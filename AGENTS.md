@@ -9,7 +9,9 @@
 ## Sprache
 
 - Unabhängig von der Sprache des Prompts wird dieses Projekt ausschließlich auf Deutsch gepflegt.
-- Antworten zum Projekt, Dokumentation, Agentenregeln, Issue- und PR-Texte sowie Commitnachrichten werden auf Deutsch verfasst. Es werden keine anderssprachigen Parallelfassungen angelegt.
+- Antworten zum Projekt, Dokumentation, Agentenregeln, Issue- und PR-Texte sowie Commitnachrichten werden auf Deutsch verfasst. Aktuell werden keine anderssprachigen Parallelfassungen angelegt.
+- Sprachabhängige Fachdokumentation liegt in Ordnern mit ISO-639-Sprachkürzeln: derzeit `docs/de/` und `roadmap/de/`. Gemeinsame Einstiegs-, Regel- und Metadatendateien bleiben an ihren bestehenden Orten.
+- Die Struktur bleibt um weitere Sprachordner mit gleicher relativer Dateistruktur erweiterbar. Weitere Sprachen werden erst nach einem ausdrücklichen Auftrag zur Mehrsprachigkeit angelegt und gepflegt.
 
 ## Arbeitsfluss
 

@@ -13,6 +13,12 @@ Status: Projektinitialisierung und Roadmap; noch keine implementierten Domänens
 
 Start: [P0 — Design und Modellgrenzen](roadmap/de/personen-nachlass-roadmap.md).
 
+## Dokumentationsstruktur
+
+Die Fachdokumentation liegt unter `docs/de/`, die Fachroadmap unter `roadmap/de/`. Sprachkürzel nach ISO 639 trennen die Inhalte; gemeinsame Einstiegs- und Metadatendateien bleiben an ihren bestehenden Orten.
+
+Bei später beauftragter Mehrsprachigkeit können zusätzliche Sprachordner mit derselben relativen Dateistruktur ergänzt werden. Aktuell wird ausschließlich Deutsch gepflegt; weitere Sprachfassungen werden nicht angelegt.
+
 Prüfung: `python scripts/validate_project.py`.
 
 Keine produktiven Personen-, Mandats- oder Unternehmensdaten und keine Secrets.

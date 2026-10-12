@@ -1,6 +1,6 @@
 # ontologie8/schema
 
-Eigenständiges Projekt für versionierte Fachmodelle, Schemas und Ontologie-Projektionen zu Personen, Familien, Organisationen, Rollen, Vermögen und zeitlichen Ereignissen. Dieses Repository führt das gemeinsame Fachmodell und seine Roadmap. NaC ist ein geplanter Consumer.
+Eigenständiges Projekt für versionierte Fachmodelle, Schemas und Ontologie-Projektionen zu Personen, Familien, Organisationen, Rollen, Vermögen und zeitlichen Ereignissen. Dieses Repository führt das gemeinsame Fachmodell und seine Roadmap unabhängig von einer konkreten Anwendung oder Speicherplattform.
 
 Status: Projektinitialisierung und Roadmap; noch keine implementierten Domänenschemas oder Laufzeitfunktionen.
 
@@ -8,7 +8,6 @@ Status: Projektinitialisierung und Roadmap; noch keine implementierten Domänens
 | --- | --- |
 | Projekt und Board | [Projekt](docs/de/projekt.md) |
 | Vollständige Roadmap | [Roadmap](roadmap/de/personen-nachlass-roadmap.md) |
-| NaC-Nutzung | [Anbindung](docs/de/nac-anbindung.md) |
 
 [Agentenregeln](AGENTS.md), [Gantt-Index](roadmap/GANTT.md) und [Lizenzzuordnung](LICENSES/README.md).
 

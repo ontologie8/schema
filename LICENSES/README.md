@@ -9,6 +9,4 @@ Copyright (c) 2026 funktion8 / ofunk.
 
 Bei synthetischen Beispielen gilt die Lizenz der fachlichen oder ausführbaren Artefaktart.
 
-Die Roadmap stammt aus NaC und wurde für eigenständige Projektzuständigkeit angepasst.
-
 [NOTICE](../NOTICE), [AUTHORS.md](../AUTHORS.md). Open-Source-Lizenzen gewähren keine Markenrechte.

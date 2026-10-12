@@ -50,7 +50,7 @@ Die Reihenfolge beschreibt Abhängigkeiten, keine zugesagten Kalendertermine. Al
 
 | Phase | Umfang | Ergebnis und Abnahmekriterium |
 | --- | --- | --- |
-| P0: Design und Speichergrenze | SharePoint-Ziel, JSON-/RDF-Rollen, Zugriffe, Schutzklassen und Rechtsraum bestimmen. | Freigegebene zweisprachige Spec mit AC-IDs, Plan und Prüfpfaden; ein führendes Modell, genehmigte Speichergrenzen und klare Nichtziele. |
+| P0: Design und Speichergrenze | SharePoint-Ziel, JSON-/RDF-Rollen, Zugriffe, Schutzklassen und Rechtsraum bestimmen. | Freigegebene Spec mit AC-IDs, Plan und Prüfpfaden; ein führendes Modell, genehmigte Speichergrenzen und klare Nichtziele. |
 | P1: Personen und Familie | Modulare JSON Schemas, stabile IDs, Beziehungen und Import-/Änderungsvertrag. | Ein kleiner synthetischer Familienfall validiert; fehlende Referenzen, unzulässige Selbstbeziehungen, widersprüchliche Zeiten und Dubletten werden nachvollziehbar behandelt. |
 | P2: Speicheradapter und 10.000er-Prototyp | Synthetische JSON-Dateien als Referenzdataset; SharePoint-Adapter zunächst offline, später in freigegebenem Testtenant. | 10.000 synthetische Personen importierbar; paginierte Lesewege, ID-Erhalt, Schema-Migration, Konflikte, Neustart und Berechtigungsgrenzen geprüft. Laufzeit, Speicherbedarf und Abfragezeiten dokumentiert. |
 | P3: Genogramm | Deterministische Familienprojektion, Legende, Export und Codex-Anbindung. | Gleiche Daten ergeben dieselben Knoten und Beziehungen; mehrere Partnerschaften, Adoption, Verstorbene und unbekannte Angaben sichtbar. Keine automatisch erfundenen Verbindungen. |

@@ -1,4 +1,4 @@
-name: Schema Project Quality
+name: Schema-Projektprüfung
 
 on:
   push:
@@ -16,5 +16,5 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Validate project, language pairs and roadmap scope
+      - name: Projektstruktur, Links und Roadmap-Umfang prüfen
         run: python scripts/validate_project.py

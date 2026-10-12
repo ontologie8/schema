@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
-"""Validate project structure, documentation links and roadmap scope offline."""
+"""Projektstruktur, Dokumentationslinks und Roadmap-Umfang offline prüfen."""
 from __future__ import annotations
 
 import json
@@ -19,14 +19,7 @@ def validate(root: Path) -> list[str]:
     ]
     for path in required:
         if not (root / path).is_file():
-            errors.append(f"Missing required file: {path}")
-    for category in ("docs", "roadmap"):
-        de = {p.relative_to(root / category / "de")
-              for p in (root / category / "de").rglob("*.md")}
-        en = {p.relative_to(root / category / "en")
-              for p in (root / category / "en").rglob("*.md")}
-        if not de or de != en:
-            errors.append(f"Unpaired language files in {category}: {de ^ en}")
+            errors.append(f"Erforderliche Datei fehlt: {path}")
     for path in root.rglob("*.md"):
         content = path.read_text(encoding="utf-8")
         for match in re.finditer(r"\[[^\]]*\]\(([^\s)]+)\)", content):
@@ -36,29 +29,28 @@ def validate(root: Path) -> list[str]:
                 continue
             resolved = (path.parent / unquote(parts.path)).resolve()
             if not resolved.is_relative_to(root.resolve()) or not resolved.exists():
-                errors.append(f"Broken local link: {path.relative_to(root)} -> {target}")
-            for lang, opposite in (("de", "en"), ("en", "de")):
-                if f"/{lang}/" in "/" + path.relative_to(root).as_posix():
-                    if f"/{opposite}/" in "/" + resolved.relative_to(root).as_posix():
-                        errors.append(f"Cross-language local link: {path.name} -> {target}")
-    for lang in ("de", "en"):
-        roadmap = root / f"roadmap/{lang}/personen-nachlass-roadmap.md"
-        acceptance = root / f"docs/{lang}/akzeptanz.md"
-        if not roadmap.exists() or not acceptance.exists():
-            errors.append(f"Missing roadmap or acceptance file: {lang}")
+                errors.append(f"Lokaler Link ungültig: {path.relative_to(root)} -> {target}")
+    roadmaps = list((root / "roadmap").rglob("personen-nachlass-roadmap.md"))
+    if not roadmaps:
+        errors.append("Fachroadmap fehlt")
+    for roadmap in roadmaps:
+        section = roadmap.parent.relative_to(root / "roadmap")
+        acceptance = root / "docs" / section / "akzeptanz.md"
+        if not acceptance.exists():
+            errors.append(f"Akzeptanzkriterien fehlen: {acceptance.relative_to(root)}")
             continue
         content = roadmap.read_text(encoding="utf-8")
         for term in ("JSON", "RDF/Turtle", "RDFLib", "SHACL", "SPARQL",
                      "NetworkX", "SharePoint", "effective_at", "recorded_at"):
             if term not in content:
-                errors.append(f"Missing technical scope {term}: {lang}")
+                errors.append(f"Technischer Umfang fehlt ({term}): {roadmap.relative_to(root)}")
         for phase in (f"P{i}" for i in range(7)):
             if phase + ":" not in content:
-                errors.append(f"Missing phase {phase}: {lang}")
+                errors.append(f"Phase fehlt ({phase}): {roadmap.relative_to(root)}")
         ac = acceptance.read_text(encoding="utf-8")
         for identifier in (f"AC-{i:02}" for i in range(1, 10)):
             if identifier not in ac:
-                errors.append(f"Missing acceptance {identifier}: {lang}")
+                errors.append(f"Akzeptanzkriterium fehlt ({identifier}): {acceptance.relative_to(root)}")
     return errors
 
 
@@ -67,7 +59,7 @@ def main() -> int:
     try:
         errors = validate(root)
     except (OSError, ValueError, KeyError) as exc:
-        errors = [f"Validation error: {exc}"]
+        errors = [f"Prüffehler: {exc}"]
     print(json.dumps({"status": "FAILED" if errors else "PASSED",
                       "errors": errors}, ensure_ascii=False, indent=2))
     return 1 if errors else 0

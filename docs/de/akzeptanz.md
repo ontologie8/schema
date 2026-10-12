@@ -13,5 +13,9 @@ Der komplette P0–P6-Scope liegt in der [Roadmap](../../roadmap/de/personen-nac
 | AC-07 | Unternehmensvermögen, private Anteile, Darlehen und Bürgschaften getrennt; keine Doppelzählung. |
 | AC-08 | Tod/Ausfall/Amtsende, Anteilserbfolge und Organ-/Vertretungsnachfolge getrennt; keine automatischen Berechtigungen. |
 | AC-09 | Familien-, Beteiligungs- und Vertretungsansicht nennen Stichtag, Quellen und offene Tatsachen. |
+| AC-10 | Deutsche Projektpflege in Phase 1; mehrsprachige Werte sind im allgemeinen Modell ohne neue Feldstruktur möglich. |
+| AC-11 | BCP-47-Sprachkennzeichen am Textwert; Sprache, Land und Rechtsraum getrennt; kein geratenes Deutsch bei fehlender Sprache. |
+| AC-12 | JSON-/RDF-Abbildung erhält Text, Sprache, Identität und Mehrfachwerte; Schriftrichtung wird bei Bedarf verlustfrei behandelt. |
+| AC-13 | Dokumentfassungen und Übersetzungen besitzen eigene Identität, Versionsbindung, Herkunft und Status; kein automatischer Vorrang. |
 
-Die Kriterien sind die Prüfziele der geplanten Umsetzung. [Projektboard](projekt.md).
+Die Kriterien sind die Prüfziele der geplanten Umsetzung. [Projektboard](projekt.md), [Designvorgabe für mehrsprachige Werte](architektur/mehrsprachige-werte.md).

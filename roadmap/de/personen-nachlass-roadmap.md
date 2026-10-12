@@ -33,6 +33,8 @@ Das Projekt definiert Datenstrukturen, Referenzdaten und Austauschverträge. Ein
 
 Ein führendes Datenmodell und definierte Mapping-/Versionsregeln vermeiden auseinanderlaufende Wahrheiten zwischen Speicherformaten, JSON und RDF. Ein großer Personen-Payload wird in Stammdaten, Beziehungen, Rollen, Nachweise und fachliche Erweiterungen gegliedert. Fehlende Angaben bleiben unbekannt, statt als Nein oder als erfundene Beziehung zu erscheinen.
 
+Für alle Fachmodule gilt die [P0-Designvorgabe für mehrsprachige Werte](../../docs/de/architektur/mehrsprachige-werte.md): Phase 1 pflegt deutsche Inhalte; der allgemeine Texttyp unterstützt von Beginn an mehrere Werte mit BCP-47-Sprachkennzeichen. Sprache, Land und Rechtsraum bleiben getrennt. Dokumentfassungen und Übersetzungen erhalten eigenständige Identitäten und Versionsbindungen; die JSON-/RDF-Abbildung muss die Sprachinformationen erhalten. AC-10 bis AC-13 ergänzen die bisherigen Prüfziele.
+
 Für 10.000 Personen werden Indizes, selektive Abfragen, Pagination und ein vollständiger Export geprüft. Die Benchmarks messen die Modell- und Austauschverträge ohne Vorgabe eines bestimmten Speicherdienstes.
 
 ## Fachliche Bausteine
@@ -50,7 +52,7 @@ Die Reihenfolge beschreibt Abhängigkeiten, keine zugesagten Kalendertermine. Al
 
 | Phase | Umfang | Ergebnis und Abnahmekriterium |
 | --- | --- | --- |
-| P0: Design und Speichergrenze | JSON-/RDF-Rollen, Austauschverträge, Zugriffe, Schutzklassen und Rechtsraum bestimmen. | Freigegebene Spec mit AC-IDs, Plan und Prüfpfaden; ein führendes Modell, klare Speichergrenzen und Nichtziele. |
+| P0: Design und Speichergrenze | JSON-/RDF-Rollen, Austauschverträge, Zugriffe, Schutzklassen, Rechtsraum und mehrsprachige Werte bestimmen. | Freigegebene Spec mit AC-IDs, Plan und Prüfpfaden; ein führendes Modell, klare Speichergrenzen und Nichtziele; AC-10 bis AC-13 im Modell- und Austauschvertrag berücksichtigt. |
 | P1: Personen und Familie | Modulare JSON Schemas, stabile IDs, Beziehungen und Import-/Änderungsvertrag. | Ein kleiner synthetischer Familienfall validiert; fehlende Referenzen, unzulässige Selbstbeziehungen, widersprüchliche Zeiten und Dubletten werden nachvollziehbar behandelt. |
 | P2: Austauschvertrag und 10.000er-Prototyp | Synthetische JSON-Dateien als Referenzdataset; Import und Export anhand des versionierten Modells. | 10.000 synthetische Personen importierbar; paginierte Lesewege, ID-Erhalt, Schema-Migration, Konflikte und Neustart geprüft. Laufzeit, Speicherbedarf und Abfragezeiten dokumentiert. |
 | P3: Genogramm | Deterministische Familienprojektion, Legende, Export und Codex-Anbindung. | Gleiche Daten ergeben dieselben Knoten und Beziehungen; mehrere Partnerschaften, Adoption, Verstorbene und unbekannte Angaben sichtbar. Keine automatisch erfundenen Verbindungen. |

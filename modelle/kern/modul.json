@@ -1,0 +1,7 @@
+{
+  "id": "urn:ontologie8:modul:kern", "version": "0.1.0", "lizenz": "AGPL-3.0-or-later",
+  "zweck": "Gemeinsamer Pilotvertrag für Identitäten, Texte, Zeit und Revisionen.",
+  "abhaengigkeiten": [],
+  "artefakte": ["modell.schema.json", "begriffe.json"],
+  "dokumentation": "../../docs/de/architektur/p0-schema-pilot.md"
+}

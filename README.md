@@ -2,11 +2,14 @@
 
 Eigenständiges Projekt für ein erweiterbares Weltmodell mit versionierten Fachmodulen, Schemas und Ontologie-Projektionen. Personen, Organisationen, Gegenstände, Rollen, Vermögen und zeitliche Aussagen nutzen einen gemeinsamen Kern. Dieses Repository führt das Fachmodell und seine Roadmap unabhängig von einer konkreten Anwendung oder Speicherplattform.
 
-Status: P0-Architekturentwurf in Bearbeitung; noch keine implementierten Domänenschemas oder Laufzeitfunktionen.
+Status: Erster ausführbarer Schema-/RDF-Pilot 0.1.0; P0 weiterhin in Bearbeitung. Synthetische Auto-, Aktien- und Bekleidungsfälle prüfen denselben Modellvertrag. Es bestehen keine produktiven Speicheranbindungen.
 
 | Einstieg | Dokument |
 | --- | --- |
 | Projekt und Board | [Projekt](docs/de/projekt.md) |
+| Ausführbarer Pilot und lokale Prüfung | [Benutzung](docs/de/architektur/p0-pilot-benutzung.md) |
+| Führender JSON-Vertrag | [Kernschema](modelle/kern/modell.schema.json) |
+| Implementierung, Alternativen und Prüfplan | [Pilotspezifikation](docs/de/architektur/p0-schema-pilot.md) |
 | Weltmodell und geplante Ordnerstruktur | [P0-Architekturentwurf](docs/de/architektur/p0-weltmodell.md) |
 | Zeit, Historie, Bewertungen und Prognosen | [P0-Zeitvertrag](docs/de/architektur/zeit-und-bewertungen.md) |
 | Auto, Aktien und Kleidung | [Synthetische Referenzfälle und Prüfmatrix](docs/de/anwendungsfaelle/zeitliche-referenzfaelle.md) |
@@ -25,6 +28,6 @@ Bei später beauftragter Mehrsprachigkeit können zusätzliche Sprachordner mit 
 
 Die Sprache der Projektpflege begrenzt nicht die Datenwerte späterer Anwendungen. Sprachabhängige Werte werden von Beginn an mit BCP-47-Sprachkennzeichen und einer erweiterbaren Sammlung entworfen. Sprachunabhängige IDs, Zahlen und Codes bleiben davon getrennt; `de` bezeichnet die Sprache Deutsch, `DE` als Ländercode Deutschland. [Modellierung, Alternativen und Prüfpfade](docs/de/architektur/mehrsprachige-werte.md).
 
-Prüfung: `python scripts/validate_project.py`.
+Prüfung mit dem verifizierten Projekt-Python: `scripts/validate_project.py`, `scripts/pruefe_pilot.py` und `python -m unittest discover -s tests -v`. [Umgebung und vollständige Befehle](docs/de/architektur/p0-pilot-benutzung.md).
 
 Keine produktiven Personen-, Mandats- oder Unternehmensdaten und keine Secrets.

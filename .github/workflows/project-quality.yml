@@ -16,5 +16,11 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Verifizierte Pilotabhängigkeiten installieren
+        run: python -m pip install -r requirements.txt
       - name: Projektstruktur, Links und Roadmap-Umfang prüfen
         run: python scripts/validate_project.py
+      - name: Schema, Module und RDF-Abbildung prüfen
+        run: python scripts/pruefe_pilot.py
+      - name: Unabhängige Modell- und Erwartungsfälle prüfen
+        run: python -m unittest discover -s tests -v

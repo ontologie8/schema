@@ -4,7 +4,7 @@ Stand: 2026-10-12. Eigenständiges Projekt in [ontologie8/schema](https://github
 
 ## Auftrag und Projektstatus
 
-Das Projekt entwirft einen gemeinsamen Modellkern mit Fachmodulen, Anwendungsfallprofilen und unabhängigen Speicherprofilen. Zeit, Herkunft, Bewertungen, Szenarien und mehrsprachige Textwerte sind gemeinsame Bausteine. Der [P0-Entwurf](architektur/p0-weltmodell.md) führt diese Struktur zusammen. Die [Personen-/Nachlassroadmap](../../roadmap/de/personen-nachlass-roadmap.md) bleibt ein Fachpfad einschließlich JSON Schema, RDF/Turtle, SHACL, SPARQL, NetworkX und optionaler Graphdatenbank.
+Das Projekt entwickelt einen gemeinsamen Modellkern mit Fachmodulen, Anwendungsfallprofilen und unabhängigen Speicherprofilen. Zeit, Herkunft, Bewertungen, Szenarien und mehrsprachige Textwerte sind gemeinsame Bausteine. Der [P0-Entwurf](architektur/p0-weltmodell.md) führt diese Struktur zusammen; der [Pilot 0.1.0](architektur/p0-pilot-benutzung.md) prüft den ersten ausführbaren Vertrag. Die [Personen-/Nachlassroadmap](../../roadmap/de/personen-nachlass-roadmap.md) bleibt ein Fachpfad einschließlich JSON Schema, RDF/Turtle, SHACL, SPARQL, NetworkX und optionaler Graphdatenbank.
 
 Arbeitsmethode: Kanban, wöchentlicher Review, bedarfsbezogener Kurzsync; Maintainer funktion8 / ofunk. Dies plant keine Termine oder Erinnerungen. P0 ist in Bearbeitung; P1–P6 bleiben Backlog.
 
@@ -12,7 +12,7 @@ Arbeitsmethode: Kanban, wöchentlicher Review, bedarfsbezogener Kurzsync; Mainta
 
 | Arbeitspaket | Scope | Status | Abhängigkeit |
 | --- | --- | --- | --- |
-| P0 | Weltmodell, Modellgrenzen, Zeit und Versionierungsvertrag | In Bearbeitung | — |
+| P0 | Weltmodell, Modellgrenzen, Zeit und Versionierungsvertrag | Pilot 0.1.0 geliefert; weitere Profilisierung in Bearbeitung | — |
 | P1 | Personen, Familie, Organisationen und zeitabhängige Rollen | Backlog | P0 |
 | P2 | JSON-Referenzdataset, Import-/Exportvertrag und 10.000er-Prüfung | Backlog | P1 |
 | P3 | Genogramm-Projektion und Exportvertrag | Backlog | P2 |
@@ -34,7 +34,19 @@ Plan und Validierung: Standards zu BCP 47, RDF und JSON-LD prüfen; die [Designv
 
 ## Nächster Schritt
 
-P0-Entwurf prüfen und konkretisieren: führende Modellrepräsentation anhand des synthetischen Piloten bestimmen; danach Schemas und ausführbare Erwartungsfälle umsetzen.
+Pilotregister in eigenständige Fachdefinitionen und Detailprofile ausbauen; externe Import-/Versionsverträge auf dem geprüften Vertragsstand konkretisieren.
+
+## Aktueller Auftrag: erster Schema- und RDF-Pilot
+
+Auftrag: Den geprüften Entwurf in konkrete Schemaartefakte überführen und JSON/RDF einschließlich mehrsprachiger Werte und zeitlicher Revisionen ausführbar prüfen. AC-03/04/10/11/12 und AC-14 bis AC-19 bilden den Umfang.
+
+Scope: Versionierter kleiner JSON-Schema-Vertrag, Modul-/Begriffsregister, synthetischer Auto-/Aktien-/Bekleidungspilot, semantische Validierung, RDF-Hin-/Rückweg und historische Abfragen mit unabhängigen Erwartungen. Deutsch bleibt Pflegesprache; andere Sprachkennzeichen werden nur als technische Testparameter mit deutschen synthetischen Texten verwendet.
+
+Risiko: RDF könnte bei ungeprüfter Konvertierung Reihenfolge, Zahlenbedeutung, Sprachkennzeichen oder zeitlichen Kontext verlieren. JSON Schema allein prüft keine referenzierten Entitäten, Revisionsketten oder konkurrierenden Zuordnungen. Diese Prüfungen werden getrennt implementiert und getestet.
+
+Plan und Review: JSON-first für diesen Pilot mit expliziten Aussagen-/Revisionsressourcen vergleichen und als überprüfbare Umsetzung festlegen; die [Implementierungsspezifikation](architektur/p0-schema-pilot.md) vor dem Code ausarbeiten und gegen den bisherigen Entwurf reviewen. Danach Schema, Daten und Abbildung umsetzen, unabhängige positive/negative Erwartungen und Hin-/Rückweg prüfen, Befunde korrigieren und CI erweitern. Ausführbare Banken-/Rechts-/Steuerlogik und produktive Speicheranbindungen gehören nicht zu dieser Lieferung.
+
+Ergebnis: JSON-first-Vertrag 0.1.0 mit Schema, semantischer Validierung, drei Modulmanifesten, Pilotprofil, 17 synthetischen Entitäten, 26 Revisionen und vier Szenarien implementiert. Turtle-/JSON-LD-Rückweg erhält die kanonische Modellbedeutung; unabhängige historische und numerische Erwartungen sowie negative Fälle sind ausführbar. Die [Benutzung](architektur/p0-pilot-benutzung.md) nennt Befehle und Grenzen. P0 bleibt für weitere Fach-/Detailprofile und externe Übernahmeverträge in Bearbeitung.
 
 ## Aktueller Auftrag: P0-Entwurf mit Zeitmodell
 

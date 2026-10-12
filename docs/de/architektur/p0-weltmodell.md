@@ -7,7 +7,7 @@ Lizenz: CC-BY-4.0
 
 Das Projekt pflegt ein speicherunabhängiges, versioniertes Schema für erweiterbare Entitäten und Beziehungen. Hier liegen Spezifikationen, Schemas, allgemeine Fachmodule und ausschließlich synthetische Beispiele. Echtdaten verbleiben vollständig außerhalb dieses Projekts, einschließlich produktiver Exporte, Protokolle und Anhänge. Die Pflege ist deutsch; sprachabhängige Werte sind von Beginn an mehrsprachig angelegt.
 
-Dieser Entwurf führt Modellkern, Zielstruktur, Anwendungsfallprofile, Zeit und Versionsübernahme zusammen. [Zeit, Bewertungen und Szenarien](zeit-und-bewertungen.md) konkretisieren den zeitlichen Vertrag. [Synthetische Referenzfälle](../anwendungsfaelle/zeitliche-referenzfaelle.md) enthalten Eingaben und erwartete Ergebnisse. Das sind Designartefakte, keine bereits implementierten Fachschemata oder Abfragen.
+Dieser Entwurf führt Modellkern, Zielstruktur, Anwendungsfallprofile, Zeit und Versionsübernahme zusammen. [Zeit, Bewertungen und Szenarien](zeit-und-bewertungen.md) konkretisieren den zeitlichen Vertrag. [Synthetische Referenzfälle](../anwendungsfaelle/zeitliche-referenzfaelle.md) enthalten Eingaben und erwartete Ergebnisse. Der [Pilot 0.1.0](p0-pilot-benutzung.md) setzt den kleinen Vertragsumfang inzwischen als JSON Schema, semantische Validierung, historische Abfragen und RDF-Hin-/Rückweg um.
 
 Der Umfang ist AC-02, AC-03, AC-04, AC-06, AC-07 und AC-09 bis AC-19 zugeordnet. Die bisherigen Nachlassfälle mit beiden Sterbereihenfolgen bleiben nach AC-01 erhalten. Die zeitlichen und fachlichen Prüfungen im Entwurf ersetzen keine spätere ausführbare Prüfung.
 
@@ -33,7 +33,7 @@ Ein Kleidungsstück mit eigener Identität ist von seinem Produktmodell und eine
 
 ## Struktur als Zielbild
 
-Die folgende Struktur ist das Ziel für die schrittweise Umsetzung. Aktuell neu angelegt sind die verlinkten Design- und Referenzfalldokumente; Modell-, Profil- und Laufzeitordner entstehen mit ihren ersten prüfbaren Artefakten. Leere Verzeichnisgerüste sind kein Implementierungsnachweis.
+Die folgende Struktur ist das Ziel für die schrittweise Umsetzung. Kernschema, Begriffspilot, Modulmanifeste, Pilotprofil, RDF-Abbildung, synthetische Eingaben und Tests sind inzwischen in ihren Bereichen angelegt. Weitere Unterbereiche entstehen mit ihren ersten prüfbaren Artefakten.
 
 ```text
 docs/de/
@@ -109,7 +109,7 @@ Die Detailtiefe kann etwa vom einfachen Objektverzeichnis bis zur belegten Histo
 | RDF als führende Repräsentation, JSON als Eingabevertrag | Beziehungen und gemeinsame Begriffe direkt als Graph | Benötigte Validierung, Revisionen und JSON-Export dürfen nicht allein aus offenen Graphannahmen abgeleitet werden |
 | Separates deklaratives Modell, daraus erzeugte Repräsentationen | Gemeinsame Definition für mehrere Formate | Generatoren müssen den fachlichen Vertrag einschließlich Einschränkungen und Historie tatsächlich erhalten |
 
-Empfehlung: Zuerst denselben kleinen Modellvertrag an den Referenzfällen abbilden und die Repräsentation wählen, die nachvollziehbare Pflege und verlustfreien Austausch ermöglicht. Ein bestimmtes Werkzeug wird hier noch nicht verbindlich gewählt. JSON und RDF dürfen keine unabhängig gepflegten Fachwahrheiten bilden.
+Pilotentscheidung: JSON Schema 2020-12 ist der führende Austauschvertrag für Version 0.1.0; RDF ist eine überprüfbare Projektion mit eigener kontrollierter Rückkonvertierung. Die [Implementierungsspezifikation](p0-schema-pilot.md) begründet diese Wahl und der [ausführbare Pilot](p0-pilot-benutzung.md) prüft sie. JSON und RDF bilden keine unabhängig gepflegten Fachwahrheiten.
 
 Für die erste Abbildungsprüfung werden Eigenschaftstypen, IDs, Sprachkennzeichen, mehrwertige Eigenschaften, qualifizierte Beziehungen, Revisionen und Szenarien verwendet. Die erwartete Bedeutung nach Hin- und Rückweg wird unabhängig von der Dateireihenfolge geprüft.
 
@@ -129,13 +129,12 @@ GitHub, SharePoint und S3 sind mögliche Speicherziele außerhalb dieses Schema-
 
 Designreview: Auto, Aktien und Kleidung wurden gegen denselben Kern betrachtet; die Fälle benötigen keine Domäne als Mittelpunkt. Bei der Prüfung wurden Erfassungsrevisionen, Bewertungsstichtag versus Gültigkeitsintervall, konkurrierende Quellen und getrennte Prognosen ausdrücklich ergänzt. [Prüfmatrix und Ergebnisse](../anwendungsfaelle/zeitliche-referenzfaelle.md) dokumentieren die fachliche Prüfung.
 
-Es bestehen keine ausführbaren Domänenschemas, Query-Engines, Kursimporte, produktiven Speicheranbindungen oder Berechnungsdienste. Automatische Rechts-/Steuerergebnisse sind weiterhin an die fachlichen Prüfpfade der bisherigen Roadmap gebunden. P0 ist erst abgeschlossen, wenn Repräsentationswahl und Abbildungsprüfung konkret durchgeführt und die Modellverträge für die erste Umsetzung festgelegt sind.
+Der kleine Pilot implementiert Schema, zeitliche Auswahl und synthetische Referenzrechnungen im Speicher. Kursimporte, produktive Speicheranbindungen und Berechnungsdienste bestehen nicht. Automatische Rechts-/Steuerergebnisse sind weiterhin an die fachlichen Prüfpfade der bisherigen Roadmap gebunden. P0 bleibt für weitere Modul-/Detailprofilisierung und externe Versions-/Importverträge in Bearbeitung; die Repräsentationswahl und Abbildungsprüfung des kleinen Piloten sind durchgeführt.
 
 Nächste Umsetzung in dieser Reihenfolge:
 
-1. Gemeinsamen kleinen Modellvertrag und Modulmanifeste für die beiden fachübergreifenden Pilotfälle ausarbeiten.
-2. JSON-/RDF-Abbildungsprobe einschließlich Sprache und zeitlicher Revisionen durchführen; führende Repräsentation anhand der Ergebnisse bestimmen.
-3. Ausführbare Schemas und unabhängige positive/negative Erwartungsfälle erstellen, insbesondere für historische Stichtagsabfragen und Prognosetrennung.
-4. Anwendungsfallprofile und Speicherprofile auf demselben Vertragsstand ergänzen; Anschluss an die erhaltene Fachroadmap prüfen.
+1. Pilotregister in weitere fachlich eigenständige Moduldefinitionen und Detailprofile ausbauen.
+2. Notwendige Beziehungen und Import-/Versionsverträge für externe Anwendungen konkretisieren.
+3. Anwendungsfall- und Speicherprofile auf demselben Vertragsstand ergänzen; Anschluss an die erhaltene Fachroadmap prüfen.
 
-[Projektboard](../projekt.md) und [Akzeptanzkriterien](../akzeptanz.md) führen Umfang und Status. Struktur-/Linkprüfung und GitHub-CI bestätigen die Dokumentlieferung, nicht die noch ausstehende Fachimplementierung.
+[Projektboard](../projekt.md) und [Akzeptanzkriterien](../akzeptanz.md) führen Umfang und Status. Die CI prüft nun zusätzlich Schema, Modulstände, RDF-Rückweg und unabhängige Erwartungsfälle. Ihre Evidenz gilt für diesen kleinen Pilotumfang.

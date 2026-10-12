@@ -1,0 +1,5 @@
+{
+  "id": "urn:ontologie8:register:module", "version": "0.1.0", "lizenz": "AGPL-3.0-or-later",
+  "manifeste": ["../modelle/kern/modul.json", "../modelle/fachmodule/finanzen/modul.json", "../modelle/fachmodule/bekleidung/modul.json"],
+  "profile": ["../profile/anwendungsfaelle/p0-pilot.json"]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "urn:ontologie8:modul:finanzen", "version": "0.1.0", "lizenz": "AGPL-3.0-or-later",
+  "zweck": "Pilottypen für Position, Finanzinstrument, Bestand, Kurs und Bewertung; keine Steuer-/Renditelogik.",
+  "abhaengigkeiten": [{"id": "urn:ontologie8:modul:kern", "version": "0.1.0"}],
+  "entitaetstypen": ["finanzinstrument", "position", "markt"],
+  "aussagetypen": ["anfangsbestand", "bestandsbewegung", "kurs", "bewertung"]
+}

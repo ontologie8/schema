@@ -1,6 +1,6 @@
 # Roadmap: Personen, Genogramme, Vermögen und zeitliche Nachlassszenarien
 
-Stand: 2026-10-12 · Status: P0-Entwurf in Bearbeitung; P1–P6 Backlog, noch nicht implementiert
+Stand: 2026-10-12 · Status: P0-Pilot implementiert, weitere Profilisierung in Bearbeitung; P1–P6 Backlog
 Einordnung: [Globale Roadmap](../GANTT.md)
 Lizenz: CC-BY-4.0
 
@@ -56,7 +56,7 @@ Die Reihenfolge beschreibt Abhängigkeiten, keine zugesagten Kalendertermine. Al
 
 | Phase | Umfang | Ergebnis und Abnahmekriterium |
 | --- | --- | --- |
-| P0: Design und Speichergrenze | Gemeinsamen Kern, Fachmodule, JSON-/RDF-Rollen, Austauschverträge, Zugriffe, Schutzklassen, Rechtsraum, mehrsprachige Werte und zeitliche Revisionen bestimmen. | Geprüfte Spec mit AC-IDs, Plan und Prüfpfaden; ein führendes Modell, klare Speichergrenzen und Nichtziele; AC-10 bis AC-19 im Modell- und Austauschvertrag berücksichtigt. Entwurf liegt vor, Abbildungsprobe und Repräsentationswahl stehen aus. |
+| P0: Design und Speichergrenze | Gemeinsamen Kern, Fachmodule, JSON-/RDF-Rollen, Austauschverträge, Zugriffe, Schutzklassen, Rechtsraum, mehrsprachige Werte und zeitliche Revisionen bestimmen. | Geprüfte Spec mit AC-IDs und Prüfpfaden; kleiner JSON-first-Pilot mit RDF-Rückweg und unabhängigen Erwartungen umgesetzt. Weitere Fach-/Detailprofile und externe Übernahmeverträge stehen aus. |
 | P1: Personen und Familie | Modulare JSON Schemas, stabile IDs, Beziehungen und Import-/Änderungsvertrag. | Ein kleiner synthetischer Familienfall validiert; fehlende Referenzen, unzulässige Selbstbeziehungen, widersprüchliche Zeiten und Dubletten werden nachvollziehbar behandelt. |
 | P2: Austauschvertrag und 10.000er-Prototyp | Synthetische JSON-Dateien als Referenzdataset; Import und Export anhand des versionierten Modells. | 10.000 synthetische Personen importierbar; paginierte Lesewege, ID-Erhalt, Schema-Migration, Konflikte und Neustart geprüft. Laufzeit, Speicherbedarf und Abfragezeiten dokumentiert. |
 | P3: Genogramm | Deterministische Familienprojektion, Legende, Export und Codex-Anbindung. | Gleiche Daten ergeben dieselben Knoten und Beziehungen; mehrere Partnerschaften, Adoption, Verstorbene und unbekannte Angaben sichtbar. Keine automatisch erfundenen Verbindungen. |
@@ -117,6 +117,6 @@ Zusätzliche synthetische Referenzfälle: ein Geschäftsführer ohne Anteile; ei
 
 ## Nächster Umsetzungsschritt
 
-P0 fortführen: Den vorliegenden Weltmodell-/Zeitentwurf anhand einer JSON-/RDF-Abbildungsprobe konkretisieren, führende Repräsentation bestimmen und ausführbare Erwartungsfälle einschließlich Stichtags-/Wissensabfragen erstellen. Die synthetischen Auto-/Aktien-/Bekleidungsfälle ergänzen den erhaltenen Familienfall. Vor Umsetzung gelten die Design-, Spec-, Review-, Datenschutz- und Qualitätsregeln dieses Projekts.
+P0 fortführen: Den [ausführbaren JSON-/RDF-Piloten](../../docs/de/architektur/p0-pilot-benutzung.md) in weitere eigenständige Fachdefinitionen und Detailprofile ausbauen sowie externe Import-/Versionsverträge konkretisieren. Die synthetischen Auto-/Aktien-/Bekleidungsfälle ergänzen den erhaltenen Familienfall. Vor weiterer Umsetzung gelten die Design-, Spec-, Review-, Datenschutz- und Qualitätsregeln dieses Projekts.
 
 Die erste Umsetzungsspezifikation entsteht in ontologie8/schema und legt den eigenständigen Modell- und Versionierungsvertrag fest.

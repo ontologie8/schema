@@ -1,0 +1,11 @@
+{
+  "id": "urn:ontologie8:profil:p0-pilot", "version": "0.1.0", "lizenz": "AGPL-3.0-or-later",
+  "zweck": "Synthetische Auto-/Aktien-/Bekleidungsprüfung desselben Modellvertrags.",
+  "module": [
+    {"id": "urn:ontologie8:modul:kern", "version": "0.1.0"},
+    {"id": "urn:ontologie8:modul:finanzen", "version": "0.1.0"},
+    {"id": "urn:ontologie8:modul:bekleidung", "version": "0.1.0"}
+  ],
+  "schema_id": "urn:ontologie8:schema:kern:0.1.0",
+  "speicherziel": "nicht_festgelegt"
+}

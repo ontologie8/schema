@@ -16,6 +16,8 @@ def validate(root: Path) -> list[str]:
         "LICENSES/README.md", "LICENSES/CC-BY-4.0.txt",
         "LICENSES/AGPL-3.0-or-later.txt", "roadmap/GANTT.md",
         ".github/workflows/project-quality.yml",
+        "modelle/kern/modell.schema.json", "register/module.json",
+        "profile/anwendungsfaelle/p0-pilot.json", "scripts/pruefe_pilot.py",
     ]
     for path in required:
         if not (root / path).is_file():
@@ -48,7 +50,7 @@ def validate(root: Path) -> list[str]:
             if phase + ":" not in content:
                 errors.append(f"Phase fehlt ({phase}): {roadmap.relative_to(root)}")
         ac = acceptance.read_text(encoding="utf-8")
-        for identifier in (f"AC-{i:02}" for i in range(1, 10)):
+        for identifier in (f"AC-{i:02}" for i in range(1, 20)):
             if identifier not in ac:
                 errors.append(f"Akzeptanzkriterium fehlt ({identifier}): {acceptance.relative_to(root)}")
     return errors

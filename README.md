@@ -1,18 +1,21 @@
 # ontologie8/schema
 
-Eigenständiges Projekt für versionierte Fachmodelle, Schemas und Ontologie-Projektionen zu Personen, Familien, Organisationen, Rollen, Vermögen und zeitlichen Ereignissen. Dieses Repository führt das gemeinsame Fachmodell und seine Roadmap unabhängig von einer konkreten Anwendung oder Speicherplattform.
+Eigenständiges Projekt für ein erweiterbares Weltmodell mit versionierten Fachmodulen, Schemas und Ontologie-Projektionen. Personen, Organisationen, Gegenstände, Rollen, Vermögen und zeitliche Aussagen nutzen einen gemeinsamen Kern. Dieses Repository führt das Fachmodell und seine Roadmap unabhängig von einer konkreten Anwendung oder Speicherplattform.
 
-Status: Projektinitialisierung und Roadmap; noch keine implementierten Domänenschemas oder Laufzeitfunktionen.
+Status: P0-Architekturentwurf in Bearbeitung; noch keine implementierten Domänenschemas oder Laufzeitfunktionen.
 
 | Einstieg | Dokument |
 | --- | --- |
 | Projekt und Board | [Projekt](docs/de/projekt.md) |
+| Weltmodell und geplante Ordnerstruktur | [P0-Architekturentwurf](docs/de/architektur/p0-weltmodell.md) |
+| Zeit, Historie, Bewertungen und Prognosen | [P0-Zeitvertrag](docs/de/architektur/zeit-und-bewertungen.md) |
+| Auto, Aktien und Kleidung | [Synthetische Referenzfälle und Prüfmatrix](docs/de/anwendungsfaelle/zeitliche-referenzfaelle.md) |
 | Vollständige Roadmap | [Roadmap](roadmap/de/personen-nachlass-roadmap.md) |
 | Mehrsprachige Werte bei deutscher Pflege | [P0-Designvorgabe](docs/de/architektur/mehrsprachige-werte.md) |
 
 [Agentenregeln](AGENTS.md), [Gantt-Index](roadmap/GANTT.md) und [Lizenzzuordnung](LICENSES/README.md).
 
-Start: [P0 — Design und Modellgrenzen](roadmap/de/personen-nachlass-roadmap.md).
+Start: [P0 — Weltmodell und Modellgrenzen](docs/de/architektur/p0-weltmodell.md). Die bisherige Personen-/Nachlassplanung bleibt ein erhaltener Fachpfad.
 
 ## Dokumentationsstruktur
 

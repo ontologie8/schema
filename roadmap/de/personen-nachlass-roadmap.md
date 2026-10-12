@@ -1,6 +1,6 @@
 # Roadmap: Personen, Genogramme, Vermögen und zeitliche Nachlassszenarien
 
-Stand: 2026-10-12 · Status: geplantes Backlog, noch nicht implementiert
+Stand: 2026-10-12 · Status: P0-Entwurf in Bearbeitung; P1–P6 Backlog, noch nicht implementiert
 Einordnung: [Globale Roadmap](../GANTT.md)
 Lizenz: CC-BY-4.0
 
@@ -11,6 +11,8 @@ Dieses Repository führt eigenständig das gemeinsame Fachmodell, JSON Schema, R
 Die in den Tabellen genannten Datenstrukturen, Schnittstellen, Algorithmen und Szenarien sind Planungsziele, keine bereits verfügbaren Implementierungen. Eine konkrete nutzende Anwendung oder Speicherplattform ist nicht festgelegt.
 
 Die Ontologie ist ein versionierter Modell-/Projektionsvertrag. Dieses Repository führt keine produktiven Personen-, Familien-, Unternehmens- oder Mandatsdaten. Das [Projektboard](../../docs/de/projekt.md) führt die Arbeitspakete.
+
+Diese Roadmap bleibt ein Fachpfad innerhalb des [erweiterbaren Weltmodells](../../docs/de/architektur/p0-weltmodell.md). Der gemeinsame Kern und die Zielstruktur werden zusätzlich an Auto, Aktien und Kleidung geprüft; die bisherigen Fachfälle und Phasen bleiben erhalten.
 
 ## Ziel
 
@@ -35,6 +37,8 @@ Ein führendes Datenmodell und definierte Mapping-/Versionsregeln vermeiden ause
 
 Für alle Fachmodule gilt die [P0-Designvorgabe für mehrsprachige Werte](../../docs/de/architektur/mehrsprachige-werte.md): Phase 1 pflegt deutsche Inhalte; der allgemeine Texttyp unterstützt von Beginn an mehrere Werte mit BCP-47-Sprachkennzeichen. Sprache, Land und Rechtsraum bleiben getrennt. Dokumentfassungen und Übersetzungen erhalten eigenständige Identitäten und Versionsbindungen; die JSON-/RDF-Abbildung muss die Sprachinformationen erhalten. AC-10 bis AC-13 ergänzen die bisherigen Prüfziele.
 
+Der [P0-Zeitvertrag](../../docs/de/architektur/zeit-und-bewertungen.md) trennt fachliche Zeit von erhaltenen Erfassungsrevisionen. Kaufpreise, Beobachtungen und konkurrierende Bewertungen besitzen eigene Kontexte; Prognosen nennen Modellversion, Eingabestand und Zielzeit. AC-14 bis AC-19 und die [synthetische Prüfmatrix](../../docs/de/anwendungsfaelle/zeitliche-referenzfaelle.md) konkretisieren die Anforderungen. Zwei Datumsfelder allein sind kein Nachweis einer funktionierenden Historie.
+
 Für 10.000 Personen werden Indizes, selektive Abfragen, Pagination und ein vollständiger Export geprüft. Die Benchmarks messen die Modell- und Austauschverträge ohne Vorgabe eines bestimmten Speicherdienstes.
 
 ## Fachliche Bausteine
@@ -52,7 +56,7 @@ Die Reihenfolge beschreibt Abhängigkeiten, keine zugesagten Kalendertermine. Al
 
 | Phase | Umfang | Ergebnis und Abnahmekriterium |
 | --- | --- | --- |
-| P0: Design und Speichergrenze | JSON-/RDF-Rollen, Austauschverträge, Zugriffe, Schutzklassen, Rechtsraum und mehrsprachige Werte bestimmen. | Freigegebene Spec mit AC-IDs, Plan und Prüfpfaden; ein führendes Modell, klare Speichergrenzen und Nichtziele; AC-10 bis AC-13 im Modell- und Austauschvertrag berücksichtigt. |
+| P0: Design und Speichergrenze | Gemeinsamen Kern, Fachmodule, JSON-/RDF-Rollen, Austauschverträge, Zugriffe, Schutzklassen, Rechtsraum, mehrsprachige Werte und zeitliche Revisionen bestimmen. | Geprüfte Spec mit AC-IDs, Plan und Prüfpfaden; ein führendes Modell, klare Speichergrenzen und Nichtziele; AC-10 bis AC-19 im Modell- und Austauschvertrag berücksichtigt. Entwurf liegt vor, Abbildungsprobe und Repräsentationswahl stehen aus. |
 | P1: Personen und Familie | Modulare JSON Schemas, stabile IDs, Beziehungen und Import-/Änderungsvertrag. | Ein kleiner synthetischer Familienfall validiert; fehlende Referenzen, unzulässige Selbstbeziehungen, widersprüchliche Zeiten und Dubletten werden nachvollziehbar behandelt. |
 | P2: Austauschvertrag und 10.000er-Prototyp | Synthetische JSON-Dateien als Referenzdataset; Import und Export anhand des versionierten Modells. | 10.000 synthetische Personen importierbar; paginierte Lesewege, ID-Erhalt, Schema-Migration, Konflikte und Neustart geprüft. Laufzeit, Speicherbedarf und Abfragezeiten dokumentiert. |
 | P3: Genogramm | Deterministische Familienprojektion, Legende, Export und Codex-Anbindung. | Gleiche Daten ergeben dieselben Knoten und Beziehungen; mehrere Partnerschaften, Adoption, Verstorbene und unbekannte Angaben sichtbar. Keine automatisch erfundenen Verbindungen. |
@@ -113,6 +117,6 @@ Zusätzliche synthetische Referenzfälle: ein Geschäftsführer ohne Anteile; ei
 
 ## Nächster Umsetzungsschritt
 
-P0 vorbereiten: Datenmodell, Austauschverträge und Schutzgrenzen konkretisieren, JSON-first mit abgeleiteter RDF-Projektion gegen RDF-first mit JSON-Eingabevertrag vergleichen und den kleinen synthetischen Referenzfall festlegen. Vor Umsetzung gelten die Design-, Spec-, Review-, Datenschutz- und Qualitätsregeln dieses Projekts.
+P0 fortführen: Den vorliegenden Weltmodell-/Zeitentwurf anhand einer JSON-/RDF-Abbildungsprobe konkretisieren, führende Repräsentation bestimmen und ausführbare Erwartungsfälle einschließlich Stichtags-/Wissensabfragen erstellen. Die synthetischen Auto-/Aktien-/Bekleidungsfälle ergänzen den erhaltenen Familienfall. Vor Umsetzung gelten die Design-, Spec-, Review-, Datenschutz- und Qualitätsregeln dieses Projekts.
 
 Die erste Umsetzungsspezifikation entsteht in ontologie8/schema und legt den eigenständigen Modell- und Versionierungsvertrag fest.

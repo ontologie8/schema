@@ -6,6 +6,11 @@
 - Fakten, Entität, Rolle, Eigentum und technische Berechtigung bleiben getrennt. Fehlende Angaben bleiben unbekannt. Kein automatischer Personenmerge und keine erfundenen Beziehungen.
 - JSON/RDF sind geplante Repräsentationen eines führenden Modells. Turtle ist eine RDF-Serialisierung.
 
+## Sprache
+
+- Unabhängig von der Sprache des Prompts wird dieses Projekt ausschließlich auf Deutsch gepflegt.
+- Antworten zum Projekt, Dokumentation, Agentenregeln, Issue- und PR-Texte sowie Commitnachrichten werden auf Deutsch verfasst. Es werden keine anderssprachigen Parallelfassungen angelegt.
+
 ## Arbeitsfluss
 
 - Auftrag, Scope, AC-IDs, Risiko, Plan und Validierung vor Änderungen dokumentieren. [Projektboard](docs/de/projekt.md) und [Roadmap](roadmap/de/personen-nachlass-roadmap.md) pflegen, wenn Scope oder Status betroffen ist.

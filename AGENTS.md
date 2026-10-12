@@ -2,9 +2,9 @@
 
 ## Geltungsbereich und Wahrheit
 
-- Dieses Repository führt das Fachmodell und die Schema-/Ontologie-Roadmap. NaC bleibt Consumer; fachliche Vorgangsarten, produktiver Speicher, Zugriffe und notarielle Entscheidungen gehören zur jeweiligen Anwendung.
+- Dieses Repository führt eigenständig das Fachmodell und die Schema-/Ontologie-Roadmap. Produktiver Speicher, Zugriffe und fachliche Entscheidungen gehören zur jeweiligen nutzenden Anwendung.
 - Fakten, Entität, Rolle, Eigentum und technische Berechtigung bleiben getrennt. Fehlende Angaben bleiben unbekannt. Kein automatischer Personenmerge und keine erfundenen Beziehungen.
-- JSON/RDF sind geplante Repräsentationen eines führenden Modells. Turtle ist eine RDF-Serialisierung. Kein globaler Reasoner im NaC-Request-Pfad.
+- JSON/RDF sind geplante Repräsentationen eines führenden Modells. Turtle ist eine RDF-Serialisierung.
 
 ## Arbeitsfluss
 

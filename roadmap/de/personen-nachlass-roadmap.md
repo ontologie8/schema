@@ -6,34 +6,34 @@ Lizenz: CC-BY-4.0
 
 ## Projektzuständigkeit
 
-Dieses Repository führt das gemeinsame Fachmodell, JSON Schema, RDF/Turtle, SHACL/SPARQL, Graph-Projektionen, Referenzdaten und den gesamten P0–P6-Plan. NaC ist ein späterer Nutzer; die Roadmap und künftige Domänenschemas werden dort nicht parallel gepflegt.
+Dieses Repository führt eigenständig das gemeinsame Fachmodell, JSON Schema, RDF/Turtle, SHACL/SPARQL, Graph-Projektionen, Referenzdaten und den gesamten P0–P6-Plan.
 
-Die folgenden NaC-bezogenen Anforderungen bleiben als Consumer-Anforderungen erhalten: SharePoint-Mapping, CLI-/Bürooberfläche, notarielle Usecases und Prüfregeln. NaC implementiert seine Adapter und Prozessintegration in einem separaten Folgetask. Die in den Tabellen genannten Listen, Befehle, Algorithmen und Szenarien sind Planungsziele, keine bereits verfügbaren Implementierungen.
+Die in den Tabellen genannten Datenstrukturen, Schnittstellen, Algorithmen und Szenarien sind Planungsziele, keine bereits verfügbaren Implementierungen. Eine konkrete nutzende Anwendung oder Speicherplattform ist nicht festgelegt.
 
-Für NaC bleibt SharePoint der festgelegte operative M365-MVP-Store. Die Ontologie ist ein versionierter Modell-/Projektionsvertrag, kein Personendatenspeicher. Dieses Repository führt keine produktiven Personen-, Familien-, Unternehmens- oder Mandatsdaten. [Projektboard](../../docs/de/projekt.md), [Consumer-Grenze](../../docs/de/nac-anbindung.md) legen Zuständigkeiten fest.
+Die Ontologie ist ein versionierter Modell-/Projektionsvertrag. Dieses Repository führt keine produktiven Personen-, Familien-, Unternehmens- oder Mandatsdaten. Das [Projektboard](../../docs/de/projekt.md) führt die Arbeitspakete.
 
-## Ziel und externe NaC-Anbindung
+## Ziel
 
-NaC soll notarielle Nachlassplanung unterstützen: strukturierte Personen- und Familienbeziehungen, ein daraus abgeleitetes Genogramm, Vermögen mit Eigentumsanteilen sowie nachvollziehbare Szenarien für Schenkungen, Testamente und zeitlich unterschiedliche Erbfälle. Der bestehende MVP wird dadurch nicht als umgesetzt oder umpriorisiert dargestellt.
+Das Fachmodell beschreibt strukturierte Personen- und Familienbeziehungen, ein daraus abgeleitetes Genogramm, Vermögen mit Eigentumsanteilen sowie nachvollziehbare Szenarien für Schenkungen, Testamente und zeitlich unterschiedliche Erbfälle.
 
-Anknüpfungspunkte sind das [Notarsoftware-Datenmodell](https://github.com/notariat8/NaC/blob/main/docs/de/notarsoftware-datenmodell.md), der [KG-Editor](https://github.com/notariat8/NaC/blob/main/docs/de/kg-editor-workstream.md), die bestehenden notariellen Nachlass-/Testaments-Usecases und der Legal-Graph-Workstream. Deren statische fachliche Knowledge Graphs bleiben von konkreten Personen- und Vermögensdaten getrennt. Fachliche KG-Artefakte bleiben usecase-lokal; kein zentraler knowledge-graph-Ordner.
+Fachliche Knowledge Graphs und allgemeine Regeln bleiben von konkreten Personen- und Vermögensdaten getrennt.
 
 ## Speicher- und Modellrichtung
 
-SharePoint ist für NaC als operativer M365-MVP-Store festgelegt; die Erweiterung zum produktiven Personenspeicher wird hier als Consumer-Mapping geplant. Die konkrete Listentopologie, Payload-Ablage und produktive Freigabe bleiben Teil der ersten Designphase.
+Das Projekt definiert Datenstrukturen, Referenzdaten und Austauschverträge. Eine spätere nutzende Anwendung entscheidet über produktive Datenhaltung, Zugriffe und Betrieb. Speicherformate und Mapping-Grenzen werden in der ersten Designphase geprüft.
 
 | Ebene | Geplanter Inhalt und Verantwortung |
 | --- | --- |
 | GitHub | Code, versionierte JSON Schemas, Ontologie, Validierungsregeln, freigegebene Fachregeln und synthetische Beispiele. Keine echten Personen- oder Mandatsdaten. |
-| SharePoint-Listen | Zweckgebundene Personenstammdaten, Beziehungen, Vermögensobjekte, Eigentumsanteile, Verfügungsmetadaten und Ereignisse in getrennten Entitätstypen; stabile fachliche IDs. Zugriff nach Notar-Team, Rolle und Mandatskontext. |
-| Geschützte Payloads und Bibliotheken | Große strukturierte Personen-Payloads und Dokumente mit getrennten Schutzklassen, Versionen und Pointern. Speicherort und Verschlüsselung werden vor produktiver Nutzung geprüft. Kein großes JSON-Schema mit Hunderten frei sichtbaren Listenspalten. |
+| Datenhaltung der nutzenden Anwendung | Personenstammdaten, Beziehungen, Vermögensobjekte, Eigentumsanteile, Verfügungsmetadaten und Ereignisse in getrennten Entitätstypen; stabile fachliche IDs. Zugriff und Betrieb liegen bei der jeweiligen Anwendung. |
+| Geschützte Payloads und Dokumente | Große strukturierte Personen-Payloads und Dokumente mit getrennten Schutzklassen, Versionen und Pointern. Speicherort und Verschlüsselung werden vor produktiver Nutzung geprüft. |
 | Python-Graph-Projektion | Ein fall- und zeitpunktbezogener Graph für Familien- und Eigentumsabfragen; NetworkX als Kandidat für den In-Memory-Prototyp. |
 | RDF/Turtle | Kandidat für semantische Ontologie und Graph-Austausch mit RDFLib, SPARQL und SHACL. RDF ist das Datenmodell, Turtle eine Serialisierung. |
 | Graphdatenbank | Optionaler späterer Query-/Projektionsspeicher nach Benchmark und Betriebsentscheidung; nicht allein durch die Zahl 10.000 begründet. |
 
-Ein führendes Datenmodell und definierte Mapping-/Versionsregeln vermeiden auseinanderlaufende Wahrheiten zwischen Listen, JSON und RDF. Ein großer Personen-Payload wird in Stammdaten, Beziehungen, Rollen, Nachweise und fachliche Erweiterungen gegliedert. Fehlende Angaben bleiben unbekannt, statt als Nein oder als erfundene Beziehung zu erscheinen.
+Ein führendes Datenmodell und definierte Mapping-/Versionsregeln vermeiden auseinanderlaufende Wahrheiten zwischen Speicherformaten, JSON und RDF. Ein großer Personen-Payload wird in Stammdaten, Beziehungen, Rollen, Nachweise und fachliche Erweiterungen gegliedert. Fehlende Angaben bleiben unbekannt, statt als Nein oder als erfundene Beziehung zu erscheinen.
 
-Für 10.000 Personen werden Indizes, selektive Abfragen und Pagination von Anfang an geplant. SharePoint hat eine List-View-Schwelle von 5.000 Elementen; diese ist keine Obergrenze für den gesamten Personenbestand. Ein vollständiger Export braucht eine eigene getestete Strategie, statt eine ungefilterte Ansicht vorauszusetzen. Technische Quellen: [List-View-Schwelle](https://learn.microsoft.com/en-us/troubleshoot/sharepoint/lists-and-libraries/items-exceeds-list-view-threshold), [Indizes und Filter](https://learn.microsoft.com/en-us/troubleshoot/sharepoint/lists-and-libraries/fails-filtering-sharepoint-column).
+Für 10.000 Personen werden Indizes, selektive Abfragen, Pagination und ein vollständiger Export geprüft. Die Benchmarks messen die Modell- und Austauschverträge ohne Vorgabe eines bestimmten Speicherdienstes.
 
 ## Fachliche Bausteine
 
@@ -50,13 +50,13 @@ Die Reihenfolge beschreibt Abhängigkeiten, keine zugesagten Kalendertermine. Al
 
 | Phase | Umfang | Ergebnis und Abnahmekriterium |
 | --- | --- | --- |
-| P0: Design und Speichergrenze | SharePoint-Ziel, JSON-/RDF-Rollen, Zugriffe, Schutzklassen und Rechtsraum bestimmen. | Freigegebene Spec mit AC-IDs, Plan und Prüfpfaden; ein führendes Modell, genehmigte Speichergrenzen und klare Nichtziele. |
+| P0: Design und Speichergrenze | JSON-/RDF-Rollen, Austauschverträge, Zugriffe, Schutzklassen und Rechtsraum bestimmen. | Freigegebene Spec mit AC-IDs, Plan und Prüfpfaden; ein führendes Modell, klare Speichergrenzen und Nichtziele. |
 | P1: Personen und Familie | Modulare JSON Schemas, stabile IDs, Beziehungen und Import-/Änderungsvertrag. | Ein kleiner synthetischer Familienfall validiert; fehlende Referenzen, unzulässige Selbstbeziehungen, widersprüchliche Zeiten und Dubletten werden nachvollziehbar behandelt. |
-| P2: Speicheradapter und 10.000er-Prototyp | Synthetische JSON-Dateien als Referenzdataset; SharePoint-Adapter zunächst offline, später in freigegebenem Testtenant. | 10.000 synthetische Personen importierbar; paginierte Lesewege, ID-Erhalt, Schema-Migration, Konflikte, Neustart und Berechtigungsgrenzen geprüft. Laufzeit, Speicherbedarf und Abfragezeiten dokumentiert. |
+| P2: Austauschvertrag und 10.000er-Prototyp | Synthetische JSON-Dateien als Referenzdataset; Import und Export anhand des versionierten Modells. | 10.000 synthetische Personen importierbar; paginierte Lesewege, ID-Erhalt, Schema-Migration, Konflikte und Neustart geprüft. Laufzeit, Speicherbedarf und Abfragezeiten dokumentiert. |
 | P3: Genogramm | Deterministische Familienprojektion, Legende, Export und Codex-Anbindung. | Gleiche Daten ergeben dieselben Knoten und Beziehungen; mehrere Partnerschaften, Adoption, Verstorbene und unbekannte Angaben sichtbar. Keine automatisch erfundenen Verbindungen. |
 | P4: Vermögensgraph | Objekte, Anteilshistorie, Bewertungen, Verpflichtungen und Schenkungen. | Eigentum je Stichtag rekonstruierbar; vollständige Anteilsbestände summieren sich korrekt, unvollständige Bestände werden markiert. Werte bleiben an Bewertungsdatum und Quelle gebunden. |
 | P5: Zeitliche Nachlassszenarien | Testamentabhängige Simulation, Sterbereihenfolge und Ereignishistorie. | Beide Sterbereihenfolgen und verschiedene Todeszeitpunkte sind reproduzierbar; Ergebnis nennt Annahmen, Daten-/Regelversion, Berechnungsweg, offene Fragen und notarielle Prüfpunkte. |
-| P6: Bedienung und Betriebsentscheidung | Zentrale nac-CLI, Bürooberfläche, Review-Flow und Backend-Benchmark. | Freigegebene CLI-/UI-Sichten unterstützen Lesen, Validieren, Visualisieren und Szenarien; Graphdatenbank nur bei belegtem Nutzen für Query, Parallelität oder Betrieb. |
+| P6: Anwendungsschnittstellen und Betriebsentscheidung | Anwendungsoffene Schnittstellen, Ansichten, Review-Flow und Backend-Benchmark. | Schnittstellen und Referenzansichten unterstützen Lesen, Validieren, Visualisieren und Szenarien; Graphdatenbank nur bei belegtem Nutzen für Query, Parallelität oder Betrieb. |
 
 P0 → P1 → P2 → P3 ist der Familienpfad. P4 baut auf P1/P2 auf; P5 braucht P3/P4 und fachlich freigegebene Regeln. P6 integriert die geprüften Bausteine.
 
@@ -75,7 +75,7 @@ Die Ausgabe soll Genogramm, Vermögen unmittelbar vor dem jeweiligen Todesfall, 
 
 Codex strukturiert Eingaben und schlägt nachvollziehbare Patches vor. Schema- und Referenzvalidierung, Diff und menschliche Bestätigung gehen einer Änderung voraus. Genogramme werden aus belegten Beziehungen erzeugt; Berechnungen laufen deterministisch in Python. Jede Ausgabe ist an Datenstand, Stichtag, Regelversion und Quellenreferenzen gebunden. Offene Tatsachen und fehlende Regeln führen zu markierten offenen Ergebnissen.
 
-Geplante Bedienaktionen sind Personen-/Beziehungsvalidierung, Genogramm-Export, Vermögensansicht zu einem Stichtag und Nachlassszenario-Vergleich über die zentrale nac-CLI und Bürooberfläche. Namen und Verträge werden in P0 festgelegt; diese Roadmap behauptet keine bereits verfügbaren Befehle.
+Geplante Schnittstellen unterstützen Personen-/Beziehungsvalidierung, Genogramm-Export, Vermögensansicht zu einem Stichtag und Nachlassszenario-Vergleich. Namen und Verträge werden in P0 festgelegt; diese Roadmap behauptet keine bereits verfügbaren Befehle.
 
 ## Erweiterung: Unternehmen, Beteiligung und Geschäftsführung
 
@@ -94,16 +94,16 @@ Eine Person bleibt ein einziger Stammdatensatz. Familienrolle, Gesellschaftsbete
 
 Beispiel für die GmbH: Geschäftsanteile sind nach [§ 15 Abs. 1 GmbHG](https://www.gesetze-im-internet.de/gmbhg/__15.html) vererblich. Die GmbH hat selbständige Rechte und Pflichten ([§ 13 GmbHG](https://www.gesetze-im-internet.de/gmbhg/__13.html)); Geschäftsführer vertreten sie nach [§ 35 GmbHG](https://www.gesetze-im-internet.de/gmbhg/__35.html). Das Modell trennt deshalb Anteilserbfolge, Unternehmensvermögen und Organ-/Vertretungsnachfolge. Ein Erbe wird nicht allein durch die Erbschaft zum Geschäftsführer. Unternehmensvermögen wird nicht zusätzlich zum Anteilswert als Privatvermögen des Gesellschafters gezählt. Übertragungs-, Einziehungs-, Abfindungs- und Nachfolgeklauseln werden als rechtsform- und dokumentabhängige Prüfpunkte geführt, nicht als pauschale Ergebnisregel.
 
-### SharePoint- und Graph-Anbindung
+### Daten- und Graph-Projektion
 
-Zusätzlich zum Personenspeicher sind getrennte Listen für Organisationen, Organfunktionen/Vertretung und Beteiligungen geplant; Dokumente verbleiben in geschützten Bibliotheken beziehungsweise Payload-Ablagen. Alle Beziehungen verweisen auf stabile fachliche IDs und tragen fachliche Gültigkeit, Erfassungszeit, Quelle und Prüfstatus. Personen werden nicht pro Unternehmen dupliziert.
+Zusätzlich zu Personen sind getrennte Entitätstypen für Organisationen, Organfunktionen/Vertretung und Beteiligungen geplant; Dokumente werden als geschützte Referenzen modelliert. Alle Beziehungen verweisen auf stabile fachliche IDs und tragen fachliche Gültigkeit, Erfassungszeit, Quelle und Prüfstatus. Personen werden nicht pro Unternehmen dupliziert.
 
-Die Graph-Projektion unterscheidet beispielsweise Person → ist Geschäftsführer von → Organisation, Person/Organisation → hält Anteil an → Organisation und Person/Organisation → ist Eigentümer von → Vermögensobjekt. Organstellung begründet weder automatisch SharePoint-Zugriff noch NaC-Freigaberechte; fachliche Vertretung und technische Autorisierung bleiben getrennt.
+Die Graph-Projektion unterscheidet beispielsweise Person → ist Geschäftsführer von → Organisation, Person/Organisation → hält Anteil an → Organisation und Person/Organisation → ist Eigentümer von → Vermögensobjekt. Organstellung begründet keine automatischen Zugriffs- oder Freigaberechte; fachliche Vertretung und technische Autorisierung bleiben getrennt.
 
 ### Roadmap-Wirkung und zusätzliche Akzeptanzkriterien
 
 - P0/P1: Organisationen und zeitabhängige Funktionen/Beteiligungen in das Modell aufnehmen. AC-06: eine Person kann ohne Dublette Familienmitglied, Geschäftsführer mehrerer Organisationen und gegebenenfalls Gesellschafter sein; unbestätigte Beteiligung bleibt unbekannt.
-- P2/P4: SharePoint-Adapter und Vermögensprojektion um diese Entitäten ergänzen. AC-07: Eigentum der Organisation, private Anteile, Darlehen und Bürgschaften bleiben unterscheidbar; Unternehmenswerte werden im Privatvermögen nicht doppelt gezählt.
+- P2/P4: Austauschverträge und Vermögensprojektion um diese Entitäten ergänzen. AC-07: Eigentum der Organisation, private Anteile, Darlehen und Bürgschaften bleiben unterscheidbar; Unternehmenswerte werden im Privatvermögen nicht doppelt gezählt.
 - P5: Tod, Ausfall, Amtsende und Anteilsübertragung als unterschiedliche Ereignisse prüfen. AC-08: Anteilserbfolge erzeugt keine automatische Organbestellung, Vollmacht oder technische Berechtigung; Änderungen der Vertretung werden anhand belegter Kombinationen und Dokumente geprüft.
 - P6: Familiengenogramm, Beteiligungsgraph und Vertretungsansicht aus demselben Datenstand anbieten. AC-09: Ansichten und Szenarien nennen Stichtag, Nachweise, offene Tatsachen und fehlende Regeln.
 
@@ -111,6 +111,6 @@ Zusätzliche synthetische Referenzfälle: ein Geschäftsführer ohne Anteile; ei
 
 ## Nächster Umsetzungsschritt
 
-P0 vorbereiten: SharePoint-Datenmodell und Schutzgrenzen konkretisieren, JSON-first mit abgeleiteter RDF-Projektion gegen RDF-first mit JSON-Eingabevertrag vergleichen und den kleinen synthetischen Referenzfall festlegen. Vor Umsetzung gelten die Design-, Spec-, Review-, Datenschutz- und Qualitätsregeln dieses Projekts. Produktive Tenant-Änderungen benötigen einen eigenen Auftrag.
+P0 vorbereiten: Datenmodell, Austauschverträge und Schutzgrenzen konkretisieren, JSON-first mit abgeleiteter RDF-Projektion gegen RDF-first mit JSON-Eingabevertrag vergleichen und den kleinen synthetischen Referenzfall festlegen. Vor Umsetzung gelten die Design-, Spec-, Review-, Datenschutz- und Qualitätsregeln dieses Projekts.
 
-Die erste Umsetzungsspezifikation entsteht in ontologie8/schema. NaC-spezifische Integrationsänderungen entstehen danach in NaC und referenzieren eine freigegebene unveränderliche Schema-Version.
+Die erste Umsetzungsspezifikation entsteht in ontologie8/schema und legt den eigenständigen Modell- und Versionierungsvertrag fest.

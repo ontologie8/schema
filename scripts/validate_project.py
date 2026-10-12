@@ -41,7 +41,7 @@ def validate(root: Path) -> list[str]:
             continue
         content = roadmap.read_text(encoding="utf-8")
         for term in ("JSON", "RDF/Turtle", "RDFLib", "SHACL", "SPARQL",
-                     "NetworkX", "SharePoint", "effective_at", "recorded_at"):
+                     "NetworkX", "effective_at", "recorded_at"):
             if term not in content:
                 errors.append(f"Technischer Umfang fehlt ({term}): {roadmap.relative_to(root)}")
         for phase in (f"P{i}" for i in range(7)):

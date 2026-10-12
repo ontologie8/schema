@@ -1,8 +1,8 @@
 ontologie8/schema
 Copyright (c) 2026 funktion8 / ofunk
 
-Roadmap für eigenständige Schema-/Ontologie-Zuständigkeit angepasst.
-Basiert auf NaC: Notariat as Code von funktion8 / ofunk (https://github.com/notariat8/NaC).
+Herkunft der ursprünglichen Roadmap: NaC: Notariat as Code von funktion8 / ofunk
+(https://github.com/notariat8/NaC). Planungsinhalte für ein eigenständiges Projekt angepasst.
 
 Dokumentation und Roadmap: CC-BY-4.0.
 Code, Schemas und Validatoren: AGPL-3.0-or-later.

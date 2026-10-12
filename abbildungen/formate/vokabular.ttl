@@ -1,0 +1,19 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+@prefix kern: <urn:ontologie8:kern:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<urn:ontologie8:kern> a owl:Ontology ;
+    owl:versionIRI <urn:ontologie8:kern:0.1.0> ;
+    rdfs:label "RDF-Abbildung des kleinen Modellvertrags"@de .
+kern:Modellpaket a rdfs:Class ; rdfs:label "Modellpaket"@de .
+kern:Entitaet a rdfs:Class ; rdfs:label "Entität"@de .
+kern:Revision a rdfs:Class ; rdfs:label "Aussagerevision"@de .
+kern:Szenario a rdfs:Class ; rdfs:label "Szenario"@de .
+kern:Textwert a rdfs:Class ; rdfs:label "Textwert mit Sprachkennzeichen"@de .
+kern:Zeitpunkt a rdfs:Class ; rdfs:label "Zeitpunkt mit bekannter Präzision"@de .
+kern:Intervall a rdfs:Class ; rdfs:label "Gültigkeitsintervall"@de .
+kern:Struktur a rdfs:Class ; rdfs:label "Strukturierter Teilwert"@de .
+kern:leereSammlung a owl:DatatypeProperty ;
+    rdfs:label "Explizit vorhandene leere Sammlung"@de ;
+    rdfs:comment "Abbildungsmetadatum, dessen Wert den Feldnamen einer leeren Sammlung angibt."@de .

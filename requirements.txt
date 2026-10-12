@@ -1,0 +1,10 @@
+# Verifizierter Pilotstand; einschließlich transitiver Abhängigkeiten.
+attrs==26.1.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+langcodes==3.5.1
+pyparsing==3.3.3
+rdflib==7.6.0
+referencing==0.37.0
+rpds-py==2026.9.1
+typing_extensions==4.16.0

@@ -1,0 +1,8 @@
+{
+  "id": "urn:ontologie8:abbildung:p0-rdf", "version": "0.1.0", "lizenz": "AGPL-3.0-or-later",
+  "schema_id": "urn:ontologie8:schema:kern:0.1.0", "namensraum": "urn:ontologie8:kern:",
+  "implementierung": "rdf.py", "vokabular": "vokabular.ttl",
+  "sammlungen": "ungeordnet", "rueckweg": "geschlossener Mappingvertrag mit erneuter Modellvalidierung",
+  "texte": "Ressource mit rdf:value als Sprachliteral und optionaler Richtung",
+  "revisionen": "Eigene Ressourcen; keine unbedingten zeitlosen Tatsachen am Subjekt"
+}

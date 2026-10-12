@@ -1,0 +1,7 @@
+{
+  "id": "urn:ontologie8:modul:bekleidung", "version": "0.1.0", "lizenz": "AGPL-3.0-or-later",
+  "zweck": "Pilottypen für Kleidungsstück, Produktmodell, Angebot und dokumentierte Empfehlung.",
+  "abhaengigkeiten": [{"id": "urn:ontologie8:modul:kern", "version": "0.1.0"}],
+  "entitaetstypen": ["kleidungsstueck", "produktmodell", "shop", "angebot"],
+  "aussagetypen": ["kauf", "eigentum", "zustand", "reparatur", "bewertung", "stilempfehlung"]
+}

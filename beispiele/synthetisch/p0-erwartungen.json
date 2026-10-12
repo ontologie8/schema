@@ -1,0 +1,58 @@
+{
+  "lizenz": "AGPL-3.0-or-later",
+  "beschreibung": "Unabhängig festgelegte synthetische Erwartungen für den Pilot.",
+  "kaufpreis": [
+    {
+      "wissen": "2024-03-25T00:00:00Z",
+      "revision": "urn:beispiel:K-1-R1",
+      "betrag": "30000"
+    },
+    {
+      "wissen": "2024-04-02T00:00:00Z",
+      "revision": "urn:beispiel:K-1-R2",
+      "betrag": "28000"
+    },
+    {
+      "wissen": "2024-04-01T09:00:00Z",
+      "revision": "urn:beispiel:K-1-R2",
+      "betrag": "28000"
+    }
+  ],
+  "eigentum": [
+    {
+      "stichtag": "2026-08-01T12:00:00Z",
+      "wissen": "2026-08-01T18:00:00Z",
+      "person": "urn:beispiel:P-A"
+    },
+    {
+      "stichtag": "2026-08-01T12:00:00Z",
+      "wissen": "2026-08-03T00:00:00Z",
+      "person": "urn:beispiel:P-B"
+    },
+    {
+      "stichtag": "2026-08-01T11:59:59Z",
+      "wissen": "2026-08-03T00:00:00Z",
+      "person": "urn:beispiel:P-A"
+    }
+  ],
+  "bewertungen": [
+    "21000",
+    "22000"
+  ],
+  "bestand": "12",
+  "bestandswert": "1500",
+  "szenarien": {
+    "urn:beispiel:S-A": "17820",
+    "urn:beispiel:S-B": "19855",
+    "urn:beispiel:S-C": "1800",
+    "urn:beispiel:S-D": "960"
+  },
+  "split": {
+    "menge": "20",
+    "betrag": "1000"
+  },
+  "kleidung": {
+    "kaufpreis": "100",
+    "wiederverkaufswert": "30"
+  }
+}

@@ -1,11 +1,11 @@
 # Synthetische Referenzfälle für den P0-Zeitvertrag
 
-Stand: 2026-10-12 · Fachliche Designprüfung durchgeführt · ausführbare Modellprüfung folgt
+Stand: 2026-10-12 · Fachliche Designprüfung und ausführbarer Pilot vorhanden
 Lizenz: CC-BY-4.0
 
 Alle Personen, Objekte, Instrumente, Quellen, Vorgänge und Zahlen sind vollständig erfunden. Die Kurz-IDs in den Tabellen stehen für getrennte synthetische Entitäten. Es liegen keine echten Gegenstände, Kurse, Belege oder Produktdaten zugrunde.
 
-Diese Fälle prüfen den [Zeitvertrag](../architektur/zeit-und-bewertungen.md) im [Weltmodell](../architektur/p0-weltmodell.md). Eingaben und erwartete Ausgaben sind unabhängig von einer künftigen Query-Implementierung festgelegt. Die Tabellen sind noch kein ausführbarer Datensatz oder Laufzeittest.
+Diese Fälle prüfen den [Zeitvertrag](../architektur/zeit-und-bewertungen.md) im [Weltmodell](../architektur/p0-weltmodell.md). Eingaben und erwartete Ausgaben wurden vor der Query-Implementierung unabhängig festgelegt. Die Tabellen beschreiben die Prüfziele; der [Pilot](../architektur/p0-pilot-benutzung.md) führt sie inzwischen mit konkreten synthetischen Daten und Tests aus.
 
 ## Fall A: Auto, Preisrevision und Eigentumswechsel
 
@@ -124,6 +124,6 @@ Fachlicher Review des Entwurfs:
 - ZF-11/14/15/16/22/23 verhindern unbegründete Fortschreibung, falsche Währungs-/Stückbasis und erfundene Zeitpräzision.
 - ZF-27 verhindert eine Rückdatierung des Systemwissens durch importierte Quellzeitstempel.
 
-Die einfachen Dezimalrechnungen wurden gegen die unabhängig angegebenen Ergebnisse geprüft. Struktur und lokale Verweise werden durch den Projektvalidator geprüft. Damit ist die Designprüfung durchgeführt; eine erfolgreiche historische Abfrage oder RDF-Rückkonvertierung ist noch nicht nachgewiesen.
+Die einfachen Dezimalrechnungen und historischen Abfragen werden gegen die unabhängig angegebenen Ergebnisse geprüft. Struktur und lokale Verweise prüft der Projektvalidator. Die [Pilotprüfroutine](../../../scripts/pruefe_pilot.py) prüft Schema, Modulstände und erwartete Ergebnisse vor und nach Turtle-/JSON-LD-Rückkonvertierung.
 
-Bei der Schemaumsetzung werden ZF-01 bis ZF-27 in ausführbare Eingaben und Erwartungen überführt. Zusätzlich werden identische Ergebnisse bei geänderter Dateireihenfolge und Hin-/Rückweg zwischen JSON und RDF geprüft. Ein Speicherprofil muss die entsprechenden Revisionen und Kontexte tatsächlich erhalten, damit es den Zeitvertrag unterstützt.
+ZF-01 bis ZF-27 sind in [ausführbare Tests](../../../tests/test_pilot.py) überführt; verwandte Fälle werden teilweise gemeinsam geprüft. Zusätzliche Tests prüfen Rücknahme, gleichzeitige Revisionen, großen Dezimalumfang, Anfangsstände und fehlerhafte RDF-Eingaben. Identische kanonische Bedeutung bei geänderter Sammlungsreihenfolge und RDF-Hin-/Rückweg ist geprüft. Ein künftiges produktives Speicherprofil muss die entsprechenden Revisionen und Kontexte ebenfalls erhalten.

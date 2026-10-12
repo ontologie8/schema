@@ -1,13 +1,13 @@
 # P0-Zeitvertrag: Historie, Bewertungen und Szenarien
 
-Stand: 2026-10-12 · Geprüfter Designentwurf · Umsetzung steht aus
+Stand: 2026-10-12 · Zeitvertrag mit ausführbarem Pilot 0.1.0
 Lizenz: CC-BY-4.0
 
 ## Zweck und Geltungsbereich
 
 Zeit ist ein Bestandteil des [gemeinsamen Modellkerns](p0-weltmodell.md). Entitäten behalten ihre Identität; Aussagen über Eigenschaften und Beziehungen können sich ändern. Fachmodule verwenden gemeinsame Zeit- und Herkunftsstrukturen mit der benötigten Detailtiefe. Konkrete Inhalte liegen in nutzenden Anwendungen; alle hiesigen Beispiele sind vollständig synthetisch.
 
-Dieser Vertrag konkretisiert AC-14 bis AC-18 und wirkt auf AC-03/07/09/12. Er beschreibt keine automatisch laufende Historisierung. Die spätere Anwendung und ihr Speicherprofil müssen den Vertrag tatsächlich umsetzen.
+Dieser Vertrag konkretisiert AC-14 bis AC-18 und wirkt auf AC-03/07/09/12. Der [Pilot](p0-pilot-benutzung.md) prüft Revisionshistorien und historische Auswahl im Speicher. Er ist keine automatisch laufende produktive Historisierung; die nutzende Anwendung und ihr Speicherprofil müssen die Daten tatsächlich erhalten.
 
 ## Eigenschaft, Beziehung und Ereignis
 
@@ -132,4 +132,4 @@ JSON-/RDF-Hin- und Rückweg müssen IDs, Zeitpräzision, Intervallgrenzen, Revis
 - [W3C: Modellmuster für Beziehungen mit zusätzlichen Angaben](https://www.w3.org/TR/swbp-n-aryRelations/) für referenzierbare Beziehungen mit eigenem Kontext; dies ist eine Working Group Note.
 - [IETF RFC 3339](https://www.rfc-editor.org/rfc/rfc3339.html) für Zeitstempel mit Offset; Präzision und unbestimmte Grenzen sind zusätzliche Modellentscheidungen.
 
-Die Zwei-Zeiten-Abfrage, Revisionsregeln und Halbintervallkonvention sind Entscheidungen dieses Entwurfs. Die [Referenzfälle und Review-Ergebnisse](../anwendungsfaelle/zeitliche-referenzfaelle.md) konkretisieren ihre Bedeutung. Ausführbare Prüfung und verlustfreies Mapping folgen vor einer produktiven Schemafreigabe.
+Die Zwei-Zeiten-Abfrage, Revisionsregeln und Halbintervallkonvention sind Entscheidungen dieses Entwurfs. Die [Referenzfälle und Review-Ergebnisse](../anwendungsfaelle/zeitliche-referenzfaelle.md) konkretisieren ihre Bedeutung. [Ausführbare Prüfung und RDF-Rückweg](p0-pilot-benutzung.md) sind für den kleinen Pilot implementiert; eine produktive Schemafreigabe besteht damit noch nicht.

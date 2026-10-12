@@ -1,0 +1,26 @@
+{
+  "id": "urn:ontologie8:register:begriffe",
+  "version": "0.1.0",
+  "lizenz": "AGPL-3.0-or-later",
+  "namensraum": "urn:ontologie8:begriff:",
+  "entitaetstypen": ["person", "organisation", "auto", "kleidungsstueck", "produktmodell", "shop", "angebot", "finanzinstrument", "position", "markt", "quelle", "methode"],
+  "aussagetypen": {
+    "kauf": {"art": "ereignis", "subjekt": ["person", "organisation"], "objekt": ["auto", "kleidungsstueck"], "pflichtdaten": ["betrag", "waehrung"]},
+    "eigentum": {"art": "beziehung", "subjekt": ["person", "organisation"], "objekt": ["auto", "kleidungsstueck"], "pflichtdaten": ["menge", "einheit"], "exklusiv": true},
+    "anfangsbestand": {"art": "beobachtung", "subjekt": ["position"], "objekt": ["finanzinstrument"], "pflichtdaten": ["menge", "einheit", "vollstaendig"]},
+    "bestandsbewegung": {"art": "ereignis", "subjekt": ["position"], "objekt": ["finanzinstrument"], "pflichtdaten": ["menge", "einheit", "betrag", "waehrung", "anlass"]},
+    "kurs": {"art": "beobachtung", "subjekt": ["finanzinstrument"], "pflichtdaten": ["betrag", "waehrung", "einheit", "markt_id"]},
+    "bewertung": {"art": "bewertung", "subjekt": ["auto", "kleidungsstueck", "position"], "pflichtdaten": ["betrag", "waehrung", "wertart"]},
+    "zustand": {"art": "beobachtung", "subjekt": ["auto", "kleidungsstueck"], "pflichtdaten": ["zustand"]},
+    "reparatur": {"art": "ereignis", "subjekt": ["auto", "kleidungsstueck"], "pflichtdaten": []},
+    "stilempfehlung": {"art": "empfehlung", "subjekt": ["person"], "objekt": ["kleidungsstueck"], "pflichtdaten": ["texte"]},
+    "uebertragung": {"art": "ereignis", "subjekt": ["person", "organisation"], "objekt": ["auto", "kleidungsstueck"], "pflichtdaten": []},
+    "ist_instanz_von": {"art": "beziehung", "subjekt": ["kleidungsstueck"], "objekt": ["produktmodell"], "pflichtdaten": []},
+    "angebot_fuer": {"art": "beziehung", "subjekt": ["angebot"], "objekt": ["produktmodell"], "pflichtdaten": []},
+    "angebot_von": {"art": "beziehung", "subjekt": ["shop"], "objekt": ["angebot"], "pflichtdaten": []}
+  },
+  "einheiten": ["stueck", "anteil"],
+  "wertarten": ["marktwert", "wiederverkaufswert", "versicherungswert", "angebotspreis"],
+  "zustaende": ["beschaedigt", "repariert"],
+  "anlaesse": ["kauf", "verkauf", "split"]
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ontologie8:schema:kern:0.1.0",
+  "title": "Kleiner Weltmodellvertrag 0.1.0",
+  "description": "Entitäten, sprachabhängige Werte, zeitliche Revisionen und isolierte Szenarien.",
+  "$comment": "SPDX-License-Identifier: AGPL-3.0-or-later",
+  "type": "object", "additionalProperties": false,
+  "required": ["id", "schema_version", "entitaeten", "revisionen", "szenarien"],
+  "properties": {
+    "id": {"$ref": "#/$defs/iri"},
+    "schema_version": {"const": "0.1.0"},
+    "entitaeten": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/entitaet"}},
+    "revisionen": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/revision"}},
+    "szenarien": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/szenario"}}
+  },
+  "$defs": {
+    "iri": {"type": "string", "format": "uri", "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$"},
+    "dezimal": {"type": "string", "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "zeitstempel": {"type": "string", "format": "date-time"},
+    "text": {
+      "type": "object", "additionalProperties": false, "required": ["wert", "sprache"],
+      "properties": {
+        "wert": {"type": "string", "minLength": 1},
+        "sprache": {"type": "string", "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"},
+        "richtung": {"enum": ["ltr", "rtl"]}
+      }
+    },
+    "punkt": {
+      "type": "object", "additionalProperties": false, "required": ["wert", "praezision"],
+      "properties": {"wert": {"type": "string"}, "praezision": {"enum": ["sekunde", "tag", "monat", "jahr"]}}
+    },
+    "grenze": {"oneOf": [
+      {"$ref": "#/$defs/punkt"},
+      {"type": "object", "additionalProperties": false, "required": ["status"], "properties": {"status": {"enum": ["offen", "unbekannt"]}}}
+    ]},
+    "zeit": {"oneOf": [
+      {
+        "type": "object", "additionalProperties": false, "required": ["art", "wert", "praezision"],
+        "properties": {"art": {"const": "zeitpunkt"}, "wert": {"type": "string"}, "praezision": {"enum": ["sekunde", "tag", "monat", "jahr"]}}
+      },
+      {
+        "type": "object", "additionalProperties": false, "required": ["art", "beginn", "ende"],
+        "properties": {"art": {"const": "intervall"}, "beginn": {"$ref": "#/$defs/grenze"}, "ende": {"$ref": "#/$defs/grenze"}}
+      }
+    ]},
+    "entitaet": {
+      "type": "object", "additionalProperties": false, "required": ["id", "typ", "bezeichnungen"],
+      "properties": {
+        "id": {"$ref": "#/$defs/iri"}, "typ": {"$ref": "#/$defs/iri"},
+        "bezeichnungen": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+        "version": {"$ref": "#/$defs/version"}
+      }
+    },
+    "daten": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "betrag": {"$ref": "#/$defs/dezimal"}, "waehrung": {"type": "string", "pattern": "^[A-Z]{3}$"},
+        "menge": {"$ref": "#/$defs/dezimal"}, "einheit": {"$ref": "#/$defs/iri"},
+        "wertart": {"$ref": "#/$defs/iri"}, "markt_id": {"$ref": "#/$defs/iri"},
+        "zustand": {"$ref": "#/$defs/iri"}, "anlass": {"$ref": "#/$defs/iri"}, "vollstaendig": {"type": "boolean"},
+        "texte": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/text"}}
+      }
+    },
+    "revision": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "aussage_id", "art", "typ", "subjekt_id", "fachliche_zeit", "erfasst_am", "quelle_id", "aussageart", "pruefstatus", "daten"],
+      "properties": {
+        "id": {"$ref": "#/$defs/iri"}, "aussage_id": {"$ref": "#/$defs/iri"},
+        "art": {"enum": ["ereignis", "beziehung", "beobachtung", "bewertung", "empfehlung", "ruecknahme"]},
+        "typ": {"$ref": "#/$defs/iri"}, "subjekt_id": {"$ref": "#/$defs/iri"}, "objekt_id": {"$ref": "#/$defs/iri"},
+        "fachliche_zeit": {"$ref": "#/$defs/zeit"}, "erfasst_am": {"$ref": "#/$defs/zeitstempel"},
+        "folge": {"type": "integer", "minimum": 0}, "ersetzt_id": {"$ref": "#/$defs/iri"},
+        "quelle_id": {"$ref": "#/$defs/iri"}, "quellzeit": {"$ref": "#/$defs/zeitstempel"},
+        "aussageart": {"enum": ["belegt", "beobachtet", "schaetzung", "berechnet", "geplant", "prognose", "empfehlung"]},
+        "pruefstatus": {"enum": ["ungeprueft", "bestaetigt"]}, "daten": {"$ref": "#/$defs/daten"},
+        "methode_id": {"$ref": "#/$defs/iri"}, "methode_version": {"$ref": "#/$defs/version"},
+        "szenario_id": {"$ref": "#/$defs/iri"},
+        "eingabe_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/iri"}}
+      },
+      "dependentRequired": {"methode_id": ["methode_version"], "methode_version": ["methode_id"]},
+      "allOf": [
+        {"if": {"properties": {"aussageart": {"const": "prognose"}}}, "then": {"required": ["szenario_id", "methode_id", "methode_version"]}, "else": {"not": {"required": ["szenario_id"]}}},
+        {"if": {"properties": {"art": {"const": "ruecknahme"}}}, "then": {"required": ["ersetzt_id"]}}
+      ]
+    },
+    "szenario": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "art", "modell_id", "modell_version", "eingaben", "zielzeit", "berechnet_am", "parameter"],
+      "properties": {
+        "id": {"$ref": "#/$defs/iri"}, "art": {"enum": ["wertfaktor", "kursannahme"]},
+        "modell_id": {"$ref": "#/$defs/iri"}, "modell_version": {"$ref": "#/$defs/version"},
+        "eingaben": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/iri"}},
+        "zielzeit": {"$ref": "#/$defs/punkt"}, "berechnet_am": {"$ref": "#/$defs/zeitstempel"},
+        "parameter": {
+          "type": "object", "additionalProperties": false,
+          "properties": {"faktor": {"$ref": "#/$defs/dezimal"}, "perioden": {"type": "integer", "minimum": 0, "maximum": 100}, "kurs": {"$ref": "#/$defs/dezimal"}, "waehrung": {"type": "string", "pattern": "^[A-Z]{3}$"}}
+        }
+      }
+    }
+  }
+}

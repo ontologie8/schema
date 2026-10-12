@@ -22,6 +22,16 @@ Arbeitsmethode: Kanban, wöchentlicher Review, bedarfsbezogener Kurzsync; Mainta
 
 Die Arbeitspakete werden in diesem Board geführt. [Akzeptanzkriterien](akzeptanz.md) definieren die fachlichen Prüfziele.
 
+## P0-Zwischenschritt: mehrsprachige Werte
+
+Auftrag: Die Projektpflege bleibt in Phase 1 vollständig deutsch. Das Schema muss sprachabhängige Werte von Beginn an mehrsprachig modellieren können, ohne eine spätere Änderung ihrer Grundstruktur zu benötigen. Echtdaten bleiben ausgeschlossen.
+
+Scope: Sprachkennzeichen am Textwert, Trennung von Sprache/Land/Rechtsraum, stabile Begriffsidentitäten, JSON-/RDF-Abbildung und eigenständige Dokumentfassungen. Keine Übersetzungen, fremdsprachigen Parallelfassungen, Domänenschemas oder Speicheranbindungen implementieren. AC-10 bis AC-13 ergänzen die bisherigen Prüfziele.
+
+Risiko: Ein einzelner Text ohne Sprachkennzeichen, ein ausschließlich auf `de` begrenzter Kerntyp oder Sprachfelder wie `titel_de` würden die spätere Erweiterung erschweren. Eine Sprachmap allein verliert bei dokumentierten Fassungen Quellen, Status und Versionen.
+
+Plan und Validierung: Standards zu BCP 47, RDF und JSON-LD prüfen; die [Designvorgabe](architektur/mehrsprachige-werte.md) mit Alternativen und Prüfpfaden festhalten; Agentenregeln, Einstieg und Roadmap daran ausrichten; Inhalt und vollständigen Git-Diff reviewen; Projektvalidator und Remote-CI prüfen. Dieser Zwischenschritt liefert die Designvorgabe, keine laufende Mehrsprachigkeitsfunktion. P0–P6 bleiben Backlog.
+
 ## Nächster Schritt
 
-Mit P0 beginnen: Design-Spec mit JSON-first/RDF-first-Vergleich, Modellgrenzen und kleinem synthetischem Pilot vorbereiten.
+Mit P0 beginnen: Design-Spec mit JSON-first/RDF-first-Vergleich, Modellgrenzen, der Vorgabe für mehrsprachige Werte und kleinem synthetischem Pilot vorbereiten.

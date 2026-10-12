@@ -12,6 +12,7 @@
 - Antworten zum Projekt, Dokumentation, Agentenregeln, Issue- und PR-Texte sowie Commitnachrichten werden auf Deutsch verfasst. Aktuell werden keine anderssprachigen Parallelfassungen angelegt.
 - Sprachabhängige Fachdokumentation liegt in Ordnern mit ISO-639-Sprachkürzeln: derzeit `docs/de/` und `roadmap/de/`. Gemeinsame Einstiegs-, Regel- und Metadatendateien bleiben an ihren bestehenden Orten.
 - Die Struktur bleibt um weitere Sprachordner mit gleicher relativer Dateistruktur erweiterbar. Weitere Sprachen werden erst nach einem ausdrücklichen Auftrag zur Mehrsprachigkeit angelegt und gepflegt.
+- Die deutsche Projektpflege begrenzt nicht die Sprachen nutzender Anwendungen. Sprachabhängige Werte werden von Beginn an als explizite Textwerte mit BCP-47-Sprachkennzeichen und erweiterbarer Kardinalität entworfen; Phase 1 pflegt nur deutsche Inhalte. Sprache, Land, Rechtsraum und stabile Begriffsidentität bleiben getrennt. [Designvorgabe](docs/de/architektur/mehrsprachige-werte.md).
 
 ## Arbeitsfluss
 

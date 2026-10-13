@@ -4,7 +4,7 @@ Eigenständiges Projekt für ein erweiterbares Weltmodell mit versionierten Fach
 
 Status: Erster ausführbarer Schema-/RDF-Pilot 0.1.0; P0 weiterhin in Bearbeitung. Synthetische Auto-, Aktien- und Bekleidungsfälle prüfen denselben Modellvertrag. Es bestehen keine produktiven Speicheranbindungen.
 
-Der allgemeine [Fachmodul-/Versionsvertrag](docs/de/architektur/fachmodule-und-versionen.md) bindet fünf Module und fünf Fallprofile einschließlich Erbausschlagung in ein geprüftes [Schema-/Prüfpaket](pakete/0.1.0/README.md). Exakte Versionen, Begriffsverantwortung und kanonische Prüfsummen werden offline geprüft. GitHub, SharePoint und S3 sind als Zielkennzeichen für eine portable lokale Schemaübernahme möglich.
+Der allgemeine [Fachmodul-/Versionsvertrag](docs/de/architektur/fachmodule-und-versionen.md) bindet fünf Module und fünf Fallprofile einschließlich Erbausschlagung in ein geprüftes [Schema-/Prüfpaket 0.1.1](pakete/0.1.1/README.md). Exakte Versionen, Begriffsverantwortung und kanonische Prüfsummen werden offline geprüft. GitHub, SharePoint und S3 sind als Zielkennzeichen für eine portable lokale Schemaübernahme möglich.
 
 | Einstieg | Dokument |
 | --- | --- |

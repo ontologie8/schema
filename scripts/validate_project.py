@@ -9,6 +9,22 @@ import sys
 from urllib.parse import unquote, urlsplit
 
 
+def pruefe_lokale_links(root: Path) -> list[str]:
+    """Auch in portablen Kopien ausschließlich die lokalen Markdown-Links prüfen."""
+    errors: list[str] = []
+    for path in root.rglob("*.md"):
+        content = path.read_text(encoding="utf-8")
+        for match in re.finditer(r"\[[^\]]*\]\(([^\s)]+)\)", content):
+            target = match.group(1)
+            parts = urlsplit(target)
+            if parts.scheme or not parts.path:
+                continue
+            resolved = (path.parent / unquote(parts.path)).resolve()
+            if not resolved.is_relative_to(root.resolve()) or not resolved.exists():
+                errors.append(f"Lokaler Link ungültig: {path.relative_to(root)} -> {target}")
+    return errors
+
+
 def validate(root: Path) -> list[str]:
     errors: list[str] = []
     required = [
@@ -26,20 +42,12 @@ def validate(root: Path) -> list[str]:
         "vertraege/module/0.1.0/vertrag.schema.json",
         "register/pakete.json", "register/paketentwurf.json",
         "pakete/0.1.0/paket.json", "scripts/pruefe_module.py",
+        "pakete/0.1.1/paket.json", "register/paketentwurf-0.1.1.json",
     ]
     for path in required:
         if not (root / path).is_file():
             errors.append(f"Erforderliche Datei fehlt: {path}")
-    for path in root.rglob("*.md"):
-        content = path.read_text(encoding="utf-8")
-        for match in re.finditer(r"\[[^\]]*\]\(([^\s)]+)\)", content):
-            target = match.group(1)
-            parts = urlsplit(target)
-            if parts.scheme or not parts.path:
-                continue
-            resolved = (path.parent / unquote(parts.path)).resolve()
-            if not resolved.is_relative_to(root.resolve()) or not resolved.exists():
-                errors.append(f"Lokaler Link ungültig: {path.relative_to(root)} -> {target}")
+    errors.extend(pruefe_lokale_links(root))
     roadmaps = list((root / "roadmap").rglob("personen-nachlass-roadmap.md"))
     if not roadmaps:
         errors.append("Fachroadmap fehlt")

@@ -4,6 +4,13 @@ Copyright (c) 2026 funktion8 / ofunk
 Herkunft der ursprünglichen Roadmap: NaC: Notariat as Code von funktion8 / ofunk
 (https://github.com/notariat8/NaC). Planungsinhalte für ein eigenständiges Projekt angepasst.
 
-Dokumentation und Roadmap: CC-BY-4.0.
+Erbausschlagungs-Prüfszenarien A–D: Fachinhalt aus notariat8/ontology von
+funktion8 / ofunk, Stand 42631313ab5679a029db59d3bb714bdeb3f0eab6:
+https://github.com/notariat8/ontology/blob/42631313ab5679a029db59d3bb714bdeb3f0eab6/docs/erbausschlagung/synthetische-szenarien.md
+CC-BY-4.0; dortige Ablaufvorlage von Hannah-Silvia Heise.
+Hier paraphrasiert und um frei erfundene Zeitwerte, Nachweise und ausführbare
+Modellprüfungen ergänzt. Keine notarielle Freigabe oder Laufzeitabhängigkeit.
+
+Dokumentation, abgeleitete synthetische Fachbeispiele und Roadmap: CC-BY-4.0.
 Code, Schemas und Validatoren: AGPL-3.0-or-later.
 Es werden keine Markenrechte eingeräumt.

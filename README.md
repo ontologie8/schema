@@ -13,6 +13,7 @@ Status: Erster ausführbarer Schema-/RDF-Pilot 0.1.0; P0 weiterhin in Bearbeitun
 | Weltmodell und geplante Ordnerstruktur | [P0-Architekturentwurf](docs/de/architektur/p0-weltmodell.md) |
 | Zeit, Historie, Bewertungen und Prognosen | [P0-Zeitvertrag](docs/de/architektur/zeit-und-bewertungen.md) |
 | Auto, Aktien und Kleidung | [Synthetische Referenzfälle und Prüfmatrix](docs/de/anwendungsfaelle/zeitliche-referenzfaelle.md) |
+| Erbausschlagung aus `ontology` | [Vier synthetische Fälle mit eigenem Prüfvertrag](docs/de/anwendungsfaelle/erbausschlagung.md) |
 | Vollständige Roadmap | [Roadmap](roadmap/de/personen-nachlass-roadmap.md) |
 | Mehrsprachige Werte bei deutscher Pflege | [P0-Designvorgabe](docs/de/architektur/mehrsprachige-werte.md) |
 
@@ -28,6 +29,6 @@ Bei später beauftragter Mehrsprachigkeit können zusätzliche Sprachordner mit 
 
 Die Sprache der Projektpflege begrenzt nicht die Datenwerte späterer Anwendungen. Sprachabhängige Werte werden von Beginn an mit BCP-47-Sprachkennzeichen und einer erweiterbaren Sammlung entworfen. Sprachunabhängige IDs, Zahlen und Codes bleiben davon getrennt; `de` bezeichnet die Sprache Deutsch, `DE` als Ländercode Deutschland. [Modellierung, Alternativen und Prüfpfade](docs/de/architektur/mehrsprachige-werte.md).
 
-Prüfung mit dem verifizierten Projekt-Python: `scripts/validate_project.py`, `scripts/pruefe_pilot.py` und `python -m unittest discover -s tests -v`. [Umgebung und vollständige Befehle](docs/de/architektur/p0-pilot-benutzung.md).
+Prüfung mit dem verifizierten Projekt-Python: `scripts/validate_project.py`, `scripts/pruefe_pilot.py`, `scripts/pruefe_erbausschlagung.py` und `python -m unittest discover -s tests -v`. [Umgebung und vollständige Befehle](docs/de/architektur/p0-pilot-benutzung.md).
 
 Keine produktiven Personen-, Mandats- oder Unternehmensdaten und keine Secrets.

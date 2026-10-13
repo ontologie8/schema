@@ -18,6 +18,11 @@ def validate(root: Path) -> list[str]:
         ".github/workflows/project-quality.yml",
         "modelle/kern/modell.schema.json", "register/module.json",
         "profile/anwendungsfaelle/p0-pilot.json", "scripts/pruefe_pilot.py",
+        "profile/anwendungsfaelle/erbausschlagung/profil.json",
+        "profile/anwendungsfaelle/erbausschlagung/prueffaelle.schema.json",
+        "scripts/pruefe_erbausschlagung.py",
+        "beispiele/synthetisch/erbausschlagung/faelle.json",
+        "beispiele/synthetisch/erbausschlagung/erwartungen.json",
     ]
     for path in required:
         if not (root / path).is_file():
@@ -50,7 +55,7 @@ def validate(root: Path) -> list[str]:
             if phase + ":" not in content:
                 errors.append(f"Phase fehlt ({phase}): {roadmap.relative_to(root)}")
         ac = acceptance.read_text(encoding="utf-8")
-        for identifier in (f"AC-{i:02}" for i in range(1, 20)):
+        for identifier in (f"AC-{i:02}" for i in range(1, 21)):
             if identifier not in ac:
                 errors.append(f"Akzeptanzkriterium fehlt ({identifier}): {acceptance.relative_to(root)}")
     return errors

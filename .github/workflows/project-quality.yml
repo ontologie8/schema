@@ -22,5 +22,7 @@ jobs:
         run: python scripts/validate_project.py
       - name: Schema, Module und RDF-Abbildung prüfen
         run: python scripts/pruefe_pilot.py
+      - name: Synthetische Erbausschlagungsfälle und RDF-Rückwege prüfen
+        run: python scripts/pruefe_erbausschlagung.py
       - name: Unabhängige Modell- und Erwartungsfälle prüfen
         run: python -m unittest discover -s tests -v

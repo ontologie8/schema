@@ -1,0 +1,740 @@
+{
+  "id": "urn:beispiel:erbausschlagung:PAKET",
+  "version": "0.1.0",
+  "datenart": "synthetisch",
+  "personen": [
+    {
+      "id": "urn:beispiel:erbausschlagung:A-ERBLASSER",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person A erblasser",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:A-PERSON",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person A person",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:B-ERBLASSER",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person B erblasser",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:B-PERSON",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person B person",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:C-ERBLASSER",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person C erblasser",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:C-PERSON",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person C person",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:C-KIND",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person C kind",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:D-ERBLASSER",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person D erblasser",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:D-PERSON",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person D person",
+          "sprache": "de"
+        }
+      ]
+    }
+  ],
+  "quellen": [
+    {
+      "id": "urn:beispiel:erbausschlagung:QUELLE",
+      "bezeichnungen": [
+        {
+          "wert": "Frei erfundener Nachweisspeicher",
+          "sprache": "de"
+        }
+      ]
+    }
+  ],
+  "beziehungen": [
+    {
+      "id": "urn:beispiel:erbausschlagung:C-ELTERN-KIND",
+      "typ": "eltern_kind",
+      "subjekt_id": "urn:beispiel:erbausschlagung:C-PERSON",
+      "objekt_id": "urn:beispiel:erbausschlagung:C-KIND",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "fachliche_zeit": {
+        "art": "intervall",
+        "beginn": {
+          "wert": "2018",
+          "praezision": "jahr"
+        },
+        "ende": {
+          "status": "offen"
+        }
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "pruefstatus": "bestaetigt"
+    }
+  ],
+  "faelle": [
+    {
+      "id": "urn:beispiel:erbausschlagung:EA-A",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetischer Fall A: Vollzugsauftrag",
+          "sprache": "de"
+        }
+      ],
+      "erblasser_id": "urn:beispiel:erbausschlagung:A-ERBLASSER",
+      "ausschlagende_person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+      "betroffene_person_ids": [
+        "urn:beispiel:erbausschlagung:A-PERSON"
+      ],
+      "vollzugsweg": "notariat",
+      "nachkontrolle": "vereinbart",
+      "annahmerisiko": "keine_hinweise",
+      "pruefungen": [
+        {
+          "id": "urn:beispiel:erbausschlagung:A-PRUEFUNG-A-PERSON-auftrag",
+          "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+          "typ": "auftrag",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:A-PRUEFUNG-A-PERSON-frist",
+          "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+          "typ": "frist",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:A-PRUEFUNG-A-PERSON-gericht",
+          "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+          "typ": "gericht",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:A-PRUEFUNG-A-PERSON-form",
+          "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+          "typ": "form",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:A-PRUEFUNG-A-PERSON-belehrung",
+          "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+          "typ": "belehrung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:A-PRUEFUNG-A-PERSON-vertretung",
+          "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+          "typ": "vertretung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:A-PRUEFUNG-A-PERSON-genehmigung",
+          "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+          "typ": "genehmigung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:A-PRUEFUNG-A-PERSON-annahmerisiko",
+          "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+          "typ": "annahmerisiko",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:EA-B",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetischer Fall B: Selbsteinreichung",
+          "sprache": "de"
+        }
+      ],
+      "erblasser_id": "urn:beispiel:erbausschlagung:B-ERBLASSER",
+      "ausschlagende_person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+      "betroffene_person_ids": [
+        "urn:beispiel:erbausschlagung:B-PERSON"
+      ],
+      "vollzugsweg": "selbsteinreichung",
+      "nachkontrolle": "nicht_vereinbart",
+      "annahmerisiko": "keine_hinweise",
+      "pruefungen": [
+        {
+          "id": "urn:beispiel:erbausschlagung:B-PRUEFUNG-B-PERSON-auftrag",
+          "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+          "typ": "auftrag",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:B-PRUEFUNG-B-PERSON-frist",
+          "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+          "typ": "frist",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:B-PRUEFUNG-B-PERSON-gericht",
+          "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+          "typ": "gericht",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:B-PRUEFUNG-B-PERSON-form",
+          "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+          "typ": "form",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:B-PRUEFUNG-B-PERSON-belehrung",
+          "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+          "typ": "belehrung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:B-PRUEFUNG-B-PERSON-vertretung",
+          "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+          "typ": "vertretung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:B-PRUEFUNG-B-PERSON-genehmigung",
+          "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+          "typ": "genehmigung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:B-PRUEFUNG-B-PERSON-annahmerisiko",
+          "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+          "typ": "annahmerisiko",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:EA-C",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetischer Fall C: Minderjähriges Kind als möglicherweise nachrückende Person",
+          "sprache": "de"
+        }
+      ],
+      "erblasser_id": "urn:beispiel:erbausschlagung:C-ERBLASSER",
+      "ausschlagende_person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+      "betroffene_person_ids": [
+        "urn:beispiel:erbausschlagung:C-PERSON",
+        "urn:beispiel:erbausschlagung:C-KIND"
+      ],
+      "vollzugsweg": "notariat",
+      "nachkontrolle": "vereinbart",
+      "annahmerisiko": "keine_hinweise",
+      "pruefungen": [
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-PERSON-auftrag",
+          "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+          "typ": "auftrag",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-PERSON-frist",
+          "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+          "typ": "frist",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-PERSON-gericht",
+          "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+          "typ": "gericht",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-PERSON-form",
+          "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+          "typ": "form",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-PERSON-belehrung",
+          "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+          "typ": "belehrung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-PERSON-vertretung",
+          "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+          "typ": "vertretung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-PERSON-genehmigung",
+          "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+          "typ": "genehmigung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-PERSON-annahmerisiko",
+          "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+          "typ": "annahmerisiko",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-KIND-auftrag",
+          "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+          "typ": "auftrag",
+          "status": "unbekannt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-KIND-frist",
+          "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+          "typ": "frist",
+          "status": "unbekannt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-KIND-gericht",
+          "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+          "typ": "gericht",
+          "status": "unbekannt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-KIND-form",
+          "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+          "typ": "form",
+          "status": "unbekannt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-KIND-belehrung",
+          "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+          "typ": "belehrung",
+          "status": "unbekannt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-KIND-vertretung",
+          "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+          "typ": "vertretung",
+          "status": "unbekannt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-KIND-genehmigung",
+          "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+          "typ": "genehmigung",
+          "status": "unbekannt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:C-PRUEFUNG-C-KIND-annahmerisiko",
+          "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+          "typ": "annahmerisiko",
+          "status": "unbekannt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:EA-D",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetischer Fall D: Mögliche Annahmehandlung",
+          "sprache": "de"
+        }
+      ],
+      "erblasser_id": "urn:beispiel:erbausschlagung:D-ERBLASSER",
+      "ausschlagende_person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+      "betroffene_person_ids": [
+        "urn:beispiel:erbausschlagung:D-PERSON"
+      ],
+      "vollzugsweg": "notariat",
+      "nachkontrolle": "vereinbart",
+      "annahmerisiko": "zu_pruefen",
+      "pruefungen": [
+        {
+          "id": "urn:beispiel:erbausschlagung:D-PRUEFUNG-D-PERSON-auftrag",
+          "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+          "typ": "auftrag",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:D-PRUEFUNG-D-PERSON-frist",
+          "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+          "typ": "frist",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:D-PRUEFUNG-D-PERSON-gericht",
+          "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+          "typ": "gericht",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:D-PRUEFUNG-D-PERSON-form",
+          "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+          "typ": "form",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:D-PRUEFUNG-D-PERSON-belehrung",
+          "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+          "typ": "belehrung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:D-PRUEFUNG-D-PERSON-vertretung",
+          "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+          "typ": "vertretung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:D-PRUEFUNG-D-PERSON-genehmigung",
+          "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+          "typ": "genehmigung",
+          "status": "bestaetigt",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        },
+        {
+          "id": "urn:beispiel:erbausschlagung:D-PRUEFUNG-D-PERSON-annahmerisiko",
+          "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+          "typ": "annahmerisiko",
+          "status": "zu_pruefen",
+          "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+          "erfasst_am": "2026-10-02T09:00:00Z"
+        }
+      ]
+    }
+  ],
+  "nachweise": [
+    {
+      "id": "urn:beispiel:erbausschlagung:A-N-A-PERSON-kenntnis_erbfall",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-A",
+      "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+      "typ": "kenntnis_erbfall",
+      "zeit": {
+        "wert": "2026-09-21T09:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:A-N-A-PERSON-kenntnis_berufungsgrund",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-A",
+      "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+      "typ": "kenntnis_berufungsgrund",
+      "zeit": {
+        "wert": "2026-09-23T11:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:A-TOD",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-A",
+      "person_id": "urn:beispiel:erbausschlagung:A-ERBLASSER",
+      "typ": "tod",
+      "zeit": {
+        "wert": "2026-09-01T08:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:A-VERSAND",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-A",
+      "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+      "typ": "versand",
+      "zeit": {
+        "wert": "2026-10-02T12:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T13:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:B-N-B-PERSON-kenntnis_erbfall",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-B",
+      "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+      "typ": "kenntnis_erbfall",
+      "zeit": {
+        "wert": "2026-09-21T09:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:B-N-B-PERSON-kenntnis_berufungsgrund",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-B",
+      "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+      "typ": "kenntnis_berufungsgrund",
+      "zeit": {
+        "wert": "2026-09-23T11:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:B-TOD",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-B",
+      "person_id": "urn:beispiel:erbausschlagung:B-ERBLASSER",
+      "typ": "tod",
+      "zeit": {
+        "wert": "2026-09-01T08:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:B-AUSHAENDIGUNG",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-B",
+      "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+      "typ": "aushaendigung",
+      "zeit": {
+        "wert": "2026-10-02T12:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T13:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:C-N-C-PERSON-kenntnis_erbfall",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-C",
+      "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+      "typ": "kenntnis_erbfall",
+      "zeit": {
+        "wert": "2026-09-21T09:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:C-N-C-PERSON-kenntnis_berufungsgrund",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-C",
+      "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+      "typ": "kenntnis_berufungsgrund",
+      "zeit": {
+        "wert": "2026-09-23T11:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:C-N-C-KIND-kenntnis_erbfall",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-C",
+      "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+      "typ": "kenntnis_erbfall",
+      "zeit": {
+        "status": "unbekannt"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "unbekannt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:C-N-C-KIND-kenntnis_berufungsgrund",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-C",
+      "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+      "typ": "kenntnis_berufungsgrund",
+      "zeit": {
+        "status": "unbekannt"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "unbekannt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:C-TOD",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-C",
+      "person_id": "urn:beispiel:erbausschlagung:C-ERBLASSER",
+      "typ": "tod",
+      "zeit": {
+        "wert": "2026-09-01T08:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:D-N-D-PERSON-kenntnis_erbfall",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-D",
+      "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+      "typ": "kenntnis_erbfall",
+      "zeit": {
+        "wert": "2026-09-21T09:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:D-N-D-PERSON-kenntnis_berufungsgrund",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-D",
+      "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+      "typ": "kenntnis_berufungsgrund",
+      "zeit": {
+        "wert": "2026-09-23T11:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:D-TOD",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-D",
+      "person_id": "urn:beispiel:erbausschlagung:D-ERBLASSER",
+      "typ": "tod",
+      "zeit": {
+        "wert": "2026-09-01T08:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    },
+    {
+      "id": "urn:beispiel:erbausschlagung:A-EINGANG",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-A",
+      "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+      "typ": "gerichtseingang",
+      "zeit": {
+        "wert": "2026-10-03T10:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-10-05T09:00:00Z",
+      "quelle_id": "urn:beispiel:erbausschlagung:QUELLE",
+      "pruefstatus": "bestaetigt"
+    }
+  ]
+}

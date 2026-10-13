@@ -1,0 +1,26 @@
+{
+  "id": "urn:ontologie8:pruefprofil:erbausschlagung",
+  "version": "0.1.0",
+  "status": "synthetischer_entwurf",
+  "schema_id": "urn:ontologie8:pruefvertrag:erbausschlagung:0.1.0",
+  "kern_schema_id": "urn:ontologie8:schema:kern:0.1.0",
+  "schema": "prueffaelle.schema.json",
+  "beispiele": "../../../beispiele/synthetisch/erbausschlagung/faelle.json",
+  "erwartungen": "../../../beispiele/synthetisch/erbausschlagung/erwartungen.json",
+  "dokumentation": "../../../docs/de/anwendungsfaelle/erbausschlagung.md",
+  "lizenz_fachinhalt": "CC-BY-4.0",
+  "lizenz_implementierung": "AGPL-3.0-or-later",
+  "herkunft": {
+    "repository": "https://github.com/notariat8/ontology",
+    "revision": "42631313ab5679a029db59d3bb714bdeb3f0eab6",
+    "zweig": "codex/erbausschlagung-sop-depth",
+    "fachstatus": "entwurf_ohne_notarielle_freigabe",
+    "dateien": ["docs/erbausschlagung/synthetische-szenarien.md", "cases/erbausschlagung/ontology.ttl"],
+    "zuordnung": [
+      {"fall": "EA-A", "quellszenario": "A", "quellbausteine": ["local.decision.execution", "local.evidence.dispatch", "local.gate.receipt.meaning", "local.knowledge.times"]},
+      {"fall": "EA-B", "quellszenario": "B", "quellbausteine": ["local.decision.execution", "local.evidence.handover", "local.decision.followup.scope"]},
+      {"fall": "EA-C", "quellszenario": "C", "quellbausteine": ["local.decision.successor", "local.decision.minor.approval", "local.gate.approval.deadline"]},
+      {"fall": "EA-D", "quellszenario": "D", "quellbausteine": ["local.prior.acts", "local.decision.acceptance", "local.gate.legal.risk"]}
+    ]
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "lizenz": "CC-BY-4.0",
+  "abfragen": [
+    {
+      "id": "EA-A-vor-Erfassung",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-A",
+      "stichtag": {
+        "wert": "2026-10-04T12:00:00Z",
+        "praezision": "sekunde"
+      },
+      "wissen": "2026-10-04T18:00:00Z",
+      "erwartet": {
+        "nachkontrolle_durch_notariat": "ja",
+        "annahmerisiko": "keine_hinweise",
+        "offene_pruefungen": [],
+        "personen": [
+          {
+            "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+            "gerichtseingang": "unbekannt",
+            "kenntnis_erbfall": "belegt",
+            "kenntnis_berufungsgrund": "belegt"
+          }
+        ],
+        "rechtliche_wirksamkeit": "nicht_berechnet",
+        "erbenstellung": "nicht_berechnet"
+      }
+    },
+    {
+      "id": "EA-A-nach-Erfassung",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-A",
+      "stichtag": {
+        "wert": "2026-10-04T12:00:00Z",
+        "praezision": "sekunde"
+      },
+      "wissen": "2026-10-06T18:00:00Z",
+      "erwartet": {
+        "nachkontrolle_durch_notariat": "ja",
+        "annahmerisiko": "keine_hinweise",
+        "offene_pruefungen": [],
+        "personen": [
+          {
+            "person_id": "urn:beispiel:erbausschlagung:A-PERSON",
+            "gerichtseingang": "belegt",
+            "kenntnis_erbfall": "belegt",
+            "kenntnis_berufungsgrund": "belegt"
+          }
+        ],
+        "rechtliche_wirksamkeit": "nicht_berechnet",
+        "erbenstellung": "nicht_berechnet"
+      }
+    },
+    {
+      "id": "EA-B",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-B",
+      "stichtag": {
+        "wert": "2026-10-04T12:00:00Z",
+        "praezision": "sekunde"
+      },
+      "wissen": "2026-10-06T18:00:00Z",
+      "erwartet": {
+        "nachkontrolle_durch_notariat": "nein",
+        "annahmerisiko": "keine_hinweise",
+        "offene_pruefungen": [],
+        "personen": [
+          {
+            "person_id": "urn:beispiel:erbausschlagung:B-PERSON",
+            "gerichtseingang": "unbekannt",
+            "kenntnis_erbfall": "belegt",
+            "kenntnis_berufungsgrund": "belegt"
+          }
+        ],
+        "rechtliche_wirksamkeit": "nicht_berechnet",
+        "erbenstellung": "nicht_berechnet"
+      }
+    },
+    {
+      "id": "EA-C",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-C",
+      "stichtag": {
+        "wert": "2026-10-04T12:00:00Z",
+        "praezision": "sekunde"
+      },
+      "wissen": "2026-10-06T18:00:00Z",
+      "erwartet": {
+        "nachkontrolle_durch_notariat": "ja",
+        "annahmerisiko": "keine_hinweise",
+        "offene_pruefungen": [
+          {
+            "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+            "typ": "auftrag"
+          },
+          {
+            "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+            "typ": "frist"
+          },
+          {
+            "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+            "typ": "gericht"
+          },
+          {
+            "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+            "typ": "form"
+          },
+          {
+            "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+            "typ": "belehrung"
+          },
+          {
+            "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+            "typ": "vertretung"
+          },
+          {
+            "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+            "typ": "genehmigung"
+          },
+          {
+            "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+            "typ": "annahmerisiko"
+          }
+        ],
+        "personen": [
+          {
+            "person_id": "urn:beispiel:erbausschlagung:C-KIND",
+            "gerichtseingang": "unbekannt",
+            "kenntnis_erbfall": "unbekannt",
+            "kenntnis_berufungsgrund": "unbekannt"
+          },
+          {
+            "person_id": "urn:beispiel:erbausschlagung:C-PERSON",
+            "gerichtseingang": "unbekannt",
+            "kenntnis_erbfall": "belegt",
+            "kenntnis_berufungsgrund": "belegt"
+          }
+        ],
+        "rechtliche_wirksamkeit": "nicht_berechnet",
+        "erbenstellung": "nicht_berechnet"
+      }
+    },
+    {
+      "id": "EA-D",
+      "fall_id": "urn:beispiel:erbausschlagung:EA-D",
+      "stichtag": {
+        "wert": "2026-10-04T12:00:00Z",
+        "praezision": "sekunde"
+      },
+      "wissen": "2026-10-06T18:00:00Z",
+      "erwartet": {
+        "nachkontrolle_durch_notariat": "ja",
+        "annahmerisiko": "zu_pruefen",
+        "offene_pruefungen": [
+          {
+            "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+            "typ": "annahmerisiko"
+          }
+        ],
+        "personen": [
+          {
+            "person_id": "urn:beispiel:erbausschlagung:D-PERSON",
+            "gerichtseingang": "unbekannt",
+            "kenntnis_erbfall": "belegt",
+            "kenntnis_berufungsgrund": "belegt"
+          }
+        ],
+        "rechtliche_wirksamkeit": "nicht_berechnet",
+        "erbenstellung": "nicht_berechnet"
+      }
+    }
+  ]
+}

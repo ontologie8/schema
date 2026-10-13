@@ -1,6 +1,6 @@
 # Roadmap: Personen, Genogramme, Vermögen und zeitliche Nachlassszenarien
 
-Stand: 2026-10-12 · Status: P0-Pilot implementiert, weitere Profilisierung in Bearbeitung; P1–P6 Backlog
+Stand: 2026-10-13 · Status: P0-Pilot und Erbausschlagungs-Modellproben implementiert, weitere Profilisierung in Bearbeitung; P1–P6 Backlog
 Einordnung: [Globale Roadmap](../GANTT.md)
 Lizenz: CC-BY-4.0
 
@@ -40,6 +40,8 @@ Für alle Fachmodule gilt die [P0-Designvorgabe für mehrsprachige Werte](../../
 Der [P0-Zeitvertrag](../../docs/de/architektur/zeit-und-bewertungen.md) trennt fachliche Zeit von erhaltenen Erfassungsrevisionen. Kaufpreise, Beobachtungen und konkurrierende Bewertungen besitzen eigene Kontexte; Prognosen nennen Modellversion, Eingabestand und Zielzeit. AC-14 bis AC-19 und die [synthetische Prüfmatrix](../../docs/de/anwendungsfaelle/zeitliche-referenzfaelle.md) konkretisieren die Anforderungen. Zwei Datumsfelder allein sind kein Nachweis einer funktionierenden Historie.
 
 Für 10.000 Personen werden Indizes, selektive Abfragen, Pagination und ein vollständiger Export geprüft. Die Benchmarks messen die Modell- und Austauschverträge ohne Vorgabe eines bestimmten Speicherdienstes.
+
+Zusätzlich prüfen vier [synthetische Erbausschlagungsfälle](../../docs/de/anwendungsfaelle/erbausschlagung.md) die Trennung von Auftrag, Personen, Familienbeziehungen, Prüfständen und zeitlichen Nachweisen. Der ergänzende Prüfvertrag erhält die bestehenden Kerntext-/Zeittypen und prüft RDF-Rückwege. AC-20 ergänzt den Umfang. Dies implementiert keine Nachlassrechtsregeln und zieht P1–P6 nicht vor; weitere Modul-/Versionsverträge bleiben Teil von P0.
 
 ## Fachliche Bausteine
 

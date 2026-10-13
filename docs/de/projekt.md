@@ -1,6 +1,6 @@
 # Projekt: Ontologie und Schemas
 
-Stand: 2026-10-12. Eigenständiges Projekt in [ontologie8/schema](https://github.com/ontologie8/schema).
+Stand: 2026-10-13. Eigenständiges Projekt in [ontologie8/schema](https://github.com/ontologie8/schema).
 
 ## Auftrag und Projektstatus
 
@@ -12,7 +12,7 @@ Arbeitsmethode: Kanban, wöchentlicher Review, bedarfsbezogener Kurzsync; Mainta
 
 | Arbeitspaket | Scope | Status | Abhängigkeit |
 | --- | --- | --- | --- |
-| P0 | Weltmodell, Modellgrenzen, Zeit und Versionierungsvertrag | Pilot 0.1.0 geliefert; weitere Profilisierung in Bearbeitung | — |
+| P0 | Weltmodell, Modellgrenzen, Zeit und Versionierungsvertrag | Pilot 0.1.0 und synthetischer Erbausschlagungs-Prüfvertrag geliefert; weitere Profilisierung in Bearbeitung | — |
 | P1 | Personen, Familie, Organisationen und zeitabhängige Rollen | Backlog | P0 |
 | P2 | JSON-Referenzdataset, Import-/Exportvertrag und 10.000er-Prüfung | Backlog | P1 |
 | P3 | Genogramm-Projektion und Exportvertrag | Backlog | P2 |
@@ -37,6 +37,10 @@ Plan und Validierung: Standards zu BCP 47, RDF und JSON-LD prüfen; die [Designv
 Pilotregister in eigenständige Fachdefinitionen und Detailprofile ausbauen; externe Import-/Versionsverträge auf dem geprüften Vertragsstand konkretisieren.
 
 ## Aktueller Auftrag: erster Schema- und RDF-Pilot
+
+Ergänzung vom 2026-10-13: Auf ausdrücklichen Auftrag werden vier Erbausschlagungs-Modellproben aus einem festgehaltenen `ontology`-Quellstand aufgenommen. Scope, Alternativen, AC-20, Risiken und Plan vor Umsetzung stehen im [Prüfvertrag](anwendungsfaelle/erbausschlagung.md). Ein eigenes Prüfprofil verwendet gemeinsame Kerntext-/Zeittypen; ein allgemeines Rechtsfachmodul und Rechtsfolgenrechnung bleiben spätere Aufgaben. Quelle und synthetische Zeitwerte sind getrennt; der Quellentwurf ist noch nicht notariell freigegeben.
+
+Ergebnis: Vier frei erfundene Fälle mit neun Personen und 17 Nachweisen, fünf unabhängige historische Erwartungsabfragen, eigene JSON-/Turtle-/JSON-LD-Abbildung und 18 ergänzende positive/negative Testmethoden. Die CI prüft beide Verträge. Die Pflege bleibt deutsch und die Ausführung vollständig offline; das Quellprojekt dient der Herkunftszuordnung. Der bestehende Pilotvertrag bleibt unverändert.
 
 Auftrag: Den geprüften Entwurf in konkrete Schemaartefakte überführen und JSON/RDF einschließlich mehrsprachiger Werte und zeitlicher Revisionen ausführbar prüfen. AC-03/04/10/11/12 und AC-14 bis AC-19 bilden den Umfang.
 

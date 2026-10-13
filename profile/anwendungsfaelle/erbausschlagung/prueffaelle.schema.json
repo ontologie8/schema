@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ontologie8:pruefvertrag:erbausschlagung:0.1.0",
+  "title": "Synthetische Erbausschlagungsfälle, Prüfvertrag 0.1.0",
+  "$comment": "SPDX-License-Identifier: AGPL-3.0-or-later",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "version", "datenart", "personen", "quellen", "beziehungen", "faelle", "nachweise"],
+  "properties": {
+    "id": {"$ref": "#/$defs/iri"},
+    "version": {"const": "0.1.0"},
+    "datenart": {"const": "synthetisch"},
+    "personen": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/person"}},
+    "quellen": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/person"}},
+    "beziehungen": {"type": "array", "items": {"$ref": "#/$defs/beziehung"}},
+    "faelle": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/fall"}},
+    "nachweise": {"type": "array", "items": {"$ref": "#/$defs/nachweis"}}
+  },
+  "$defs": {
+    "iri": {"$ref": "urn:ontologie8:schema:kern:0.1.0#/$defs/iri"},
+    "texte": {"type": "array", "minItems": 1, "items": {"$ref": "urn:ontologie8:schema:kern:0.1.0#/$defs/text"}},
+    "punkt": {"$ref": "urn:ontologie8:schema:kern:0.1.0#/$defs/punkt"},
+    "zeit": {"oneOf": [{"$ref": "#/$defs/punkt"}, {"type": "object", "additionalProperties": false, "required": ["status"], "properties": {"status": {"const": "unbekannt"}}}]},
+    "status": {"enum": ["bestaetigt", "unbekannt", "zu_pruefen"]},
+    "person": {
+      "type": "object", "additionalProperties": false, "required": ["id", "bezeichnungen"],
+      "properties": {"id": {"$ref": "#/$defs/iri"}, "bezeichnungen": {"$ref": "#/$defs/texte"}}
+    },
+    "beziehung": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "typ", "subjekt_id", "objekt_id", "quelle_id", "fachliche_zeit", "erfasst_am", "pruefstatus"],
+      "properties": {
+        "id": {"$ref": "#/$defs/iri"}, "typ": {"enum": ["eltern_kind", "vertretung"]},
+        "subjekt_id": {"$ref": "#/$defs/iri"}, "objekt_id": {"$ref": "#/$defs/iri"}, "quelle_id": {"$ref": "#/$defs/iri"},
+        "fachliche_zeit": {"$ref": "urn:ontologie8:schema:kern:0.1.0#/$defs/zeit"},
+        "erfasst_am": {"type": "string", "format": "date-time"}, "pruefstatus": {"$ref": "#/$defs/status"}
+      }
+    },
+    "pruefung": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "person_id", "typ", "status", "quelle_id", "erfasst_am"],
+      "properties": {
+        "id": {"$ref": "#/$defs/iri"}, "person_id": {"$ref": "#/$defs/iri"},
+        "typ": {"enum": ["auftrag", "frist", "gericht", "form", "belehrung", "vertretung", "genehmigung", "annahmerisiko"]},
+        "status": {"$ref": "#/$defs/status"}, "quelle_id": {"$ref": "#/$defs/iri"}, "erfasst_am": {"type": "string", "format": "date-time"}
+      }
+    },
+    "fall": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "bezeichnungen", "erblasser_id", "ausschlagende_person_id", "betroffene_person_ids", "vollzugsweg", "nachkontrolle", "annahmerisiko", "pruefungen"],
+      "properties": {
+        "id": {"$ref": "#/$defs/iri"}, "bezeichnungen": {"$ref": "#/$defs/texte"},
+        "erblasser_id": {"$ref": "#/$defs/iri"}, "ausschlagende_person_id": {"$ref": "#/$defs/iri"},
+        "betroffene_person_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/iri"}},
+        "vollzugsweg": {"enum": ["notariat", "selbsteinreichung", "unbekannt"]},
+        "nachkontrolle": {"enum": ["vereinbart", "nicht_vereinbart", "unbekannt"]},
+        "annahmerisiko": {"enum": ["keine_hinweise", "zu_pruefen", "unbekannt"]},
+        "pruefungen": {"type": "array", "items": {"$ref": "#/$defs/pruefung"}}
+      }
+    },
+    "nachweis": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "fall_id", "person_id", "typ", "zeit", "erfasst_am", "quelle_id", "pruefstatus"],
+      "properties": {
+        "id": {"$ref": "#/$defs/iri"}, "fall_id": {"$ref": "#/$defs/iri"}, "person_id": {"$ref": "#/$defs/iri"},
+        "typ": {"enum": ["tod", "kenntnis_erbfall", "kenntnis_berufungsgrund", "aushaendigung", "versand", "gerichtseingang"]},
+        "zeit": {"$ref": "#/$defs/zeit"}, "erfasst_am": {"type": "string", "format": "date-time"},
+        "quelle_id": {"$ref": "#/$defs/iri"}, "pruefstatus": {"$ref": "#/$defs/status"}
+      }
+    }
+  }
+}

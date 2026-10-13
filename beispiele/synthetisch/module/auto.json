@@ -1,0 +1,386 @@
+{
+  "id": "urn:beispiel:profil:auto",
+  "schema_version": "0.1.0",
+  "entitaeten": [
+    {
+      "id": "urn:beispiel:P-A",
+      "typ": "urn:ontologie8:begriff:person",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person A",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:P-B",
+      "typ": "urn:ontologie8:begriff:person",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person B",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:AUTO-1",
+      "typ": "urn:ontologie8:begriff:auto",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Auto",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:Q-A",
+      "typ": "urn:ontologie8:begriff:quelle",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Quelle A",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:Q-B",
+      "typ": "urn:ontologie8:begriff:quelle",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Quelle B",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:M-A",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Faktorverfahren A",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-B",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Faktorverfahren B",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-C",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Bestandsverfahren",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-D",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Beratungsmethode",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-V",
+      "typ": "urn:ontologie8:begriff:methode",
+      "version": "1.0.0",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Vergleichswertmethode",
+          "sprache": "de"
+        }
+      ]
+    }
+  ],
+  "revisionen": [
+    {
+      "id": "urn:beispiel:K-1-R1",
+      "aussage_id": "urn:beispiel:K-1",
+      "art": "ereignis",
+      "typ": "urn:ontologie8:begriff:kauf",
+      "subjekt_id": "urn:beispiel:P-A",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2024-03-10T10:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2024-03-20T09:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "30000",
+        "waehrung": "EUR"
+      },
+      "objekt_id": "urn:beispiel:AUTO-1"
+    },
+    {
+      "id": "urn:beispiel:K-1-R2",
+      "aussage_id": "urn:beispiel:K-1",
+      "art": "ereignis",
+      "typ": "urn:ontologie8:begriff:kauf",
+      "subjekt_id": "urn:beispiel:P-A",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2024-03-10T10:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2024-04-01T09:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "28000",
+        "waehrung": "EUR"
+      },
+      "objekt_id": "urn:beispiel:AUTO-1",
+      "ersetzt_id": "urn:beispiel:K-1-R1"
+    },
+    {
+      "id": "urn:beispiel:E-A-R1",
+      "aussage_id": "urn:beispiel:E-A",
+      "art": "beziehung",
+      "typ": "urn:ontologie8:begriff:eigentum",
+      "subjekt_id": "urn:beispiel:P-A",
+      "fachliche_zeit": {
+        "art": "intervall",
+        "beginn": {
+          "wert": "2024-03-10T10:00:00Z",
+          "praezision": "sekunde"
+        },
+        "ende": {
+          "status": "offen"
+        }
+      },
+      "erfasst_am": "2024-03-20T09:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "menge": "1",
+        "einheit": "urn:ontologie8:begriff:anteil"
+      },
+      "objekt_id": "urn:beispiel:AUTO-1"
+    },
+    {
+      "id": "urn:beispiel:E-A-R2",
+      "aussage_id": "urn:beispiel:E-A",
+      "art": "beziehung",
+      "typ": "urn:ontologie8:begriff:eigentum",
+      "subjekt_id": "urn:beispiel:P-A",
+      "fachliche_zeit": {
+        "art": "intervall",
+        "beginn": {
+          "wert": "2024-03-10T10:00:00Z",
+          "praezision": "sekunde"
+        },
+        "ende": {
+          "wert": "2026-08-01T12:00:00Z",
+          "praezision": "sekunde"
+        }
+      },
+      "erfasst_am": "2026-08-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "menge": "1",
+        "einheit": "urn:ontologie8:begriff:anteil"
+      },
+      "objekt_id": "urn:beispiel:AUTO-1",
+      "ersetzt_id": "urn:beispiel:E-A-R1"
+    },
+    {
+      "id": "urn:beispiel:E-B-R1",
+      "aussage_id": "urn:beispiel:E-B",
+      "art": "beziehung",
+      "typ": "urn:ontologie8:begriff:eigentum",
+      "subjekt_id": "urn:beispiel:P-B",
+      "fachliche_zeit": {
+        "art": "intervall",
+        "beginn": {
+          "wert": "2026-08-01T12:00:00Z",
+          "praezision": "sekunde"
+        },
+        "ende": {
+          "status": "offen"
+        }
+      },
+      "erfasst_am": "2026-08-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "menge": "1",
+        "einheit": "urn:ontologie8:begriff:anteil"
+      },
+      "objekt_id": "urn:beispiel:AUTO-1"
+    },
+    {
+      "id": "urn:beispiel:U-1-R1",
+      "aussage_id": "urn:beispiel:U-1",
+      "art": "ereignis",
+      "typ": "urn:ontologie8:begriff:uebertragung",
+      "subjekt_id": "urn:beispiel:P-A",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2026-08-01T12:00:00Z",
+        "praezision": "sekunde"
+      },
+      "erfasst_am": "2026-08-02T09:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {},
+      "objekt_id": "urn:beispiel:AUTO-1"
+    },
+    {
+      "id": "urn:beispiel:B-A-R1",
+      "aussage_id": "urn:beispiel:B-A",
+      "art": "bewertung",
+      "typ": "urn:ontologie8:begriff:bewertung",
+      "subjekt_id": "urn:beispiel:AUTO-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2026-06-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-06-03T09:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "schaetzung",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "22000",
+        "waehrung": "EUR",
+        "wertart": "urn:ontologie8:begriff:marktwert"
+      },
+      "methode_id": "urn:beispiel:M-V",
+      "methode_version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:B-B-R1",
+      "aussage_id": "urn:beispiel:B-B",
+      "art": "bewertung",
+      "typ": "urn:ontologie8:begriff:bewertung",
+      "subjekt_id": "urn:beispiel:AUTO-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2026-06-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-06-04T09:00:00Z",
+      "quelle_id": "urn:beispiel:Q-B",
+      "aussageart": "schaetzung",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "21000",
+        "waehrung": "EUR",
+        "wertart": "urn:ontologie8:begriff:marktwert"
+      },
+      "methode_id": "urn:beispiel:M-V",
+      "methode_version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:S-A-R1",
+      "aussage_id": "urn:beispiel:S-A-Ergebnis",
+      "art": "bewertung",
+      "typ": "urn:ontologie8:begriff:bewertung",
+      "subjekt_id": "urn:beispiel:AUTO-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2028-06-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-06-05T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "prognose",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "17820",
+        "waehrung": "EUR",
+        "wertart": "urn:ontologie8:begriff:marktwert"
+      },
+      "methode_id": "urn:beispiel:M-A",
+      "methode_version": "1.0.0",
+      "szenario_id": "urn:beispiel:S-A"
+    },
+    {
+      "id": "urn:beispiel:S-B-R1",
+      "aussage_id": "urn:beispiel:S-B-Ergebnis",
+      "art": "bewertung",
+      "typ": "urn:ontologie8:begriff:bewertung",
+      "subjekt_id": "urn:beispiel:AUTO-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2028-06-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-06-05T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "prognose",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "19855",
+        "waehrung": "EUR",
+        "wertart": "urn:ontologie8:begriff:marktwert"
+      },
+      "methode_id": "urn:beispiel:M-B",
+      "methode_version": "1.0.0",
+      "szenario_id": "urn:beispiel:S-B"
+    }
+  ],
+  "szenarien": [
+    {
+      "id": "urn:beispiel:S-A",
+      "art": "wertfaktor",
+      "modell_id": "urn:beispiel:M-A",
+      "modell_version": "1.0.0",
+      "eingaben": [
+        "urn:beispiel:B-A-R1"
+      ],
+      "zielzeit": {
+        "wert": "2028-06-01",
+        "praezision": "tag"
+      },
+      "berechnet_am": "2026-06-05T10:00:00Z",
+      "parameter": {
+        "faktor": "0.90",
+        "perioden": 2
+      }
+    },
+    {
+      "id": "urn:beispiel:S-B",
+      "art": "wertfaktor",
+      "modell_id": "urn:beispiel:M-B",
+      "modell_version": "1.0.0",
+      "eingaben": [
+        "urn:beispiel:B-A-R1"
+      ],
+      "zielzeit": {
+        "wert": "2028-06-01",
+        "praezision": "tag"
+      },
+      "berechnet_am": "2026-06-05T10:00:00Z",
+      "parameter": {
+        "faktor": "0.95",
+        "perioden": 2
+      }
+    }
+  ]
+}

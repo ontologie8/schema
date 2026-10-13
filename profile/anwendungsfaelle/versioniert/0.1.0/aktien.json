@@ -1,0 +1,42 @@
+{
+  "art": "profil",
+  "id": "urn:ontologie8:profil:aktien",
+  "version": "0.1.0",
+  "vertrag_version": "0.1.0",
+  "bezeichnungen": [
+    {
+      "wert": "Synthetisches Referenzprofil aktien",
+      "sprache": "de"
+    }
+  ],
+  "module": [
+    {
+      "id": "urn:ontologie8:modul:kern",
+      "version": "0.2.0"
+    },
+    {
+      "id": "urn:ontologie8:modul:finanzen",
+      "version": "0.2.0"
+    }
+  ],
+  "schema_id": "urn:ontologie8:schema:kern:0.1.0",
+  "abbildung_id": "urn:ontologie8:abbildung:p0-rdf",
+  "erwartungsvertrag_id": "urn:ontologie8:erwartungsvertrag:modellfragen:0.1.0",
+  "entitaetstypen": [
+    "urn:ontologie8:begriff:person",
+    "urn:ontologie8:begriff:organisation",
+    "urn:ontologie8:begriff:quelle",
+    "urn:ontologie8:begriff:methode",
+    "urn:ontologie8:begriff:finanzinstrument",
+    "urn:ontologie8:begriff:position",
+    "urn:ontologie8:begriff:markt"
+  ],
+  "aussagetypen": [
+    "urn:ontologie8:begriff:anfangsbestand",
+    "urn:ontologie8:begriff:bestandsbewegung",
+    "urn:ontologie8:begriff:kurs",
+    "urn:ontologie8:begriff:bewertung"
+  ],
+  "beispiel_id": "urn:ontologie8:artefakt:beispiel-aktien",
+  "erwartungen_id": "urn:ontologie8:artefakt:erwartungen-aktien"
+}

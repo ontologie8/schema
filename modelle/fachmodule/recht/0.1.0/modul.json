@@ -1,0 +1,53 @@
+{
+  "art": "modul",
+  "id": "urn:ontologie8:modul:recht",
+  "version": "0.1.0",
+  "vertrag_version": "0.1.0",
+  "bezeichnungen": [
+    {
+      "wert": "Recht: synthetische Erbausschlagungsprüfung",
+      "sprache": "de"
+    }
+  ],
+  "abhaengigkeiten": [
+    {
+      "id": "urn:ontologie8:modul:kern",
+      "version": "0.2.0"
+    }
+  ],
+  "bereitstellungen": [
+    {
+      "id": "urn:ontologie8:pruefvertrag:erbausschlagung:0.1.0",
+      "art": "schema",
+      "definitionen": [
+        {
+          "wert": "Ergänzender synthetischer Prüfvertrag; keine allgemeine Rechtsfolgenrechnung.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:abbildung:erbausschlagung:0.1.0",
+      "art": "abbildung",
+      "definitionen": [
+        {
+          "wert": "Eigener kontrollierter RDF-Rückweg für synthetische Erbausschlagungsfälle.",
+          "sprache": "de"
+        }
+      ]
+    }
+  ],
+  "nutzungen": [
+    "urn:ontologie8:begriff:person",
+    "urn:ontologie8:begriff:organisation",
+    "urn:ontologie8:begriff:quelle",
+    "urn:ontologie8:begriff:methode"
+  ],
+  "artefakt_ids": [
+    "urn:ontologie8:artefakt:erbausschlagung-schema",
+    "urn:ontologie8:artefakt:erbausschlagung-validierung",
+    "urn:ontologie8:artefakt:rdf-erbausschlagung",
+    "urn:ontologie8:artefakt:erbausschlagung-erwartungspruefung",
+    "urn:ontologie8:artefakt:erbausschlagung-herkunft"
+  ]
+}

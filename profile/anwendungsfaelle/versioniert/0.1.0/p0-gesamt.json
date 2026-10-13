@@ -1,0 +1,64 @@
+{
+  "art": "profil",
+  "id": "urn:ontologie8:profil:p0-gesamt",
+  "version": "0.1.0",
+  "vertrag_version": "0.1.0",
+  "bezeichnungen": [
+    {
+      "wert": "Synthetisches Referenzprofil p0-gesamt",
+      "sprache": "de"
+    }
+  ],
+  "module": [
+    {
+      "id": "urn:ontologie8:modul:kern",
+      "version": "0.2.0"
+    },
+    {
+      "id": "urn:ontologie8:modul:fahrzeuge",
+      "version": "0.1.0"
+    },
+    {
+      "id": "urn:ontologie8:modul:finanzen",
+      "version": "0.2.0"
+    },
+    {
+      "id": "urn:ontologie8:modul:bekleidung",
+      "version": "0.2.0"
+    }
+  ],
+  "schema_id": "urn:ontologie8:schema:kern:0.1.0",
+  "abbildung_id": "urn:ontologie8:abbildung:p0-rdf",
+  "erwartungsvertrag_id": "urn:ontologie8:erwartungsvertrag:p0-pilot:0.1.0",
+  "entitaetstypen": [
+    "urn:ontologie8:begriff:person",
+    "urn:ontologie8:begriff:organisation",
+    "urn:ontologie8:begriff:auto",
+    "urn:ontologie8:begriff:kleidungsstueck",
+    "urn:ontologie8:begriff:produktmodell",
+    "urn:ontologie8:begriff:shop",
+    "urn:ontologie8:begriff:angebot",
+    "urn:ontologie8:begriff:finanzinstrument",
+    "urn:ontologie8:begriff:position",
+    "urn:ontologie8:begriff:markt",
+    "urn:ontologie8:begriff:quelle",
+    "urn:ontologie8:begriff:methode"
+  ],
+  "aussagetypen": [
+    "urn:ontologie8:begriff:kauf",
+    "urn:ontologie8:begriff:eigentum",
+    "urn:ontologie8:begriff:anfangsbestand",
+    "urn:ontologie8:begriff:bestandsbewegung",
+    "urn:ontologie8:begriff:kurs",
+    "urn:ontologie8:begriff:bewertung",
+    "urn:ontologie8:begriff:zustand",
+    "urn:ontologie8:begriff:reparatur",
+    "urn:ontologie8:begriff:stilempfehlung",
+    "urn:ontologie8:begriff:uebertragung",
+    "urn:ontologie8:begriff:ist_instanz_von",
+    "urn:ontologie8:begriff:angebot_fuer",
+    "urn:ontologie8:begriff:angebot_von"
+  ],
+  "beispiel_id": "urn:ontologie8:artefakt:beispiel-p0-gesamt",
+  "erwartungen_id": "urn:ontologie8:artefakt:erwartungen-p0-gesamt"
+}

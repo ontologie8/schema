@@ -1,0 +1,88 @@
+{
+  "art": "modul",
+  "id": "urn:ontologie8:modul:finanzen",
+  "version": "0.2.0",
+  "vertrag_version": "0.1.0",
+  "bezeichnungen": [
+    {
+      "wert": "Finanzen: Bestand und Aktien",
+      "sprache": "de"
+    }
+  ],
+  "abhaengigkeiten": [
+    {
+      "id": "urn:ontologie8:modul:kern",
+      "version": "0.2.0"
+    }
+  ],
+  "bereitstellungen": [
+    {
+      "id": "urn:ontologie8:begriff:finanzinstrument",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Ein Finanzinstrument unabhängig von einem Bestand oder Kurs.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:position",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Eine Bestandseinheit mit referenziertem Instrument, Menge und Bewegungshistorie.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:markt",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Explizite Markt- beziehungsweise Kursbasis einer Beobachtung.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:anfangsbestand",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Expliziter Anfangsbestand im angegebenen Instrument- und Einheitenkontext.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:bestandsbewegung",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Bestandsänderung; Kauf, Verkauf und Split bleiben unterscheidbar.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:kurs",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Kursbeobachtung mit Instrument, Markt, Währung und Stückbasis.",
+          "sprache": "de"
+        }
+      ]
+    }
+  ],
+  "nutzungen": [
+    "urn:ontologie8:begriff:person",
+    "urn:ontologie8:begriff:organisation",
+    "urn:ontologie8:begriff:quelle",
+    "urn:ontologie8:begriff:methode",
+    "urn:ontologie8:begriff:bewertung"
+  ],
+  "artefakt_ids": []
+}

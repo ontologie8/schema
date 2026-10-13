@@ -1,0 +1,29 @@
+{
+  "art": "profil",
+  "id": "urn:ontologie8:profil:erbausschlagung",
+  "version": "0.1.0",
+  "vertrag_version": "0.1.0",
+  "bezeichnungen": [
+    {
+      "wert": "Synthetisches Referenzprofil erbausschlagung",
+      "sprache": "de"
+    }
+  ],
+  "module": [
+    {
+      "id": "urn:ontologie8:modul:kern",
+      "version": "0.2.0"
+    },
+    {
+      "id": "urn:ontologie8:modul:recht",
+      "version": "0.1.0"
+    }
+  ],
+  "schema_id": "urn:ontologie8:pruefvertrag:erbausschlagung:0.1.0",
+  "abbildung_id": "urn:ontologie8:abbildung:erbausschlagung:0.1.0",
+  "erwartungsvertrag_id": "urn:ontologie8:erwartungsvertrag:erbausschlagung:0.1.0",
+  "entitaetstypen": [],
+  "aussagetypen": [],
+  "beispiel_id": "urn:ontologie8:artefakt:beispiel-erbausschlagung",
+  "erwartungen_id": "urn:ontologie8:artefakt:erwartungen-erbausschlagung"
+}

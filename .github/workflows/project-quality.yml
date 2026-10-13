@@ -24,5 +24,7 @@ jobs:
         run: python scripts/pruefe_pilot.py
       - name: Synthetische Erbausschlagungsfälle und RDF-Rückwege prüfen
         run: python scripts/pruefe_erbausschlagung.py
+      - name: Allgemeine Fachmodule, Profile und Versionsbindungen prüfen
+        run: python scripts/pruefe_module.py
       - name: Unabhängige Modell- und Erwartungsfälle prüfen
         run: python -m unittest discover -s tests -v

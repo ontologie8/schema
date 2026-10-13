@@ -1,0 +1,112 @@
+{
+  "art": "modul",
+  "id": "urn:ontologie8:modul:bekleidung",
+  "version": "0.2.0",
+  "vertrag_version": "0.1.0",
+  "bezeichnungen": [
+    {
+      "wert": "Bekleidung, Angebot und Stilberatung",
+      "sprache": "de"
+    }
+  ],
+  "abhaengigkeiten": [
+    {
+      "id": "urn:ontologie8:modul:kern",
+      "version": "0.2.0"
+    }
+  ],
+  "bereitstellungen": [
+    {
+      "id": "urn:ontologie8:begriff:kleidungsstueck",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Ein konkretes Kleidungsstück mit eigener Identität, unabhängig vom Produktmodell.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:produktmodell",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Ein Produktmodell, von dem konkrete Gegenstände Instanzen sein können.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:shop",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Ein Shop als ausdrücklich identifizierter Anbieter.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:angebot",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Ein konkretes Angebot zu einem Produktmodell, unabhängig von einem Kauf.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:stilempfehlung",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Ausdrückliche Empfehlung mit Methode und Eingabestand; keine beobachtete Tatsache.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:ist_instanz_von",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Verbindung eines konkreten Kleidungsstücks mit seinem Produktmodell.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:angebot_fuer",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Verbindung eines Angebots mit dem angebotenen Produktmodell.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:angebot_von",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Verbindung eines Shops mit einem identifizierten Angebot.",
+          "sprache": "de"
+        }
+      ]
+    }
+  ],
+  "nutzungen": [
+    "urn:ontologie8:begriff:person",
+    "urn:ontologie8:begriff:organisation",
+    "urn:ontologie8:begriff:quelle",
+    "urn:ontologie8:begriff:methode",
+    "urn:ontologie8:begriff:kauf",
+    "urn:ontologie8:begriff:eigentum",
+    "urn:ontologie8:begriff:zustand",
+    "urn:ontologie8:begriff:reparatur",
+    "urn:ontologie8:begriff:bewertung"
+  ],
+  "artefakt_ids": []
+}

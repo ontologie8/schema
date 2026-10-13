@@ -24,5 +24,8 @@ Der komplette P0–P6-Scope liegt in der [Roadmap](../../roadmap/de/personen-nac
 | AC-18 | Zeitpräzision, offene/unbekannte Grenzen, Halbintervalle und Revisionskonflikte sind definiert; Abbildung erhält diese Bedeutung. |
 | AC-19 | Gemeinsamer Modellkern, Fachmodule, Anwendungsfall-/Speicherprofile und externe Versionsübernahme sind getrennt; Auto, Aktien und Kleidung nutzen denselben Kern. |
 | AC-20 | Erbausschlagung aus einem festgehaltenen `ontology`-Quellstand als synthetische Prüfungen: Vollzugswege, getrennte Personen, Kenntnis-/Eingangsnachweise und offene Vertretungs-/Genehmigungs-/Annahmerisiken; keine automatische Rechtsentscheidung, JSON-/RDF-Rückweg erhält die Bedeutung. |
+| AC-21 | Allgemeine Modul-/Profilmanifeste definieren eindeutige Begriffsverantwortung, vollständige zyklusfreie Abhängigkeiten und exakte Stände; Auto, Aktien, Bekleidung und Erbausschlagung sind einzeln prüfbare Profile. |
+| AC-22 | Paket-/Artefaktbindung und neue Versionsstände sind reproduzierbar; veröffentlichte gleiche Identitäten werden nicht überschrieben. Unterschiedliche Inhalte ergeben ohne gerichteten Nachweis keine automatische Kompatibilitätsaussage. |
+| AC-23 | GitHub, SharePoint und S3 sind als Zielarchitektur benennbar; eine portable Schema-/Prüfkopie läuft mit gebundenen Abhängigkeiten außerhalb ihrer bisherigen Ablage. Keine Anbieterübertragung, produktiven Daten oder Zugangsdaten im Schema-Repository. |
 
 Die Kriterien sind die Prüfziele der geplanten Umsetzung. [Projektboard](projekt.md), [Weltmodell](architektur/p0-weltmodell.md), [mehrsprachige Werte](architektur/mehrsprachige-werte.md), [Zeitvertrag](architektur/zeit-und-bewertungen.md) und [synthetische Prüfmatrix](anwendungsfaelle/zeitliche-referenzfaelle.md).

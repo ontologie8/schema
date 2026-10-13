@@ -1,6 +1,6 @@
 # Roadmap: Personen, Genogramme, Vermögen und zeitliche Nachlassszenarien
 
-Stand: 2026-10-13 · Status: P0-Pilot und Erbausschlagungs-Modellproben implementiert, weitere Profilisierung in Bearbeitung; P1–P6 Backlog
+Stand: 2026-10-13 · Status: P0-Pilot, Erbausschlagung und allgemeiner Fachmodul-/Versionsvertrag implementiert; weitere Fachdefinitionen und Migrationen offen; P1–P6 Backlog
 Einordnung: [Globale Roadmap](../GANTT.md)
 Lizenz: CC-BY-4.0
 
@@ -42,6 +42,8 @@ Der [P0-Zeitvertrag](../../docs/de/architektur/zeit-und-bewertungen.md) trennt f
 Für 10.000 Personen werden Indizes, selektive Abfragen, Pagination und ein vollständiger Export geprüft. Die Benchmarks messen die Modell- und Austauschverträge ohne Vorgabe eines bestimmten Speicherdienstes.
 
 Zusätzlich prüfen vier [synthetische Erbausschlagungsfälle](../../docs/de/anwendungsfaelle/erbausschlagung.md) die Trennung von Auftrag, Personen, Familienbeziehungen, Prüfständen und zeitlichen Nachweisen. Der ergänzende Prüfvertrag erhält die bestehenden Kerntext-/Zeittypen und prüft RDF-Rückwege. AC-20 ergänzt den Umfang. Dies implementiert keine Nachlassrechtsregeln und zieht P1–P6 nicht vor; weitere Modul-/Versionsverträge bleiben Teil von P0.
+
+Der [allgemeine Fachmodul-/Versionsvertrag](../../docs/de/architektur/fachmodule-und-versionen.md) setzt diesen P0-Teil inzwischen um: fünf Modulverantwortungen, einzelne Fallprofile, exakte Versionsauflösung und portable Paketbindung. AC-21 bis AC-23 definieren die Prüfgrenzen. Weitere Fachdefinitionen, produktive Datenverträge und gerichtete Versionsmigrationen stehen aus; P1–P6 bleiben Backlog.
 
 ## Fachliche Bausteine
 

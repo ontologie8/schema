@@ -1,0 +1,342 @@
+{
+  "id": "urn:beispiel:profil:bekleidung",
+  "schema_version": "0.1.0",
+  "entitaeten": [
+    {
+      "id": "urn:beispiel:P-A",
+      "typ": "urn:ontologie8:begriff:person",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person A",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:P-B",
+      "typ": "urn:ontologie8:begriff:person",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person B",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:KLEIDUNG-1",
+      "typ": "urn:ontologie8:begriff:kleidungsstueck",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Kleidungsstück",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:MODELL-1",
+      "typ": "urn:ontologie8:begriff:produktmodell",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Produktmodell",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:SHOP-1",
+      "typ": "urn:ontologie8:begriff:shop",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetischer Shop",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:ANGEBOT-1",
+      "typ": "urn:ontologie8:begriff:angebot",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Angebot",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:Q-A",
+      "typ": "urn:ontologie8:begriff:quelle",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Quelle A",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:Q-B",
+      "typ": "urn:ontologie8:begriff:quelle",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Quelle B",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:M-A",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Faktorverfahren A",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-B",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Faktorverfahren B",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-C",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Bestandsverfahren",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-D",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Beratungsmethode",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-V",
+      "typ": "urn:ontologie8:begriff:methode",
+      "version": "1.0.0",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Vergleichswertmethode",
+          "sprache": "de"
+        }
+      ]
+    }
+  ],
+  "revisionen": [
+    {
+      "id": "urn:beispiel:D-1-R1",
+      "aussage_id": "urn:beispiel:D-1",
+      "art": "ereignis",
+      "typ": "urn:ontologie8:begriff:kauf",
+      "subjekt_id": "urn:beispiel:P-A",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2025-05-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2025-05-01T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "100",
+        "waehrung": "EUR"
+      },
+      "objekt_id": "urn:beispiel:KLEIDUNG-1"
+    },
+    {
+      "id": "urn:beispiel:D-2-R1",
+      "aussage_id": "urn:beispiel:D-2",
+      "art": "beobachtung",
+      "typ": "urn:ontologie8:begriff:zustand",
+      "subjekt_id": "urn:beispiel:KLEIDUNG-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2026-04-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-04-01T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "beobachtet",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "zustand": "urn:ontologie8:begriff:beschaedigt"
+      }
+    },
+    {
+      "id": "urn:beispiel:D-4-R1",
+      "aussage_id": "urn:beispiel:D-4",
+      "art": "beobachtung",
+      "typ": "urn:ontologie8:begriff:zustand",
+      "subjekt_id": "urn:beispiel:KLEIDUNG-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2026-04-11",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-04-11T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "beobachtet",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "zustand": "urn:ontologie8:begriff:repariert"
+      }
+    },
+    {
+      "id": "urn:beispiel:D-3-R1",
+      "aussage_id": "urn:beispiel:D-3",
+      "art": "ereignis",
+      "typ": "urn:ontologie8:begriff:reparatur",
+      "subjekt_id": "urn:beispiel:KLEIDUNG-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2026-04-10",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-04-10T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {}
+    },
+    {
+      "id": "urn:beispiel:D-5-R1",
+      "aussage_id": "urn:beispiel:D-5",
+      "art": "bewertung",
+      "typ": "urn:ontologie8:begriff:bewertung",
+      "subjekt_id": "urn:beispiel:KLEIDUNG-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2026-06-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-06-01T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "schaetzung",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "30",
+        "waehrung": "EUR",
+        "wertart": "urn:ontologie8:begriff:wiederverkaufswert"
+      },
+      "methode_id": "urn:beispiel:M-V",
+      "methode_version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:D-6-R1",
+      "aussage_id": "urn:beispiel:D-6",
+      "art": "empfehlung",
+      "typ": "urn:ontologie8:begriff:stilempfehlung",
+      "subjekt_id": "urn:beispiel:P-A",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2026-06-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-06-01T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "empfehlung",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "texte": [
+          {
+            "wert": "Für den synthetischen Geschäftstermin das vorhandene reparierte Kleidungsstück berücksichtigen.",
+            "sprache": "de"
+          }
+        ]
+      },
+      "objekt_id": "urn:beispiel:KLEIDUNG-1",
+      "methode_id": "urn:beispiel:M-D",
+      "methode_version": "1.0.0",
+      "eingabe_ids": [
+        "urn:beispiel:D-4-R1"
+      ]
+    },
+    {
+      "id": "urn:beispiel:D-7-R1",
+      "aussage_id": "urn:beispiel:D-7",
+      "art": "beziehung",
+      "typ": "urn:ontologie8:begriff:ist_instanz_von",
+      "subjekt_id": "urn:beispiel:KLEIDUNG-1",
+      "fachliche_zeit": {
+        "art": "intervall",
+        "beginn": {
+          "wert": "2025-05-01T00:00:00Z",
+          "praezision": "sekunde"
+        },
+        "ende": {
+          "status": "offen"
+        }
+      },
+      "erfasst_am": "2025-05-01T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {},
+      "objekt_id": "urn:beispiel:MODELL-1"
+    },
+    {
+      "id": "urn:beispiel:D-8-R1",
+      "aussage_id": "urn:beispiel:D-8",
+      "art": "beziehung",
+      "typ": "urn:ontologie8:begriff:angebot_fuer",
+      "subjekt_id": "urn:beispiel:ANGEBOT-1",
+      "fachliche_zeit": {
+        "art": "intervall",
+        "beginn": {
+          "wert": "2025-05-01T00:00:00Z",
+          "praezision": "sekunde"
+        },
+        "ende": {
+          "status": "offen"
+        }
+      },
+      "erfasst_am": "2025-05-01T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {},
+      "objekt_id": "urn:beispiel:MODELL-1"
+    },
+    {
+      "id": "urn:beispiel:D-9-R1",
+      "aussage_id": "urn:beispiel:D-9",
+      "art": "beziehung",
+      "typ": "urn:ontologie8:begriff:angebot_von",
+      "subjekt_id": "urn:beispiel:SHOP-1",
+      "fachliche_zeit": {
+        "art": "intervall",
+        "beginn": {
+          "wert": "2025-05-01T00:00:00Z",
+          "praezision": "sekunde"
+        },
+        "ende": {
+          "status": "offen"
+        }
+      },
+      "erfasst_am": "2025-05-01T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {},
+      "objekt_id": "urn:beispiel:ANGEBOT-1"
+    }
+  ],
+  "szenarien": []
+}

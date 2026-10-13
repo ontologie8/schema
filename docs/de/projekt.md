@@ -44,7 +44,7 @@ Scope: Geschlossene gemeinsame Modul-/Profil-/Paket-/Übernahmemetadaten, eindeu
 
 Plan und Review: Profilgrenzen zusätzlich zur bestehenden fachlichen Validierung prüfen; Abhängigkeiten und bereitgestellte Begriffe geschlossen auflösen; Einzelproben gegen unabhängige Fragen und tatsächliche RDF-Rückwege prüfen; Identitätsverletzungen und Export-/Versionsfehler zurückweisen. Eine unterschiedliche Versionsnummer allein beweist keine Kompatibilität. Ein Paketgenerator erstellt nur neue Stände und prüft sie vor Veröffentlichung in einer separaten Kopie.
 
-Ergebnis: Fünf versionierte Module, fünf Profile, 29 Begriffszuständigkeiten, drei zusätzliche Einzelproben mit 17 unabhängigen Fragen und ein Paket mit 49 explizit gebundenen Artefakten. Die 76 Testmethoden einschließlich 22 neuer Versions-/Profil-/Übernahmeprüfungen bestehen. Die portable CLI wird außerhalb ihrer bisherigen Ablage geprüft. Anbieterbetrieb, produktive Rechtsdatenschemata und gerichtete Migrationen sind weiterhin eigene Aufgaben.
+Ergebnis: Fünf versionierte Module, fünf Profile, 29 Begriffszuständigkeiten, drei zusätzliche Einzelproben mit 17 unabhängigen Fragen und ein Paket mit 49 explizit gebundenen Artefakten. Die 77 Testmethoden einschließlich 23 neuer Versions-/Profil-/Übernahmeprüfungen bestehen. Die portable CLI wird außerhalb ihrer bisherigen Ablage geprüft. Anbieterbetrieb, produktive Rechtsdatenschemata und gerichtete Migrationen sind weiterhin eigene Aufgaben.
 
 ## Aktueller Auftrag: erster Schema- und RDF-Pilot
 

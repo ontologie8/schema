@@ -51,13 +51,13 @@
       "id": "urn:ontologie8:artefakt:modulvalidierung",
       "pfad": "scripts/modulvertrag.py",
       "art": "text",
-      "sha256": "21be36a5e57c3beee32b2c9ed632d9c5c011e2e536163d8732a101cb19f9d17d"
+      "sha256": "adc76d35bebd696fe7eaa47c0af193660d9b37ac32ea0fe08702b7463d709aad"
     },
     {
       "id": "urn:ontologie8:artefakt:profilvalidierung",
       "pfad": "scripts/profilpruefung.py",
       "art": "text",
-      "sha256": "d4b67cc722bc0853f9aedee3f7c0f4c18c2d54ed8562a65026b4ecf82c9617af"
+      "sha256": "a23ff2bddc602d70b32a240d309b129be3e4f40b7c9998ce1d32f9f3bad2a83a"
     },
     {
       "id": "urn:ontologie8:artefakt:modulpruefroutine",

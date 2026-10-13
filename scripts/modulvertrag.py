@@ -50,7 +50,9 @@ def pruefsumme(pfad: Path, art: str) -> str:
 def sicherer_pfad(wurzel: Path, relativ: str) -> Path:
     fordere(isinstance(relativ, str) and relativ and "\\" not in relativ and ":" not in relativ, "Kein portabler relativer Pfad")
     teile = relativ.split("/")
-    fordere(all(t not in {"", ".", "..", ".git", ".venv", ".aws", ".codex", ".agents", "out"} for t in teile), "Unzulässiger Artefaktpfad")
+    fordere(all(t.casefold() not in {"", ".", "..", ".git", ".venv", ".aws", ".codex", ".agents", "out"} for t in teile), "Unzulässiger Artefaktpfad")
+    geraete = {"con", "prn", "aux", "nul", "conin$", "conout$"} | {f"{art}{n}" for art in ("com", "lpt") for n in range(1, 10)}
+    fordere(all(t == t.rstrip(" .") and t.split(".")[0].casefold() not in geraete and all(ord(c) >= 32 and c not in '<>"|?*' for c in t) for t in teile), "Nicht portabler Windows-Dateiname")
     fordere(not PurePosixPath(relativ).is_absolute(), "Absoluter Artefaktpfad")
     pfad = (wurzel / relativ).resolve()
     fordere(pfad.is_relative_to(wurzel.resolve()), "Artefakt verlässt Paketwurzel")

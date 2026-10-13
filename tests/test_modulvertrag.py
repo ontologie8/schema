@@ -12,7 +12,7 @@ import unittest
 from scripts.erzeuge_paket import erzeuge
 from scripts.modellvertrag import Modellfehler
 from scripts.modulvertrag import PAKETPFAD, WURZEL, exportiere, lesen, pruefe_fortschreibung, pruefe_paket, pruefe_uebernahme, pruefsumme, uebernahme, vergleiche
-from scripts.profilpruefung import pruefe_profil, validiere_daten
+from scripts.profilpruefung import pruefe_modellfragen, pruefe_profil, validiere_daten
 
 M = "urn:ontologie8:modul:"
 P = "urn:ontologie8:profil:"
@@ -135,6 +135,13 @@ class Modulvertragspruefung(unittest.TestCase):
         aktien = lesen(paket.artefakt(paket.profile[P + "aktien"]["beispiel_id"]))
         with self.assertRaises(Modellfehler): validiere_daten(paket, P + "auto", aktien)
 
+    def test_fachfragen_erhalten_die_dezimalbedeutung(self):
+        profil = self.original.profile[P + "auto"]
+        daten = lesen(self.original.artefakt(profil["beispiel_id"]))
+        next(r for r in daten["revisionen"] if r["id"] == "urn:beispiel:K-1-R1")["daten"]["betrag"] = "30000.000"
+        erwartungen = lesen(self.original.artefakt(profil["erwartungen_id"]))
+        pruefe_modellfragen(daten, erwartungen)
+
     def test_unbekanntes_profil_und_erwartungsvertrag_abgewiesen(self):
         paket = pruefe_paket(self.wurzel)
         with self.assertRaises(Modellfehler): pruefe_profil(paket, P + "fehlt")
@@ -143,7 +150,7 @@ class Modulvertragspruefung(unittest.TestCase):
 
     def test_pfadueberschreitung_und_pruefsummenschleife_abgewiesen(self):
         manifest = lesen(self.wurzel / PAKETPFAD)
-        for pfad in ("../fremd.json", "C:/fremd.json", "/fremd.json", ".git/config", "modelle\\kern\\modell.schema.json", PAKETPFAD):
+        for pfad in ("../fremd.json", "C:/fremd.json", "/fremd.json", ".git/config", ".GiT/config", "NUL.json", "ordner./datei.json", "datei?.json", "datei.json ", "modelle\\kern\\modell.schema.json", PAKETPFAD):
             with self.subTest(pfad=pfad):
                 variante = deepcopy(manifest)
                 variante["artefakte"][0]["pfad"] = pfad

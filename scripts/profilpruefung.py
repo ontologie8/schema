@@ -35,6 +35,7 @@ def validiere_daten(paket: Paket, profil_id: str, daten: dict):
 
 def _projektion(ergebnis: dict, felder: list) -> dict:
     modellvertrag.fordere(felder and len(set(felder)) == len(felder), "Leere oder doppelte Projektionsfelder")
+    ergebnis = modellvertrag.normalisiere(ergebnis)
     ausgabe = {}
     for feld in felder:
         wert = ergebnis

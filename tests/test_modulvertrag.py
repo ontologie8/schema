@@ -13,6 +13,7 @@ from scripts.erzeuge_paket import erzeuge
 from scripts.modellvertrag import Modellfehler
 from scripts.modulvertrag import PAKETPFAD, WURZEL, exportiere, lesen, pruefe_fortschreibung, pruefe_paket, pruefe_uebernahme, pruefsumme, uebernahme, vergleiche
 from scripts.profilpruefung import pruefe_modellfragen, pruefe_profil, validiere_daten
+from scripts.validate_project import pruefe_lokale_links
 
 M = "urn:ontologie8:modul:"
 P = "urn:ontologie8:profil:"
@@ -218,6 +219,15 @@ class Modulvertragspruefung(unittest.TestCase):
     def test_bestehendes_exportziel_wird_nicht_ueberschrieben(self):
         with self.assertRaises(Modellfehler): exportiere(self.original, self.wurzel, "s3")
         self.assertEqual(lesen(self.wurzel / "uebernahme.json")["speicherziel"], "github")
+
+    def test_aktueller_export_enthaelt_alle_lokalen_dokumentabhaengigkeiten(self):
+        aktuell = pruefe_paket(WURZEL, "pakete/0.1.1/paket.json")
+        ziel = Path(self.tmp.name) / "aktueller-export"
+        exportiere(aktuell, ziel, "sharepoint")
+        self.assertEqual(pruefe_lokale_links(ziel), [])
+        self.assertTrue((ziel / "LICENSES/README.md").is_file())
+        (ziel / "LICENSES/README.md").unlink()
+        self.assertTrue(any("AUTHORS.md" in f for f in pruefe_lokale_links(ziel)))
 
 
 if __name__ == "__main__":

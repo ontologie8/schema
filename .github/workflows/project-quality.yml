@@ -25,6 +25,6 @@ jobs:
       - name: Synthetische Erbausschlagungsfälle und RDF-Rückwege prüfen
         run: python scripts/pruefe_erbausschlagung.py
       - name: Allgemeine Fachmodule, Profile und Versionsbindungen prüfen
-        run: python scripts/pruefe_module.py
+        run: python scripts/pruefe_module.py --paket pakete/0.1.1/paket.json
       - name: Unabhängige Modell- und Erwartungsfälle prüfen
         run: python -m unittest discover -s tests -v

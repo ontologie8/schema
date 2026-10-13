@@ -87,6 +87,14 @@ Umsetzungsreview: Die aktive Paketbindung erhielt einen eigenen relativen Pfad, 
 
 Lokale Evidenz: fünf Module, fünf Profile und 29 eindeutige Begriffszuständigkeiten geprüft. Drei Einzelproben enthalten 17 zusätzliche unabhängige Fragen; bisheriger Gesamtpilot und Erbausschlagungsfälle bestehen weiterhin einschließlich Turtle-/JSON-LD-Rückwegen. Die Tests prüfen auch die CLI aus einer separaten portablen Kopie, spätere aktive Paketversionen, alle drei Zielkennzeichen und offene Vergleichsergebnisse. Profilfragen vergleichen die kanonische Modellbedeutung; eine andere Dezimallexik verändert den Betrag nicht. Windows-Pfade werden auch bei anderer Groß-/Kleinschreibung, reservierten Gerätenamen und unzulässigen Endzeichen zurückgewiesen. Insgesamt 77 Testmethoden sind erfolgreich, davon 23 neue.
 
+## Korrektur der Paketvollständigkeit 0.1.1
+
+Die abschließende lokale Linkprüfung einer exportierten Kopie fand den Verweis von `AUTHORS.md` auf die fehlende `LICENSES/README.md`. AC-23 erfordert auch diese Dokumentabhängigkeit. Die Korrektur ergänzt die Lizenzzuordnung in einem neuen Paketstand 0.1.1; das veröffentlichte Paket 0.1.0, seine Module, Profile, Schemata, Abbildungen und Erwartungen bleiben unverändert.
+
+Plan und Review vor Korrektur: Einen eigenen Paketentwurf mit der fehlenden Datei erstellen; einen höheren Paketstand mit dem bestehenden Generator prüfen; die vorhandene lokale Markdown-Linkprüfung als wiederverwendbare Funktion ausführen und im Exporttest einsetzen. Neue Paketstände werden ausdrücklich gewählt, statt den initialen Stand still zu ersetzen. Der Export liefert weiterhin ausschließlich Schema-/Prüfarbeitsmittel und synthetische Daten.
+
+Paket 0.1.1 bindet 50 Artefakte. Ein eigener versionierter Paketentwurf erhält den bisherigen Entwurf unverändert. Die CI wählt 0.1.1 ausdrücklich, während die bisherigen Tests weiterhin den initialen Stand prüfen. Der zusätzliche Exporttest prüft alle lokalen Markdown-Links und erkennt eine fehlende Lizenzzuordnung. Insgesamt bestehen 78 Testmethoden, davon 24 zusätzliche Prüfungen gegenüber den ursprünglichen Datenpiloten.
+
 ## Nächster Schritt
 
 Weitere Fachdefinitionen auf dem geprüften Vertrag ergänzen; bei einem tatsächlichen Versionswechsel einen gerichteten Migrationsvertrag mit unabhängigen Erwartungen erstellen.

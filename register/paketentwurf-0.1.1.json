@@ -1,0 +1,269 @@
+{
+  "paket_id": "urn:ontologie8:paket:referenzmodell",
+  "module": [
+    "urn:ontologie8:artefakt:modul-kern",
+    "urn:ontologie8:artefakt:modul-fahrzeuge",
+    "urn:ontologie8:artefakt:modul-finanzen",
+    "urn:ontologie8:artefakt:modul-bekleidung",
+    "urn:ontologie8:artefakt:modul-recht"
+  ],
+  "profile": [
+    "urn:ontologie8:artefakt:profil-auto",
+    "urn:ontologie8:artefakt:profil-aktien",
+    "urn:ontologie8:artefakt:profil-bekleidung",
+    "urn:ontologie8:artefakt:profil-p0-gesamt",
+    "urn:ontologie8:artefakt:profil-erbausschlagung"
+  ],
+  "artefakte": [
+    {
+      "id": "urn:ontologie8:artefakt:kernschema",
+      "pfad": "modelle/kern/modell.schema.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:pilotregister",
+      "pfad": "modelle/kern/begriffe.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modellvalidierung",
+      "pfad": "scripts/modellvertrag.py",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:rdf-pilot",
+      "pfad": "abbildungen/formate/rdf.py",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:rdf-pilotvertrag",
+      "pfad": "abbildungen/formate/p0-rdf.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:rdf-vokabular",
+      "pfad": "abbildungen/formate/vokabular.ttl",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:metavertrag",
+      "pfad": "vertraege/module/0.1.0/vertrag.schema.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modulvalidierung",
+      "pfad": "scripts/modulvertrag.py",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profilvalidierung",
+      "pfad": "scripts/profilpruefung.py",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modulpruefroutine",
+      "pfad": "scripts/pruefe_module.py",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:paketgenerator",
+      "pfad": "scripts/erzeuge_paket.py",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:abhaengigkeiten",
+      "pfad": "requirements.txt",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erbausschlagung-schema",
+      "pfad": "profile/anwendungsfaelle/erbausschlagung/prueffaelle.schema.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erbausschlagung-validierung",
+      "pfad": "scripts/erbausschlagung.py",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:rdf-erbausschlagung",
+      "pfad": "abbildungen/formate/erbausschlagung.py",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erbausschlagung-erwartungspruefung",
+      "pfad": "scripts/pruefe_erbausschlagung.py",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erbausschlagung-herkunft",
+      "pfad": "profile/anwendungsfaelle/erbausschlagung/profil.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:pilot-erwartungspruefung",
+      "pfad": "scripts/pruefe_pilot.py",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:beispiel-p0-gesamt",
+      "pfad": "beispiele/synthetisch/p0-pilot.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erwartungen-p0-gesamt",
+      "pfad": "beispiele/synthetisch/p0-erwartungen.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:beispiel-erbausschlagung",
+      "pfad": "beispiele/synthetisch/erbausschlagung/faelle.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erwartungen-erbausschlagung",
+      "pfad": "beispiele/synthetisch/erbausschlagung/erwartungen.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:autoren",
+      "pfad": "AUTHORS.md",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:urheberhinweise",
+      "pfad": "NOTICE",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:lizenz-code",
+      "pfad": "LICENSES/AGPL-3.0-or-later.txt",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:lizenz-fachinhalt",
+      "pfad": "LICENSES/CC-BY-4.0.txt",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:paketbenutzung",
+      "pfad": "pakete/0.1.1/README.md",
+      "art": "text"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:bisheriges-modulregister",
+      "pfad": "register/module.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:bisheriges-kernmanifest",
+      "pfad": "modelle/kern/modul.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:bisheriges-finanzmanifest",
+      "pfad": "modelle/fachmodule/finanzen/modul.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:bisheriges-bekleidungsmanifest",
+      "pfad": "modelle/fachmodule/bekleidung/modul.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:bisheriges-pilotprofil",
+      "pfad": "profile/anwendungsfaelle/p0-pilot.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modul-kern",
+      "pfad": "modelle/kern/0.2.0/modul.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modul-fahrzeuge",
+      "pfad": "modelle/fachmodule/fahrzeuge/0.1.0/modul.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modul-finanzen",
+      "pfad": "modelle/fachmodule/finanzen/0.2.0/modul.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modul-bekleidung",
+      "pfad": "modelle/fachmodule/bekleidung/0.2.0/modul.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modul-recht",
+      "pfad": "modelle/fachmodule/recht/0.1.0/modul.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profil-auto",
+      "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/auto.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:beispiel-auto",
+      "pfad": "beispiele/synthetisch/module/auto.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erwartungen-auto",
+      "pfad": "beispiele/synthetisch/module/auto-erwartungen.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profil-aktien",
+      "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/aktien.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:beispiel-aktien",
+      "pfad": "beispiele/synthetisch/module/aktien.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erwartungen-aktien",
+      "pfad": "beispiele/synthetisch/module/aktien-erwartungen.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profil-bekleidung",
+      "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/bekleidung.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:beispiel-bekleidung",
+      "pfad": "beispiele/synthetisch/module/bekleidung.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erwartungen-bekleidung",
+      "pfad": "beispiele/synthetisch/module/bekleidung-erwartungen.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profil-p0-gesamt",
+      "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/p0-gesamt.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profil-erbausschlagung",
+      "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/erbausschlagung.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:paketentwurf",
+      "pfad": "register/paketentwurf-0.1.1.json",
+      "art": "json"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:lizenzzuordnung",
+      "pfad": "LICENSES/README.md",
+      "art": "text"
+    }
+  ]
+}

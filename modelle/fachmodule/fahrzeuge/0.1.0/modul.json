@@ -5,7 +5,7 @@
   "vertrag_version": "0.1.0",
   "bezeichnungen": [
     {
-      "wert": "Fahrzeuge: synthetischer Autopilot",
+      "wert": "Fahrzeuge: synthetischer Referenzfall",
       "sprache": "de"
     }
   ],
@@ -21,7 +21,7 @@
       "art": "entitaet",
       "definitionen": [
         {
-          "wert": "Ein konkretes Fahrzeug mit eigener Identität; Kauf, Eigentum und Bewertung sind getrennte Aussagen.",
+          "wert": "Ein konkretes Auto mit eigener Identität; Kauf, Eigentum und Bewertung sind getrennte Aussagen.",
           "sprache": "de"
         }
       ]

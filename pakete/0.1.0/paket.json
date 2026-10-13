@@ -207,7 +207,7 @@
       "id": "urn:ontologie8:artefakt:modul-fahrzeuge",
       "pfad": "modelle/fachmodule/fahrzeuge/0.1.0/modul.json",
       "art": "json",
-      "sha256": "ea63fde2ef9544699400e51e16889bec1b8db229d8aa184c7ebf0f18d89ef663"
+      "sha256": "f063facf11122f4a4379975054a1decf24ed37d1d85e1287849f8dd688c9507c"
     },
     {
       "id": "urn:ontologie8:artefakt:modul-finanzen",
@@ -231,7 +231,7 @@
       "id": "urn:ontologie8:artefakt:profil-auto",
       "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/auto.json",
       "art": "json",
-      "sha256": "2a628d6c9b4e4366886a1473444b6283503a13d850f2170a66f636d4050933e7"
+      "sha256": "8ad876654987bed6c69b565f4d06c1718164e650f4548ed68034b841575c3a65"
     },
     {
       "id": "urn:ontologie8:artefakt:beispiel-auto",
@@ -249,7 +249,7 @@
       "id": "urn:ontologie8:artefakt:profil-aktien",
       "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/aktien.json",
       "art": "json",
-      "sha256": "01a06bb829c6bebe8020b196463ed82df51431f227e5ce8b2400c374299311d1"
+      "sha256": "b3df59fc1d87917b626deffd0de5068c10ec8a0e8950b6d2c81ed0cc2d026a89"
     },
     {
       "id": "urn:ontologie8:artefakt:beispiel-aktien",
@@ -267,7 +267,7 @@
       "id": "urn:ontologie8:artefakt:profil-bekleidung",
       "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/bekleidung.json",
       "art": "json",
-      "sha256": "c757e09db58ca7564161369e2d2d0ce8c62e661320ca02f0e4369f5428a1d3a3"
+      "sha256": "0cdb94cf887023159e0cbb3efc741888b9b560bb82dc2e5e46b38caa8280927b"
     },
     {
       "id": "urn:ontologie8:artefakt:beispiel-bekleidung",
@@ -285,13 +285,13 @@
       "id": "urn:ontologie8:artefakt:profil-p0-gesamt",
       "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/p0-gesamt.json",
       "art": "json",
-      "sha256": "ca06fa1a8bf6c17e0ffa01d495b8980979570dc1eb8f33e9fe6fde65d25dadd6"
+      "sha256": "1f10a8f9459932217102c485296bc7185c45144bb07e6588b2b9bbf23122145b"
     },
     {
       "id": "urn:ontologie8:artefakt:profil-erbausschlagung",
       "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/erbausschlagung.json",
       "art": "json",
-      "sha256": "dace1e3f6b2cd236cb0eaaeee24254e4d08e7d4995fdce4dd51a5b2f2671a324"
+      "sha256": "3824f69aa2695b7a0172be3a649390176549d402bee3367503894f56fa0d763a"
     },
     {
       "id": "urn:ontologie8:artefakt:paketentwurf",

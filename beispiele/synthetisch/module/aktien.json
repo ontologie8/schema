@@ -1,0 +1,343 @@
+{
+  "id": "urn:beispiel:profil:aktien",
+  "schema_version": "0.1.0",
+  "entitaeten": [
+    {
+      "id": "urn:beispiel:P-A",
+      "typ": "urn:ontologie8:begriff:person",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person A",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:P-B",
+      "typ": "urn:ontologie8:begriff:person",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Person B",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:INSTRUMENT-1",
+      "typ": "urn:ontologie8:begriff:finanzinstrument",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Finanzinstrument",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:POSITION-1",
+      "typ": "urn:ontologie8:begriff:position",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Depotposition",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:MARKT-1",
+      "typ": "urn:ontologie8:begriff:markt",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetischer Markt",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:Q-A",
+      "typ": "urn:ontologie8:begriff:quelle",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Quelle A",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:Q-B",
+      "typ": "urn:ontologie8:begriff:quelle",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Quelle B",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:beispiel:M-A",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Faktorverfahren A",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-B",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Faktorverfahren B",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-C",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetisches Bestandsverfahren",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-D",
+      "typ": "urn:ontologie8:begriff:methode",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Beratungsmethode",
+          "sprache": "de"
+        }
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "id": "urn:beispiel:M-V",
+      "typ": "urn:ontologie8:begriff:methode",
+      "version": "1.0.0",
+      "bezeichnungen": [
+        {
+          "wert": "Synthetische Vergleichswertmethode",
+          "sprache": "de"
+        }
+      ]
+    }
+  ],
+  "revisionen": [
+    {
+      "id": "urn:beispiel:C-0-R1",
+      "aussage_id": "urn:beispiel:C-0",
+      "art": "beobachtung",
+      "typ": "urn:ontologie8:begriff:anfangsbestand",
+      "subjekt_id": "urn:beispiel:POSITION-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2025-03-09",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2025-03-09T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "menge": "0",
+        "einheit": "urn:ontologie8:begriff:stueck",
+        "vollstaendig": true
+      },
+      "objekt_id": "urn:beispiel:INSTRUMENT-1"
+    },
+    {
+      "id": "urn:beispiel:C-1-R1",
+      "aussage_id": "urn:beispiel:C-1",
+      "art": "ereignis",
+      "typ": "urn:ontologie8:begriff:bestandsbewegung",
+      "subjekt_id": "urn:beispiel:POSITION-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2025-03-10",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2025-03-10T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "menge": "10",
+        "einheit": "urn:ontologie8:begriff:stueck",
+        "betrag": "100",
+        "waehrung": "EUR",
+        "anlass": "urn:ontologie8:begriff:kauf"
+      },
+      "objekt_id": "urn:beispiel:INSTRUMENT-1"
+    },
+    {
+      "id": "urn:beispiel:C-2-R1",
+      "aussage_id": "urn:beispiel:C-2",
+      "art": "ereignis",
+      "typ": "urn:ontologie8:begriff:bestandsbewegung",
+      "subjekt_id": "urn:beispiel:POSITION-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2025-06-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2025-06-01T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "menge": "5",
+        "einheit": "urn:ontologie8:begriff:stueck",
+        "betrag": "110",
+        "waehrung": "EUR",
+        "anlass": "urn:ontologie8:begriff:kauf"
+      },
+      "objekt_id": "urn:beispiel:INSTRUMENT-1"
+    },
+    {
+      "id": "urn:beispiel:C-3-R1",
+      "aussage_id": "urn:beispiel:C-3",
+      "art": "ereignis",
+      "typ": "urn:ontologie8:begriff:bestandsbewegung",
+      "subjekt_id": "urn:beispiel:POSITION-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2025-09-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2025-09-01T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "belegt",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "menge": "-3",
+        "einheit": "urn:ontologie8:begriff:stueck",
+        "betrag": "120",
+        "waehrung": "EUR",
+        "anlass": "urn:ontologie8:begriff:verkauf"
+      },
+      "objekt_id": "urn:beispiel:INSTRUMENT-1"
+    },
+    {
+      "id": "urn:beispiel:C-4-R1",
+      "aussage_id": "urn:beispiel:C-4",
+      "art": "beobachtung",
+      "typ": "urn:ontologie8:begriff:kurs",
+      "subjekt_id": "urn:beispiel:INSTRUMENT-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2026-06-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-06-01T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "beobachtet",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "125",
+        "waehrung": "EUR",
+        "einheit": "urn:ontologie8:begriff:stueck",
+        "markt_id": "urn:beispiel:MARKT-1"
+      }
+    },
+    {
+      "id": "urn:beispiel:S-C-R1",
+      "aussage_id": "urn:beispiel:S-C-Ergebnis",
+      "art": "bewertung",
+      "typ": "urn:ontologie8:begriff:bewertung",
+      "subjekt_id": "urn:beispiel:POSITION-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2028-06-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-06-02T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "prognose",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "1800",
+        "waehrung": "EUR",
+        "wertart": "urn:ontologie8:begriff:marktwert"
+      },
+      "methode_id": "urn:beispiel:M-C",
+      "methode_version": "1.0.0",
+      "szenario_id": "urn:beispiel:S-C"
+    },
+    {
+      "id": "urn:beispiel:S-D-R1",
+      "aussage_id": "urn:beispiel:S-D-Ergebnis",
+      "art": "bewertung",
+      "typ": "urn:ontologie8:begriff:bewertung",
+      "subjekt_id": "urn:beispiel:POSITION-1",
+      "fachliche_zeit": {
+        "art": "zeitpunkt",
+        "wert": "2028-06-01",
+        "praezision": "tag"
+      },
+      "erfasst_am": "2026-06-02T10:00:00Z",
+      "quelle_id": "urn:beispiel:Q-A",
+      "aussageart": "prognose",
+      "pruefstatus": "bestaetigt",
+      "daten": {
+        "betrag": "960",
+        "waehrung": "EUR",
+        "wertart": "urn:ontologie8:begriff:marktwert"
+      },
+      "methode_id": "urn:beispiel:M-C",
+      "methode_version": "1.0.0",
+      "szenario_id": "urn:beispiel:S-D"
+    }
+  ],
+  "szenarien": [
+    {
+      "id": "urn:beispiel:S-C",
+      "art": "kursannahme",
+      "modell_id": "urn:beispiel:M-C",
+      "modell_version": "1.0.0",
+      "eingaben": [
+        "urn:beispiel:C-0-R1",
+        "urn:beispiel:C-1-R1",
+        "urn:beispiel:C-2-R1",
+        "urn:beispiel:C-3-R1",
+        "urn:beispiel:C-4-R1"
+      ],
+      "zielzeit": {
+        "wert": "2028-06-01",
+        "praezision": "tag"
+      },
+      "berechnet_am": "2026-06-02T10:00:00Z",
+      "parameter": {
+        "kurs": "150",
+        "waehrung": "EUR"
+      }
+    },
+    {
+      "id": "urn:beispiel:S-D",
+      "art": "kursannahme",
+      "modell_id": "urn:beispiel:M-C",
+      "modell_version": "1.0.0",
+      "eingaben": [
+        "urn:beispiel:C-0-R1",
+        "urn:beispiel:C-1-R1",
+        "urn:beispiel:C-2-R1",
+        "urn:beispiel:C-3-R1",
+        "urn:beispiel:C-4-R1"
+      ],
+      "zielzeit": {
+        "wert": "2028-06-01",
+        "praezision": "tag"
+      },
+      "berechnet_am": "2026-06-02T10:00:00Z",
+      "parameter": {
+        "kurs": "80",
+        "waehrung": "EUR"
+      }
+    }
+  ]
+}

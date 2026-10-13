@@ -1,0 +1,95 @@
+{
+  "id": "urn:ontologie8:erwartungsvertrag:modellfragen:0.1.0",
+  "abfragen": [
+    {
+      "id": "Kleidung-Kaufpreis",
+      "operation": "revision",
+      "argumente": {
+        "id": "urn:beispiel:D-1-R1"
+      },
+      "felder": [
+        "daten.betrag"
+      ],
+      "erwartet": {
+        "daten.betrag": "100"
+      }
+    },
+    {
+      "id": "Kleidung-Wiederverkaufswert",
+      "operation": "revision",
+      "argumente": {
+        "id": "urn:beispiel:D-5-R1"
+      },
+      "felder": [
+        "daten.betrag"
+      ],
+      "erwartet": {
+        "daten.betrag": "30"
+      }
+    },
+    {
+      "id": "Kleidung-Reparatur-kein-Wert",
+      "operation": "revision",
+      "argumente": {
+        "id": "urn:beispiel:D-3-R1"
+      },
+      "felder": [
+        "daten"
+      ],
+      "erwartet": {
+        "daten": {}
+      }
+    },
+    {
+      "id": "Kleidung-Empfehlung-Eingabestand",
+      "operation": "revision",
+      "argumente": {
+        "id": "urn:beispiel:D-6-R1"
+      },
+      "felder": [
+        "objekt_id",
+        "eingabe_ids",
+        "methode_id",
+        "methode_version"
+      ],
+      "erwartet": {
+        "objekt_id": "urn:beispiel:KLEIDUNG-1",
+        "eingabe_ids": [
+          "urn:beispiel:D-4-R1"
+        ],
+        "methode_id": "urn:beispiel:M-D",
+        "methode_version": "1.0.0"
+      }
+    },
+    {
+      "id": "Kleidung-Produktmodell",
+      "operation": "revision",
+      "argumente": {
+        "id": "urn:beispiel:D-7-R1"
+      },
+      "felder": [
+        "subjekt_id",
+        "objekt_id"
+      ],
+      "erwartet": {
+        "subjekt_id": "urn:beispiel:KLEIDUNG-1",
+        "objekt_id": "urn:beispiel:MODELL-1"
+      }
+    },
+    {
+      "id": "Kleidung-Angebot-Anbieter",
+      "operation": "revision",
+      "argumente": {
+        "id": "urn:beispiel:D-9-R1"
+      },
+      "felder": [
+        "subjekt_id",
+        "objekt_id"
+      ],
+      "erwartet": {
+        "subjekt_id": "urn:beispiel:SHOP-1",
+        "objekt_id": "urn:beispiel:ANGEBOT-1"
+      }
+    }
+  ]
+}

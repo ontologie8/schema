@@ -1,0 +1,71 @@
+{
+  "id": "urn:ontologie8:erwartungsvertrag:modellfragen:0.1.0",
+  "abfragen": [
+    {
+      "id": "Aktien-Anzahl",
+      "operation": "bestand",
+      "argumente": {
+        "position_id": "urn:beispiel:POSITION-1",
+        "stichtag": {
+          "wert": "2026-06-01",
+          "praezision": "tag"
+        },
+        "wissen": "2026-06-06T00:00:00Z"
+      },
+      "felder": [
+        "menge"
+      ],
+      "erwartet": {
+        "menge": "12"
+      }
+    },
+    {
+      "id": "Aktien-Bestandswert",
+      "operation": "bestandswert",
+      "argumente": {
+        "position_id": "urn:beispiel:POSITION-1",
+        "stichtag": {
+          "wert": "2026-06-01",
+          "praezision": "tag"
+        },
+        "wissen": "2026-06-06T00:00:00Z",
+        "waehrung": "EUR",
+        "markt_id": "urn:beispiel:MARKT-1"
+      },
+      "felder": [
+        "betrag",
+        "waehrung"
+      ],
+      "erwartet": {
+        "betrag": "1500",
+        "waehrung": "EUR"
+      }
+    },
+    {
+      "id": "Aktien-S-C",
+      "operation": "szenario",
+      "argumente": {
+        "szenario_id": "urn:beispiel:S-C"
+      },
+      "felder": [
+        "betrag"
+      ],
+      "erwartet": {
+        "betrag": "1800"
+      }
+    },
+    {
+      "id": "Aktien-S-D",
+      "operation": "szenario",
+      "argumente": {
+        "szenario_id": "urn:beispiel:S-D"
+      },
+      "felder": [
+        "betrag"
+      ],
+      "erwartet": {
+        "betrag": "960"
+      }
+    }
+  ]
+}

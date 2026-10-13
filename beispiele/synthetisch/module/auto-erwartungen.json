@@ -1,0 +1,156 @@
+{
+  "id": "urn:ontologie8:erwartungsvertrag:modellfragen:0.1.0",
+  "abfragen": [
+    {
+      "id": "Auto-Kaufpreis-vor-Korrektur",
+      "operation": "auswahl",
+      "argumente": {
+        "stichtag": {
+          "wert": "2024-03-10T10:00:00Z",
+          "praezision": "sekunde"
+        },
+        "wissen": "2024-03-25T00:00:00Z",
+        "typ": "kauf"
+      },
+      "felder": [
+        "id",
+        "daten.betrag"
+      ],
+      "erwartet": {
+        "treffer": [
+          {
+            "id": "urn:beispiel:K-1-R1",
+            "daten.betrag": "30000"
+          }
+        ],
+        "unbestimmt": []
+      }
+    },
+    {
+      "id": "Auto-Kaufpreis-nach-Korrektur",
+      "operation": "auswahl",
+      "argumente": {
+        "stichtag": {
+          "wert": "2024-03-10T10:00:00Z",
+          "praezision": "sekunde"
+        },
+        "wissen": "2024-04-02T00:00:00Z",
+        "typ": "kauf"
+      },
+      "felder": [
+        "id",
+        "daten.betrag"
+      ],
+      "erwartet": {
+        "treffer": [
+          {
+            "id": "urn:beispiel:K-1-R2",
+            "daten.betrag": "28000"
+          }
+        ],
+        "unbestimmt": []
+      }
+    },
+    {
+      "id": "Auto-Eigentum-frueher-Wissensstand",
+      "operation": "auswahl",
+      "argumente": {
+        "stichtag": {
+          "wert": "2026-08-01T12:00:00Z",
+          "praezision": "sekunde"
+        },
+        "wissen": "2026-08-01T18:00:00Z",
+        "typ": "eigentum"
+      },
+      "felder": [
+        "subjekt_id"
+      ],
+      "erwartet": {
+        "treffer": [
+          {
+            "subjekt_id": "urn:beispiel:P-A"
+          }
+        ],
+        "unbestimmt": []
+      }
+    },
+    {
+      "id": "Auto-Eigentum-spaeter-Wissensstand",
+      "operation": "auswahl",
+      "argumente": {
+        "stichtag": {
+          "wert": "2026-08-01T12:00:00Z",
+          "praezision": "sekunde"
+        },
+        "wissen": "2026-08-03T00:00:00Z",
+        "typ": "eigentum"
+      },
+      "felder": [
+        "subjekt_id"
+      ],
+      "erwartet": {
+        "treffer": [
+          {
+            "subjekt_id": "urn:beispiel:P-B"
+          }
+        ],
+        "unbestimmt": []
+      }
+    },
+    {
+      "id": "Auto-zwei-Quellen",
+      "operation": "auswahl",
+      "argumente": {
+        "stichtag": {
+          "wert": "2026-06-01",
+          "praezision": "tag"
+        },
+        "wissen": "2026-06-06T00:00:00Z",
+        "typ": "bewertung"
+      },
+      "felder": [
+        "quelle_id",
+        "daten.betrag"
+      ],
+      "erwartet": {
+        "treffer": [
+          {
+            "quelle_id": "urn:beispiel:Q-A",
+            "daten.betrag": "22000"
+          },
+          {
+            "quelle_id": "urn:beispiel:Q-B",
+            "daten.betrag": "21000"
+          }
+        ],
+        "unbestimmt": []
+      }
+    },
+    {
+      "id": "Auto-S-A",
+      "operation": "szenario",
+      "argumente": {
+        "szenario_id": "urn:beispiel:S-A"
+      },
+      "felder": [
+        "betrag"
+      ],
+      "erwartet": {
+        "betrag": "17820"
+      }
+    },
+    {
+      "id": "Auto-S-B",
+      "operation": "szenario",
+      "argumente": {
+        "szenario_id": "urn:beispiel:S-B"
+      },
+      "felder": [
+        "betrag"
+      ],
+      "erwartet": {
+        "betrag": "19855"
+      }
+    }
+  ]
+}

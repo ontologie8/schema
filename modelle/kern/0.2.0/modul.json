@@ -1,0 +1,151 @@
+{
+  "art": "modul",
+  "id": "urn:ontologie8:modul:kern",
+  "version": "0.2.0",
+  "vertrag_version": "0.1.0",
+  "bezeichnungen": [
+    {
+      "wert": "Gemeinsamer Modellkern",
+      "sprache": "de"
+    }
+  ],
+  "abhaengigkeiten": [],
+  "bereitstellungen": [
+    {
+      "id": "urn:ontologie8:begriff:person",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Eine Person mit stabiler Identität; Rollen bleiben eigene Zuordnungen.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:organisation",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Eine Organisation mit eigener Identität; keine Gleichsetzung mit ihren Beteiligten.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:quelle",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Referenzierte Herkunft einer Aussage oder eines Nachweises.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:methode",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Identifizierte Methode mit ausdrücklich gebundener Version.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:kauf",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Dokumentiertes Kaufereignis; ein Kaufpreis ist kein fortgeschriebener Marktwert.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:eigentum",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Dokumentierte Eigentumszuordnung mit Zeit und Herkunft; kein technischer Zugriff.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:bewertung",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Wert eines Gegenstands oder Bestands für Wertart, Stichtag, Währung und Quelle.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:zustand",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Beobachteter Zustand eines Gegenstands zu einem Zeitpunkt.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:reparatur",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Dokumentiertes Reparaturereignis ohne automatisch abgeleiteten Wert.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:begriff:uebertragung",
+      "art": "aussage",
+      "definitionen": [
+        {
+          "wert": "Dokumentiertes Übertragungsereignis; eigenständige Eigentumsaussagen bleiben nötig.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:schema:kern:0.1.0",
+      "art": "schema",
+      "definitionen": [
+        {
+          "wert": "Geschlossener Datensatzvertrag des Weltmodellpilots 0.1.0.",
+          "sprache": "de"
+        }
+      ]
+    },
+    {
+      "id": "urn:ontologie8:abbildung:p0-rdf",
+      "art": "abbildung",
+      "definitionen": [
+        {
+          "wert": "Kontrollierter RDF-Hin- und Rückweg des Datensatzvertrags 0.1.0.",
+          "sprache": "de"
+        }
+      ]
+    }
+  ],
+  "nutzungen": [],
+  "artefakt_ids": [
+    "urn:ontologie8:artefakt:kernschema",
+    "urn:ontologie8:artefakt:pilotregister",
+    "urn:ontologie8:artefakt:modellvalidierung",
+    "urn:ontologie8:artefakt:rdf-pilot",
+    "urn:ontologie8:artefakt:rdf-pilotvertrag",
+    "urn:ontologie8:artefakt:rdf-vokabular",
+    "urn:ontologie8:artefakt:metavertrag",
+    "urn:ontologie8:artefakt:modulvalidierung",
+    "urn:ontologie8:artefakt:profilvalidierung",
+    "urn:ontologie8:artefakt:modulpruefroutine",
+    "urn:ontologie8:artefakt:abhaengigkeiten",
+    "urn:ontologie8:artefakt:paketgenerator",
+    "urn:ontologie8:artefakt:pilot-erwartungspruefung"
+  ]
+}

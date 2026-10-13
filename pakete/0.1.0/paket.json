@@ -1,0 +1,357 @@
+{
+  "art": "paket",
+  "id": "urn:ontologie8:paket:referenzmodell",
+  "version": "0.1.0",
+  "vertrag_version": "0.1.0",
+  "status": "entwicklungsstand",
+  "artefakte": [
+    {
+      "id": "urn:ontologie8:artefakt:kernschema",
+      "pfad": "modelle/kern/modell.schema.json",
+      "art": "json",
+      "sha256": "27e91281894d54ba59d3142cb1d7c9ca0984ec6c24da4275181689ee960189ad"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:pilotregister",
+      "pfad": "modelle/kern/begriffe.json",
+      "art": "json",
+      "sha256": "99f97724c1ade65c64c218f93342b84d08642b5a6d3ae2ad7c9ca67204b67c51"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modellvalidierung",
+      "pfad": "scripts/modellvertrag.py",
+      "art": "text",
+      "sha256": "9aaa95c284527022af5a11f03a4c05d820eb072fdb2deb4726bb1def2ace60bf"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:rdf-pilot",
+      "pfad": "abbildungen/formate/rdf.py",
+      "art": "text",
+      "sha256": "d8b93c3f99a29cfba116c9bde8713f825e1f9ca92037d6d9bfe926760631c0c8"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:rdf-pilotvertrag",
+      "pfad": "abbildungen/formate/p0-rdf.json",
+      "art": "json",
+      "sha256": "83446d7ca2a4c722b1525e3b3e43e2be9bc50a3d42b112f7a9c5f736ce05bafb"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:rdf-vokabular",
+      "pfad": "abbildungen/formate/vokabular.ttl",
+      "art": "text",
+      "sha256": "44286c754bd059b6f8bf981999ed638c94c31208bd5f7ae4d7ca77b75afcbe10"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:metavertrag",
+      "pfad": "vertraege/module/0.1.0/vertrag.schema.json",
+      "art": "json",
+      "sha256": "3ad1621b206aeea4920e25a4346fe0ecad5defc6f5763cee356c8d46b8c0481f"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modulvalidierung",
+      "pfad": "scripts/modulvertrag.py",
+      "art": "text",
+      "sha256": "adc76d35bebd696fe7eaa47c0af193660d9b37ac32ea0fe08702b7463d709aad"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profilvalidierung",
+      "pfad": "scripts/profilpruefung.py",
+      "art": "text",
+      "sha256": "a23ff2bddc602d70b32a240d309b129be3e4f40b7c9998ce1d32f9f3bad2a83a"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modulpruefroutine",
+      "pfad": "scripts/pruefe_module.py",
+      "art": "text",
+      "sha256": "28be67e00130cc057b8cccff3a8bb0c4a86b9d5f613f0c93103245f4a7d8df99"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:paketgenerator",
+      "pfad": "scripts/erzeuge_paket.py",
+      "art": "text",
+      "sha256": "97ba779d26a1dfc8586824b6227eda59bbb9ed0f41f2bbd12b740f7e31f5420b"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:abhaengigkeiten",
+      "pfad": "requirements.txt",
+      "art": "text",
+      "sha256": "b267ebe36db3f9bc0dd4f7a618e1b740afccfc6182a573509e32db7cf0acd9d7"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erbausschlagung-schema",
+      "pfad": "profile/anwendungsfaelle/erbausschlagung/prueffaelle.schema.json",
+      "art": "json",
+      "sha256": "cf9dfadfa57f49aac435618a89dd47d354beee04cfd99a30d68e52f79183543b"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erbausschlagung-validierung",
+      "pfad": "scripts/erbausschlagung.py",
+      "art": "text",
+      "sha256": "440afd367ccfec069017e6e0d95a2ab973c110dff82632e3994898d053200909"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:rdf-erbausschlagung",
+      "pfad": "abbildungen/formate/erbausschlagung.py",
+      "art": "text",
+      "sha256": "c305c63badcc692fb70d1abb7b638a990cd6fbbf89d6154e8c3b8542714dd3b5"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erbausschlagung-erwartungspruefung",
+      "pfad": "scripts/pruefe_erbausschlagung.py",
+      "art": "text",
+      "sha256": "76f3fad39be3e1953df174dfca3ce99d279b4ccebf757a141d45d57c96958b91"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erbausschlagung-herkunft",
+      "pfad": "profile/anwendungsfaelle/erbausschlagung/profil.json",
+      "art": "json",
+      "sha256": "30800adeadb31ac05d58ccc2b43d3516ad1e5711428e9201e595673a08079679"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:pilot-erwartungspruefung",
+      "pfad": "scripts/pruefe_pilot.py",
+      "art": "text",
+      "sha256": "24d26f9dd18bc2eb13577f947695d8dd8fc126337cacfe836195a5fac170759c"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:beispiel-p0-gesamt",
+      "pfad": "beispiele/synthetisch/p0-pilot.json",
+      "art": "json",
+      "sha256": "b3361b84bff6ca0696d4c01430f6dc677a0e123a45459a5f63a2b62674e8eec5"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erwartungen-p0-gesamt",
+      "pfad": "beispiele/synthetisch/p0-erwartungen.json",
+      "art": "json",
+      "sha256": "862acb0a26ebc8066a1ebb515aaf9b4efce03797d40325e596d9132f879e32c3"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:beispiel-erbausschlagung",
+      "pfad": "beispiele/synthetisch/erbausschlagung/faelle.json",
+      "art": "json",
+      "sha256": "10eb6bfbd91fbef392b6d2a6283ff7de3aa61fa2ec7deb57a80d11975a0a638c"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erwartungen-erbausschlagung",
+      "pfad": "beispiele/synthetisch/erbausschlagung/erwartungen.json",
+      "art": "json",
+      "sha256": "8acf866e2892c58641ab5fe6d7caacde512e2beaffff712bee060b7ca8c82188"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:autoren",
+      "pfad": "AUTHORS.md",
+      "art": "text",
+      "sha256": "1fe67f39a0501f93b582afcc08f3c05f25ee295dbb026969e12b8e4d7cf70ea6"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:urheberhinweise",
+      "pfad": "NOTICE",
+      "art": "text",
+      "sha256": "0ea0a026f9fbffbecf1c27bb7ecd37b03c1e002ade042a841fa551d30c1deded"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:lizenz-code",
+      "pfad": "LICENSES/AGPL-3.0-or-later.txt",
+      "art": "text",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:lizenz-fachinhalt",
+      "pfad": "LICENSES/CC-BY-4.0.txt",
+      "art": "text",
+      "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:paketbenutzung",
+      "pfad": "pakete/0.1.0/README.md",
+      "art": "text",
+      "sha256": "a1b368475b7545ce7269eaf89b1fca0a8b0c73fa0c70833b6372f587fbb47d74"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:bisheriges-modulregister",
+      "pfad": "register/module.json",
+      "art": "json",
+      "sha256": "9d7e77cfeb216e16bdfe9be1759f5a94066a63a8699219196923db86be3bab3e"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:bisheriges-kernmanifest",
+      "pfad": "modelle/kern/modul.json",
+      "art": "json",
+      "sha256": "c6a1cf665b9c7bcd6c0fe0c5a5f6e7189fecfa475c3397652f9da351a67352d9"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:bisheriges-finanzmanifest",
+      "pfad": "modelle/fachmodule/finanzen/modul.json",
+      "art": "json",
+      "sha256": "4d1dd86317ae5394832fa7eba7f0fe2dd2298b23bf4d29170c933e5b8b197d58"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:bisheriges-bekleidungsmanifest",
+      "pfad": "modelle/fachmodule/bekleidung/modul.json",
+      "art": "json",
+      "sha256": "3eebf4437fbd77b0bf1738e078ca96ac6fc8b7de4c3e290a4bc175d533ca0500"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:bisheriges-pilotprofil",
+      "pfad": "profile/anwendungsfaelle/p0-pilot.json",
+      "art": "json",
+      "sha256": "ccf5c6fee8ce17d0862f28dcb23b6bbb8590f6c53eee5299ef60b7d7fa632dc3"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modul-kern",
+      "pfad": "modelle/kern/0.2.0/modul.json",
+      "art": "json",
+      "sha256": "793704c75fd462fd9bd076de2bbe4dea98ee41aef78b1393108edb536c93fadd"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modul-fahrzeuge",
+      "pfad": "modelle/fachmodule/fahrzeuge/0.1.0/modul.json",
+      "art": "json",
+      "sha256": "f063facf11122f4a4379975054a1decf24ed37d1d85e1287849f8dd688c9507c"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modul-finanzen",
+      "pfad": "modelle/fachmodule/finanzen/0.2.0/modul.json",
+      "art": "json",
+      "sha256": "e019a79ece8cca8ce486a17b6da298e2226bbcd05bd84a44ad50d5cb5908fbab"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modul-bekleidung",
+      "pfad": "modelle/fachmodule/bekleidung/0.2.0/modul.json",
+      "art": "json",
+      "sha256": "eed9ec943fd39f84d0ed389e429ba05a49426041bbd4fb2fbf4bad9e49a11e6e"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:modul-recht",
+      "pfad": "modelle/fachmodule/recht/0.1.0/modul.json",
+      "art": "json",
+      "sha256": "64bdf0deff0de65286ef9cb83a2cffe453b382255275fae031e635a3d0611577"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profil-auto",
+      "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/auto.json",
+      "art": "json",
+      "sha256": "8ad876654987bed6c69b565f4d06c1718164e650f4548ed68034b841575c3a65"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:beispiel-auto",
+      "pfad": "beispiele/synthetisch/module/auto.json",
+      "art": "json",
+      "sha256": "004ac0e2c568e2cd1f2dc6674e74926860260e3af1b67ea977da6a5b75b1d2b2"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erwartungen-auto",
+      "pfad": "beispiele/synthetisch/module/auto-erwartungen.json",
+      "art": "json",
+      "sha256": "6a38f74747c56dc9a43ead70c2cd4531917cbdbc489eff2129b655405a3887b0"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profil-aktien",
+      "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/aktien.json",
+      "art": "json",
+      "sha256": "b3df59fc1d87917b626deffd0de5068c10ec8a0e8950b6d2c81ed0cc2d026a89"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:beispiel-aktien",
+      "pfad": "beispiele/synthetisch/module/aktien.json",
+      "art": "json",
+      "sha256": "72b326b23251cbee3a03a7f0d4df7e3946970bc91aa1a8635eb110c4a0821bbd"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erwartungen-aktien",
+      "pfad": "beispiele/synthetisch/module/aktien-erwartungen.json",
+      "art": "json",
+      "sha256": "59e513ef9193cea144f3c48add2de9375206206d85cc0640ec6e22380a6af18c"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profil-bekleidung",
+      "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/bekleidung.json",
+      "art": "json",
+      "sha256": "0cdb94cf887023159e0cbb3efc741888b9b560bb82dc2e5e46b38caa8280927b"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:beispiel-bekleidung",
+      "pfad": "beispiele/synthetisch/module/bekleidung.json",
+      "art": "json",
+      "sha256": "d5528a135d74e5abafeda4565182f2f8a9b09f226d7f76827402b474467310ed"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:erwartungen-bekleidung",
+      "pfad": "beispiele/synthetisch/module/bekleidung-erwartungen.json",
+      "art": "json",
+      "sha256": "adde390696c46ad6d123e75b4698675cd864763a038232213fe9b12584ddc15d"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profil-p0-gesamt",
+      "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/p0-gesamt.json",
+      "art": "json",
+      "sha256": "1f10a8f9459932217102c485296bc7185c45144bb07e6588b2b9bbf23122145b"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:profil-erbausschlagung",
+      "pfad": "profile/anwendungsfaelle/versioniert/0.1.0/erbausschlagung.json",
+      "art": "json",
+      "sha256": "3824f69aa2695b7a0172be3a649390176549d402bee3367503894f56fa0d763a"
+    },
+    {
+      "id": "urn:ontologie8:artefakt:paketentwurf",
+      "pfad": "register/paketentwurf.json",
+      "art": "json",
+      "sha256": "d38271575586d5d244a31d3177100e22dd0ecd62c9f1c49089edd9143203a56e"
+    }
+  ],
+  "module": [
+    {
+      "id": "urn:ontologie8:modul:kern",
+      "version": "0.2.0",
+      "artefakt_id": "urn:ontologie8:artefakt:modul-kern"
+    },
+    {
+      "id": "urn:ontologie8:modul:fahrzeuge",
+      "version": "0.1.0",
+      "artefakt_id": "urn:ontologie8:artefakt:modul-fahrzeuge"
+    },
+    {
+      "id": "urn:ontologie8:modul:finanzen",
+      "version": "0.2.0",
+      "artefakt_id": "urn:ontologie8:artefakt:modul-finanzen"
+    },
+    {
+      "id": "urn:ontologie8:modul:bekleidung",
+      "version": "0.2.0",
+      "artefakt_id": "urn:ontologie8:artefakt:modul-bekleidung"
+    },
+    {
+      "id": "urn:ontologie8:modul:recht",
+      "version": "0.1.0",
+      "artefakt_id": "urn:ontologie8:artefakt:modul-recht"
+    }
+  ],
+  "profile": [
+    {
+      "id": "urn:ontologie8:profil:auto",
+      "version": "0.1.0",
+      "artefakt_id": "urn:ontologie8:artefakt:profil-auto"
+    },
+    {
+      "id": "urn:ontologie8:profil:aktien",
+      "version": "0.1.0",
+      "artefakt_id": "urn:ontologie8:artefakt:profil-aktien"
+    },
+    {
+      "id": "urn:ontologie8:profil:bekleidung",
+      "version": "0.1.0",
+      "artefakt_id": "urn:ontologie8:artefakt:profil-bekleidung"
+    },
+    {
+      "id": "urn:ontologie8:profil:p0-gesamt",
+      "version": "0.1.0",
+      "artefakt_id": "urn:ontologie8:artefakt:profil-p0-gesamt"
+    },
+    {
+      "id": "urn:ontologie8:profil:erbausschlagung",
+      "version": "0.1.0",
+      "artefakt_id": "urn:ontologie8:artefakt:profil-erbausschlagung"
+    }
+  ]
+}

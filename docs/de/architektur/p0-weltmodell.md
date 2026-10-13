@@ -81,6 +81,8 @@ Maschinelle Definitionen werden nicht pro Dokumentationssprache dupliziert. Weit
 
 Jedes Modul bekommt bei Umsetzung ein Manifest mit ID, Version, Zweck, Abhängigkeiten, bereitgestellten Typen und Referenzen auf seine Dokumentation und Prüffälle. Ein zentrales Register verweist auf diese Manifeste. Fachliche IDs bleiben bei einer Ordneränderung erhalten; lokale Pfadverweise werden entsprechend aktualisiert und geprüft.
 
+Der [allgemeine Fachmodul-/Versionsvertrag](fachmodule-und-versionen.md) implementiert inzwischen gemeinsame Metadaten, eindeutige Begriffszuständigkeiten, fünf exakt gebundene Profile und eine portable Paketübernahme. Die ursprünglichen Pilotmanifeste bleiben historische Entwicklungsartefakte ihres Stands; die neuen Manifeste liegen in Versionsverzeichnissen.
+
 Die vorhandene [Personen-/Nachlassroadmap](../../../roadmap/de/personen-nachlass-roadmap.md) beschreibt einen Fachpfad. Finanzen und Bekleidung erproben die gemeinsame Struktur zusätzlich. Das Projekt erhält dadurch keine Bindung an eine bisherige nutzende Anwendung.
 
 ## Profile und Anwendungsfälle

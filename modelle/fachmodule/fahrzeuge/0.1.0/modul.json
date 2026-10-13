@@ -1,0 +1,41 @@
+{
+  "art": "modul",
+  "id": "urn:ontologie8:modul:fahrzeuge",
+  "version": "0.1.0",
+  "vertrag_version": "0.1.0",
+  "bezeichnungen": [
+    {
+      "wert": "Fahrzeuge: synthetischer Referenzfall",
+      "sprache": "de"
+    }
+  ],
+  "abhaengigkeiten": [
+    {
+      "id": "urn:ontologie8:modul:kern",
+      "version": "0.2.0"
+    }
+  ],
+  "bereitstellungen": [
+    {
+      "id": "urn:ontologie8:begriff:auto",
+      "art": "entitaet",
+      "definitionen": [
+        {
+          "wert": "Ein konkretes Auto mit eigener Identität; Kauf, Eigentum und Bewertung sind getrennte Aussagen.",
+          "sprache": "de"
+        }
+      ]
+    }
+  ],
+  "nutzungen": [
+    "urn:ontologie8:begriff:person",
+    "urn:ontologie8:begriff:organisation",
+    "urn:ontologie8:begriff:quelle",
+    "urn:ontologie8:begriff:methode",
+    "urn:ontologie8:begriff:kauf",
+    "urn:ontologie8:begriff:eigentum",
+    "urn:ontologie8:begriff:uebertragung",
+    "urn:ontologie8:begriff:bewertung"
+  ],
+  "artefakt_ids": []
+}

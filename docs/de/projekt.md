@@ -12,7 +12,7 @@ Arbeitsmethode: Kanban, wöchentlicher Review, bedarfsbezogener Kurzsync; Mainta
 
 | Arbeitspaket | Scope | Status | Abhängigkeit |
 | --- | --- | --- | --- |
-| P0 | Weltmodell, Modellgrenzen, Zeit und Versionierungsvertrag | Pilot 0.1.0 und synthetischer Erbausschlagungs-Prüfvertrag geliefert; weitere Profilisierung in Bearbeitung | — |
+| P0 | Weltmodell, Modellgrenzen, Zeit und Versionierungsvertrag | Pilot, Erbausschlagung und allgemeiner Fachmodul-/Versionsvertrag geliefert; weitere Fachdefinitionen und Migrationen offen | — |
 | P1 | Personen, Familie, Organisationen und zeitabhängige Rollen | Backlog | P0 |
 | P2 | JSON-Referenzdataset, Import-/Exportvertrag und 10.000er-Prüfung | Backlog | P1 |
 | P3 | Genogramm-Projektion und Exportvertrag | Backlog | P2 |
@@ -34,7 +34,17 @@ Plan und Validierung: Standards zu BCP 47, RDF und JSON-LD prüfen; die [Designv
 
 ## Nächster Schritt
 
-Pilotregister in eigenständige Fachdefinitionen und Detailprofile ausbauen; externe Import-/Versionsverträge auf dem geprüften Vertragsstand konkretisieren.
+Weitere Fachdefinitionen im allgemeinen Modulvertrag ergänzen; bei einem tatsächlichen Versionswechsel einen gerichteten Migrationsvertrag mit unabhängigen Erwartungen erstellen.
+
+## Aktueller Auftrag: allgemeiner Fachmodul- und Versionsvertrag
+
+Auftrag: Auto, Aktien, Kleidung und Erbausschlagung gemeinsam für den allgemeinen Fachmodul-/Versionsvertrag nutzen. AC-21 bis AC-23 ergänzen die bestehenden Prüfziele. Scope, Alternativen, Risiko, Plan und Designreview vor Code stehen in der [Spezifikation](architektur/fachmodule-und-versionen.md).
+
+Scope: Geschlossene gemeinsame Modul-/Profil-/Paket-/Übernahmemetadaten, eindeutige Begriffsverantwortung, exakte Abhängigkeiten, fünf Fallprofile, SHA-256-Artefaktbindung und eine portable offline geprüfte Kopie mit benanntem Speicherziel. Die vorhandenen Datenverträge und Referenzfälle bleiben erhalten; die beiden Datensatzformen werden ausdrücklich unterschieden.
+
+Plan und Review: Profilgrenzen zusätzlich zur bestehenden fachlichen Validierung prüfen; Abhängigkeiten und bereitgestellte Begriffe geschlossen auflösen; Einzelproben gegen unabhängige Fragen und tatsächliche RDF-Rückwege prüfen; Identitätsverletzungen und Export-/Versionsfehler zurückweisen. Eine unterschiedliche Versionsnummer allein beweist keine Kompatibilität. Ein Paketgenerator erstellt nur neue Stände und prüft sie vor Veröffentlichung in einer separaten Kopie.
+
+Ergebnis: Fünf versionierte Module, fünf Profile, 29 Begriffszuständigkeiten, drei zusätzliche Einzelproben mit 17 unabhängigen Fragen und ein Paket mit 49 explizit gebundenen Artefakten. Die 77 Testmethoden einschließlich 23 neuer Versions-/Profil-/Übernahmeprüfungen bestehen. Die portable CLI wird außerhalb ihrer bisherigen Ablage geprüft. Anbieterbetrieb, produktive Rechtsdatenschemata und gerichtete Migrationen sind weiterhin eigene Aufgaben.
 
 ## Aktueller Auftrag: erster Schema- und RDF-Pilot
 

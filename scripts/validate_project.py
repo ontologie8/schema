@@ -23,6 +23,9 @@ def validate(root: Path) -> list[str]:
         "scripts/pruefe_erbausschlagung.py",
         "beispiele/synthetisch/erbausschlagung/faelle.json",
         "beispiele/synthetisch/erbausschlagung/erwartungen.json",
+        "vertraege/module/0.1.0/vertrag.schema.json",
+        "register/pakete.json", "register/paketentwurf.json",
+        "pakete/0.1.0/paket.json", "scripts/pruefe_module.py",
     ]
     for path in required:
         if not (root / path).is_file():
@@ -55,7 +58,7 @@ def validate(root: Path) -> list[str]:
             if phase + ":" not in content:
                 errors.append(f"Phase fehlt ({phase}): {roadmap.relative_to(root)}")
         ac = acceptance.read_text(encoding="utf-8")
-        for identifier in (f"AC-{i:02}" for i in range(1, 21)):
+        for identifier in (f"AC-{i:02}" for i in range(1, 24)):
             if identifier not in ac:
                 errors.append(f"Akzeptanzkriterium fehlt ({identifier}): {acceptance.relative_to(root)}")
     return errors

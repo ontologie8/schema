@@ -1,0 +1,7 @@
+{
+  "id": "urn:ontologie8:register:pakete",
+  "version": "0.1.0",
+  "pakete": [
+    "../pakete/0.1.0/paket.json"
+  ]
+}
